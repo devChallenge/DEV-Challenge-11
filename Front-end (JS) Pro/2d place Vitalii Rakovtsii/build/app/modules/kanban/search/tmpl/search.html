@@ -1,0 +1,14 @@
+
+<form>
+  <div class="form-group">
+    <input class="form-control" type="search" placeholder="type to search..." (input)="changeSearchCriteriaBeacon.emit($event.target.value)"/>
+  </div>
+  <div class="form-group"><small class="text-muted">filter by color:</small>
+    <label class="custom-control custom-radio">
+      <input class="custom-control-input" value="-1" type="radio" name="colour" checked="checked" (change)="changeSearchColourBeacon.emit($event.target.value)"/><span class="custom-control-indicator"></span><span class="custom-control-description">disable</span>
+    </label>
+    <label class="custom-control custom-radio" *ngFor="let colour of colourService.getAllColours()">
+      <input class="custom-control-input" [value]="colour[0]" type="radio" name="colour" [checked]="searchColour === colour[0]" (change)="changeSearchColourBeacon.emit($event.target.value)"/><span class="custom-control-indicator" [style.backgroundColor]="colour[1]"></span><span class="custom-control-description">{{ colour[2] }}</span>
+    </label>
+  </div>
+</form>

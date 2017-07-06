@@ -1,0 +1,8 @@
+target 'SpreadSheet' do
+  use_frameworks!
+
+  pod 'SpreadsheetView'
+  pod 'ReactiveSwift'
+  pod 'ReactiveCocoa'
+
+end

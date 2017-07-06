@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "app": "npm i && cd build && node ../node_modules/static-server/bin/static-server.js"
+  },
+  "dependencies": {
+    "static-server": "^2.0.4"
+  }
+}

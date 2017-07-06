@@ -1,0 +1,31 @@
+.board .tools {
+  margin: 1em;
+  display: flex;
+  align-items: center; }
+  .board .tools .tool {
+    margin-right: 1em; }
+
+.board .all-tags {
+  margin: 1em;
+  border: 1px solid #dededf;
+  padding: 1em; }
+
+.board .archive-cards {
+  margin: 1em;
+  border: 1px solid #dededf;
+  padding: 1em;
+  display: flex; }
+  .board .archive-cards .archived-card {
+    background: #dededf;
+    padding: 1em;
+    border-radius: .28571429rem; }
+  .board .archive-cards .restore-button {
+    margin-top: 1em; }
+
+.board .columns {
+  display: flex;
+  margin: 1em;
+  border: 1px solid #dededf;
+  overflow: scroll; }
+  .board .columns .new-column {
+    padding: 1em; }

@@ -1,0 +1,63 @@
+@font-face {
+    font-family: "Geometria";
+    src: url("fonts/Geometria/Geometria.eot");
+    src: url("fonts/Geometria/Geometria.eot?#iefix")format("embedded-opentype"), url("fonts/Geometria/Geometria.woff") format("woff"), url("fonts/Geometria/Geometria.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Geometria Bold";
+    src: url("fonts/Geometria/Geometria-Bold.eot");
+    src: url("fonts/Geometria/Geometria-Bold.eot?#iefix")format("embedded-opentype"), url("fonts/Geometria/Geometria-Bold.woff") format("woff"), url("fonts/Geometria/Geometria-Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Geometria Extra Bold";
+    src: url("fonts/Geometria/Geometria-ExtraBold.eot");
+    src: url("fonts/Geometria/Geometria-ExtraBold.eot?#iefix")format("embedded-opentype"), url("fonts/Geometria/Geometria-ExtraBold.woff") format("woff"), url("fonts/Geometria/Geometria-ExtraBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Geometria Light";
+    src: url("fonts/Geometria/Geometria-Light.eot");
+    src: url("fonts/Geometria/Geometria-Light.eot?#iefix")format("embedded-opentype"), url("fonts/Geometria/Geometria-Light.woff") format("woff"), url("fonts/Geometria/Geometria-Light.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Geometria Light";
+    src: url("fonts/Geometria/Geometria-Light.eot");
+    src: url("fonts/Geometria/Geometria-Light.eot?#iefix")format("embedded-opentype"), url("fonts/Geometria/Geometria-Light.woff") format("woff"), url("fonts/Geometria/Geometria-Light.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+	font-family: 'Gilroy';
+	src: url('fonts/Gilroy/Gilroy-ExtraBold.eot');
+	src: url('fonts/Gilroy/Gilroy-ExtraBold.eot?#iefix') format('embedded-opentype'),
+		url('fonts/Gilroy/Gilroy-ExtraBold.woff') format('woff'),
+		url('fonts/Gilroy/Gilroy-ExtraBold.ttf') format('truetype');
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gilroy';
+	src: url('fonts/Gilroy/Gilroy-Light.eot');
+	src: url('fonts/Gilroy/Gilroy-Light.eot?#iefix') format('embedded-opentype'),
+		url('fonts/Gilroy/Gilroy-Light.woff') format('woff'),
+		url('fonts/Gilroy/Gilroy-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+
+$geometria: "Geometria",sans-serif;
+$geometriaBold: "Geometria Bold",sans-serif;
+$geometriaExtraBold: "Geometria Extra Bold",sans-serif;
+$geometriaLight: "Geometria Light",sans-serif;
+$gilroy: 'Gilroy';

@@ -1,0 +1,12 @@
+<div class="comment c-card">
+  <div class="c-card__item">
+    <!-- ko if: !editing() -->
+    <div class="clickable" data-bind="text: model.text, click: startEditing"></div>
+    <span class="icon-delete" data-bind="click: remove"></span>
+    <!-- /ko -->
+    <!-- ko if: editing -->
+    <textarea class="c-field" data-bind="value: model.text, event: { blur: finishEditing }"></textarea>
+    <button class="c-button" data-bind="click: finishEditing">До архіву</button>
+    <!-- /ko -->
+  </div>
+</div>

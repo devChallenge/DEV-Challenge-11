@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path d="M46.4387755,14.25 L15.0612245,14.25 C13.4845588,14.25 12,15.7257046 12,17.3112245 L12,39.505102 C12,41.2797334 13.4845588,42.755438 15.0612245,42.5663265 L16.5918367,42.5663265 L16.5918367,51.75 L26.5408163,42.5663265 L46.4387755,42.5663265 C48.0154412,42.755438 49.5,41.2797334 49.5,39.505102 L49.5,17.3112245 C49.5,15.7257046 48.0154412,14.25 46.4387755,14.25 Z" id="path-1"></path>
+        <filter x="-13.3%" y="-10.7%" width="126.7%" height="126.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.4 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Стартовая" transform="translate(-1359.000000, -722.000000)" fill-rule="nonzero">
+            <g id="Чат" transform="translate(1350.000000, 710.000000)">
+                <g id="Shape">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

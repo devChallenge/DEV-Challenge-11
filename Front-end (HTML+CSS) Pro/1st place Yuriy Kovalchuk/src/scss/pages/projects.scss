@@ -1,0 +1,315 @@
+// $geometria: "Geometria",sans-serif;
+// $geometriaBold: "Geometria Bold",sans-serif;
+// $geometriaExtraBold: "Geometria Extra Bold",sans-serif;
+// $geometriaLight: "Geometria Light",sans-serif;
+// $gilroy: 'Gilroy';
+
+.page-wrapper {
+  overflow: hidden;
+}
+
+.projects {
+  //overflow: hidden;
+  padding-top: 33px;
+  padding-bottom: 50px;
+
+  &__help-type {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 50px;
+  }
+
+  &__head {
+    position: relative;
+    height: 100px;
+    margin-bottom: 67px;
+    @media (max-width: $screen-sm-max) {
+      margin-bottom: 15px;
+      height: 51px;
+    }
+  }
+
+  &__body {
+    padding-left: 137px;
+    @media (max-width: $screen-lg-max) {
+      padding-left: 0;
+    }
+  }
+
+  &__head-wrapper {
+    @include position(absolute, 0 null null 0)
+    transform: translateX(0);
+    transition: 0.2s ease;
+  }
+
+  &__item {
+  }
+
+  &__head-link {
+    font-family: $geometriaExtraBold;
+    font-size: 64px;
+    //font-weight: 800;
+    text-align: left;
+    color: #ffffff;
+    text-decoration: none;
+    position: relative;
+
+    @media (max-width: $screen-sm-max) {
+      font-size: 30px;
+      margin-right: 50px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 100px;
+    }
+
+    &:not(.active) {
+      opacity: 0.15;
+
+      .projects__head-link-count {
+        display: none;
+      }
+    }
+  }
+
+  &__head-link-count {
+    font-family: $gilroy;
+    font-size: 18px;
+    font-weight: 800;
+    text-align: left;
+    color: #e63554;
+    @include position(absolute, 50% -45px null null)
+    transform: translateY(-50%);
+  }
+
+  &__item {
+    display: flex;
+    overflow: hidden;
+    height: 200px;
+    transition: .2s ease;
+    position: relative;
+    z-index: 1;
+
+    &:not(.active) {
+      height: 100px;
+
+      .projects__item-image {
+        background: #000;
+
+        img {
+          opacity: 0.5;
+        }
+      }
+
+      .projects__item-text {
+        opacity: 0;
+      }
+
+      .projects__item-status {
+        opacity: 0;
+      }
+
+      .projects__item-info-controls {
+        opacity: 0;
+      }
+    }
+    @media (max-width: $screen-md-max) {
+      height: auto;
+      display: block;
+      &:not(.active) {
+        height: auto;
+        .projects__item-image {
+          background: #000;
+
+          img {
+            opacity: 1;
+          }
+        }
+
+        .projects__item-text {
+          opacity: 1;
+        }
+
+        .projects__item-status {
+          opacity: 1;
+        }
+
+        .projects__item-info-controls {
+          opacity: 1;
+        }
+      }
+
+    }
+  }
+
+  &__item-image-status {
+    @include position(absolute, null null 10px 10px)
+    background-image: linear-gradient(to left, #6082d8, #e73453);
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    font-family: $geometriaBold;
+    padding: 3px 6px;
+    border-radius: 5px;
+  }
+
+  &__item-image {
+    width: 400px;
+    position: relative;
+    flex-shrink: 0;
+    @media (max-width: $screen-md-max) {
+      width: 100%;
+      height: 200px;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__item-info {
+    padding-left: 50px;
+    width: 100%;
+    border-bottom: 1px solid rgba(#d8d8d8, .5);
+    padding-top: 10px;
+    @media (max-width: $screen-lg-max) {
+      padding-left: 10px;
+    }
+  }
+
+  &__item-date {
+    font-family: $gilroy;
+    font-size: 12px;
+    font-weight: 300;
+    //text-align: left;
+    color: #c5d5e6;
+    margin-bottom: 16px;
+  }
+
+  &__item-title {
+    font-family: $geometriaExtraBold;
+    font-size: 18px;
+    //font-weight: 800;
+    //text-align: left;
+    color: #ffffff;
+    margin-bottom: 10px;
+  }
+
+  &__item-text {
+    font-family: $gilroy;
+    font-size: 14px;
+    font-weight: 300;
+    //text-align: left;
+    color: #ffffff;
+    max-width: 74%;
+    margin-bottom: 18px;
+    transition: .2s ease;
+  }
+
+  &__item-status {
+    opacity: 0.5;
+    font-family: $gilroy;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: left;
+    color: #b4c4d8;
+    transition: .2s ease;
+  }
+
+  &__item-info-controls {
+    transition: .2s ease;
+    @include position(absolute, 50% 0 null null);
+    transform: translateY(-50%)
+  }
+
+  &__item-controls-link {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #9c5d9a;
+    position: relative;
+    text-decoration: none;
+
+    svg {
+      @include position(absolute, 0 0 0 0);
+      margin: auto;
+      fill: #fff;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &--hand {
+      svg {
+        width: 14.6px;
+        height: 18px;
+      }
+    }
+
+    &--money {
+      svg {
+        width: 14.6px;
+        height: 18px;
+      }
+    }
+
+    &--clothes {
+      svg {
+        width: 14.6px;
+        height: 18px;
+      }
+    }
+
+    &--donation {
+      svg {
+        width: 14.6px;
+        height: 18px;
+      }
+    }
+
+    &:hover {
+      .projects__item-controls-link-helper {
+        opacity: 1;
+
+      }
+    }
+  }
+
+  &__item-controls-link-helper {
+    @include position(absolute, 50% null null -15px);
+    transform: translate(-100%, -50%);
+    font-family: $gilroy;
+    font-size: 12px;
+    font-weight: 300;
+    text-align: right;
+    color: #c5d5e6;
+    text-decoration: none;
+    opacity: 0;
+    transition: .2s ease;
+    //@media (max-width: $screen-md-max) {
+    //  opacity: 1;
+    //}
+
+  }
+
+  &__form-group-name {
+    font-family: $geometria;
+    font-size: 14px;
+    //font-weight: 500;
+    //text-align: left;
+    color: #939aa3;
+    margin-bottom: 5px;
+  }
+}
+
+.show {
+  transition: opacity 400ms;
+}
+
+.hide {
+  opacity: 0;
+}

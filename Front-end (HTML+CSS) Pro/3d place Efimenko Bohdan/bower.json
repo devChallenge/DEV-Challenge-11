@@ -1,0 +1,22 @@
+{
+  "name": "fucking-frontend",
+  "description": "frontend postcss",
+  "main": "gulpfile.js",
+  "authors": [
+    "Efimenko"
+  ],
+  "license": "ISC",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "devDependencies": {
+    "fancybox": "^2.1.5",
+    "jquery": "^3.1.1",
+    "bemto": "^2.1.0",
+    "jquery-mask-plugin": "^1.14.10",
+    "normalize-css": "^7.0.0",
+    "slick-carousel": "^1.6.0"
+  }
+}

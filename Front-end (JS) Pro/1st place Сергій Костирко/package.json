@@ -1,0 +1,83 @@
+{
+  "name": "devchallange_final",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "prebuild": "rimraf ./build",
+    "build": "cross-env NODE_ENV=production webpack --config ./webpack/prod.babel.js --color -p --progress",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --config ./webpack/dev.babel.js"
+  },
+  "dependencies": {
+    "blaze": "^3.2.2",
+    "jquery": "^3.2.1",
+    "jquery-ui": "^1.12.1",
+    "knockout": "^3.4.2",
+    "knockout-sortable": "^1.1.0",
+    "knockout.mapping": "^2.4.3",
+    "markdown": "^0.5.0",
+    "spectrum-colorpicker": "^1.8.0",
+    "uuid-js": "^0.7.5"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-env": "^1.5.1",
+    "babili-webpack-plugin": "^0.1.1",
+    "copy-webpack-plugin": "^4.0.1",
+    "cross-env": "^5.0.0",
+    "css-loader": "^0.28.3",
+    "eslint": "^3.19.0",
+    "eslint-config-defaults": "^9.0.0",
+    "eslint-config-prettier": "^2.1.1",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.11.1",
+    "html-loader": "^0.4.5",
+    "html-webpack-plugin": "^2.28.0",
+    "rimraf": "^2.6.1",
+    "serviceworker-webpack-plugin": "^0.2.2",
+    "style-loader": "^0.18.1",
+    "url-loader": "^0.5.8",
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5",
+    "webpack-merge": "^4.1.0"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "browsers": [
+              "last 2 versions"
+            ]
+          }
+        }
+      ]
+    ],
+    "plugins": [
+      "transform-class-properties",
+      "transform-object-rest-spread"
+    ]
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": [
+      "defaults",
+      "prettier"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "ecmaFeatures": {}
+    },
+    "env": {
+      "browser": true,
+      "node": true
+    }
+  }
+}

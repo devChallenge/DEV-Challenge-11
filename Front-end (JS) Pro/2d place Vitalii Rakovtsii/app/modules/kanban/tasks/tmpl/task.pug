@@ -1,0 +1,8 @@
+.task__title.container-fluid
+  .row
+    .col {{ task.title }}
+    a.badge.badge-info
+    a.badge.badge-primary('[routerLink]'='[{ outlets: { overlay: ["update-task", task.id] } }]') update
+    a.badge.badge-danger('href'='javascript:', '(click)'='removeBeacon.emit(task)') remove
+
+.task__description('[innerHTML]'='task.descriptionMD')

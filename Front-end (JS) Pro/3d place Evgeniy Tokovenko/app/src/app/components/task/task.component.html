@@ -1,0 +1,31 @@
+<div class="task"
+     [style.opacity]="task.isVisible ? 1 : 0.4"
+     [style.borderColor]="task.category && task.category.color || '#000'">
+  <div class="task__title">
+    {{task.title}}
+  </div>
+  <div class="task__description">
+    {{task.description}}
+  </div>
+  <div class="task__category">
+    <b>Category: </b>
+    {{task.category && task.category.title}}
+  </div>
+  <div class="task__user">
+    <b>User:</b> 
+    {{task.user && task.user.name}}
+  </div>
+  <div class="task__tags">
+    <b>Tags:</b> 
+    {{task.tags && task.tags.join(', ')}}
+  </div>
+
+  <div class="task__photo" *ngIf="task.user && task.user.photo">
+    <img [src]="task.user.photo">
+  </div>
+  <button md-raised-button 
+          color="warn"
+          (click)="onRemove(task)">
+      Remove
+    </button>
+</div>

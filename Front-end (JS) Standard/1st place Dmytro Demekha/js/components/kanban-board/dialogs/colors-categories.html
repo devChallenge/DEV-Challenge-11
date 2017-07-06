@@ -1,0 +1,9 @@
+<h1>Edit color`s categories</h1>
+<div class="dialog_content">
+    <ul class="categories_list">
+        <li ng-repeat="category in $dialogCtrl.colorsCategories" ng-if="$index > 0">
+            <input type="text" ng-model="category.name" />
+        </li>
+    </ul>
+    <button class="orange_btn" ng-click="$dialogCtrl.saveColors()">Save</button>
+</div>

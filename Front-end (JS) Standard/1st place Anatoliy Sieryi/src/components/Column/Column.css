@@ -1,0 +1,18 @@
+.column {
+  width: 260px;
+  border-right: 1px solid #dededf;
+  padding: 1em; }
+  .column:hover .column-header .controls {
+    display: block; }
+  .column .column-header {
+    position: relative;
+    margin-bottom: 1em; }
+    .column .column-header .ui.header {
+      margin: 0;
+      margin-right: 1em; }
+    .column .column-header .controls {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: #fff; }

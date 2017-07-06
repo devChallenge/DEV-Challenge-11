@@ -1,0 +1,58 @@
+version: '2'
+
+services:
+  callcenter1:
+    build: server_client
+    depends_on:
+      - mongodb
+      - config
+      - register
+    links:
+     - mongodb
+     - config
+     - register
+  callcenter2:
+    build: server_client
+    depends_on:
+      - mongodb
+      - config
+      - register
+    links:
+     - mongodb
+     - config
+     - register
+  main:
+    build: server_main
+    depends_on:
+      - config
+      - register
+    links:
+     - config
+     - register
+     - callcenter1
+     - callcenter2
+    ports:
+     - "8001:8001"
+  mongodb:
+    image: 'bitnami/mongodb:latest'
+    labels:
+      kompose.service.type: nodeport
+    ports:
+      - "27017:27017"
+    volumes:
+      - 'mongodb_data:/bitnami/mongodb'
+  config:
+    build: server_config
+    restart: always
+    ports:
+      - "8000:8000"
+    environment:
+      - spring.profiles.active=native
+  register:
+    build: server_register
+    restart: always
+    ports:
+      - "8010:8010"
+volumes:
+  mongodb_data:
+    driver: local

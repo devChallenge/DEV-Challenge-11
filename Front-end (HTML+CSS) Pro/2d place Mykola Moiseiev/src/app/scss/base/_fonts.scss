@@ -1,0 +1,131 @@
+@font-face {
+	font-family: 'Geometria';
+	src: url('../fonts/Geometria/Geometria.eot');
+	src: url('../fonts/Geometria/Geometria.eot?#iefix') format('embedded-opentype'), 
+		url('../fonts/Geometria/Geometria.woff') format('woff'), 
+		url('../fonts/Geometria/Geometria.woff2') format('woff'), 
+		url('../fonts/Geometria/Geometria.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+}
+@font-face {
+	font-family: 'Geometria';
+	src: url('../fonts/Geometria/Geometria-Bold.eot');
+	src: url('../fonts/Geometria/Geometria-Bold.eot?#iefix') format('embedded-opentype'), 
+		url('../fonts/Geometria/Geometria-Bold.woff') format('woff'), 
+		url('../fonts/Geometria/Geometria-Bold.woff2') format('woff'), 
+		url('../fonts/Geometria/Geometria-Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+	font-stretch: normal;
+}
+@font-face {
+	font-family: 'Geometria';
+	src: url('../fonts/Geometria/Geometria-ExtraBold.eot');
+	src: url('../fonts/Geometria/Geometria-ExtraBold.eot?#iefix') format('embedded-opentype'), 
+		url('../fonts/Geometria/Geometria-ExtraBold.woff') format('woff'), 
+		url('../fonts/Geometria/Geometria-ExtraBold.woff2') format('woff'), 
+		url('../fonts/Geometria/Geometria-ExtraBold.ttf') format('truetype');
+	font-weight: 800;
+	font-style: normal;
+	font-stretch: normal;
+}
+@font-face {
+	font-family: 'Geometria';
+	src: url('../fonts/Geometria/Geometria-Light.eot');
+	src: url('../fonts/Geometria/Geometria-Light.eot?#iefix') format('embedded-opentype'), 
+		url('../fonts/Geometria/Geometria-Light.woff') format('woff'), 
+		url('../fonts/Geometria/Geometria-Light.woff2') format('woff'), 
+		url('../fonts/Geometria/Geometria-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+	font-stretch: normal;
+}
+
+@font-face {
+    font-family:'Gilroy';
+    src: url('../fonts/Gilroy/Gilroy-Light.eot');
+	src: url('../fonts/Gilroy/Gilroy-Light.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Gilroy/Gilroy-Light.woff2') format('woff2'),
+		url('../fonts/Gilroy/Gilroy-Light.woff') format('woff'),
+		url('../fonts/Gilroy/Gilroy-Light.svg#Gilroy-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-0491;
+}
+@font-face {
+    font-family:'Gilroy';
+    src: url('../fonts/Gilroy/Gilroy-ExtraBold.eot');
+	src: url('../fonts/Gilroy/Gilroy-ExtraBold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Gilroy/Gilroy-ExtraBold.woff2') format('woff2'),
+		url('../fonts/Gilroy/Gilroy-ExtraBold.woff') format('woff'),
+		url('../fonts/Gilroy/Gilroy-ExtraBold.svg#Gilroy-ExtraBold') format('svg');
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-0491;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?5qhy34');
+  src:  url('../fonts/icomoon.eot?5qhy34#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?5qhy34') format('truetype'),
+    url('../fonts/icomoon.woff?5qhy34') format('woff'),
+    url('../fonts/icomoon.svg?5qhy34#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-clothes:before {
+  content: "\e905";
+  color: #c5d5e6;
+}
+.icon-donation:before {
+  content: "\e906";
+  color: #c5d5e6;
+}
+.icon-hade:before {
+  content: "\e907";
+  color: #c5d5e6;
+}
+.icon-wallet:before {
+  content: "\e908";
+  color: #c5d5e6;
+}
+.icon-fb:before {
+  content: "\e900";
+  color: #c5d5e6;
+}
+.icon-tw:before {
+  content: "\e901";
+  color: #c5d5e6;
+}
+.icon-vk:before {
+  content: "\e902";
+  color: #c5d5e6;
+}
+.icon-search:before {
+  content: "\e903";
+  color: #c5d5e6;
+}
+.icon-triangle:before {
+  content: "\e904";
+}

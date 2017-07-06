@@ -1,0 +1,23 @@
+.c-chat
+  position: fixed
+  bottom: 30px
+  right: 30px
+  z-index: 2
+  &__btn
+    width: 60px
+    height: 60px
+    border: none
+    border-radius: 50%
+    background-color: #9d5e9b
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 16px 0 #9d5e9b
+    cursor: pointer
+    transition: transform .2s ease-in-out
+    will-change: transform
+    &:--hover
+      transform: translateY(-5px)
+    &-icon
+      display: inline-block
+      position: relative
+      width: 38px
+      height: 38px
+      top: 4px

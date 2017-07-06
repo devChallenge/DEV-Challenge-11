@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+  client-dev:
+    image: node:7.9
+    volumes:
+      - ./client:/usr/src/app
+      - ./services/entry-point/public:/usr/src/app/dist
+    command: "cd /usr/src/app && npm start"

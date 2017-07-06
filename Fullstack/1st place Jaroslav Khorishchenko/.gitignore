@@ -1,0 +1,9 @@
+.tmp
+.DS_Store
+.vscode
+node_modules
+bower_components
+dist
+coverage
+data
+npm-debug.log

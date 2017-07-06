@@ -1,0 +1,11 @@
+<div class="colums" 
+     fxLayout="row">
+  <div class="colums__item"
+      fxFlex="grow"
+      *ngFor="let column of columns">
+        <app-tasks-column 
+          [column]="column" 
+          [tasks]="tasks"
+        ></app-tasks-column>
+  </div>
+</div>

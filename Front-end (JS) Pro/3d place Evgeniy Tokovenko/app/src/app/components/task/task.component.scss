@@ -1,0 +1,45 @@
+.task {
+  padding: 10px;
+  border-left-style: solid;
+  border-left-width: 10px;
+  margin: 15px;
+  box-shadow: 0 0 5px grey;
+  background: white;
+  cursor: move;
+  position: relative;
+  >button {
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+  &:hover {
+    box-shadow: 0 0 10px grey;
+    >button {
+      display: block;
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  &__description {
+    font-size: 15px;
+    margin-bottom: 7px;
+  }
+  &__category,
+  &__tags,
+  &__user {
+    font-size: 13px;
+    margin-bottom: 3px;
+  }
+  &__photo {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    >img {
+      width: 40px;
+    }
+  }
+}

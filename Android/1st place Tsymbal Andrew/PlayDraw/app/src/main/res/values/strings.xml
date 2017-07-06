@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PlayDraw</string>
+    <string name="play">Play</string>
+    <string name="stop">Stop</string>
+    <string name="clear">Clear</string>
+    <string name="choose_instrument">Оберiть iнструмент:</string>
+    <string name="speed">Темп: 120</string>
+</resources>

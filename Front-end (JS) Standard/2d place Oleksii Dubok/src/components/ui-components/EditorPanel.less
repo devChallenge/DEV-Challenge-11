@@ -1,0 +1,60 @@
+@import '../../assets/variables.less';
+
+.EditorPanel {
+    width: 50vw;
+    background: ivory;
+    box-shadow: 2px 2px 30px 3px rgba(0,0,0,0.75);
+
+    .header {
+        height: 60px;
+        display: flex;
+        align-items: flex-end;
+        padding-left: 50px;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+    }
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 50px 0 20px;
+    }
+}
+
+:global {
+    .Overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .ReactModal__Content {
+        z-index: 20;
+        outline: none;
+    }
+}
+
+.galleryEnter {
+    pointer-events: none;
+    transform:      translateY(25%);
+    opacity: 0;
+    transition:     transform .4s ease, opacity .4s ease;
+    &.galleryEnterActive {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+.galleryLeave {
+    pointer-events: none;
+    transform:      translateY(0);
+    opacity: 1;
+    transition:     transform .4s ease, opacity .4s ease;
+    &.galleryLeaveActive {
+        opacity: 0;
+        transform: translateY(25%);
+    }
+}

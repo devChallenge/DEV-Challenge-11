@@ -1,0 +1,12 @@
+:host {
+  display: block;
+  background: #000;
+  color: #172e3c;
+  min-height: 100%;
+  height: auto;
+}
+:host.loaded {
+  -webkit-transition: background-color 500ms ease-out;
+  transition: background-color 500ms ease-out;
+  background-color: #29262b;
+}

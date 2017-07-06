@@ -1,0 +1,33 @@
+@import '../../assets/variables.less';
+
+.SearchBar {
+    margin: 0 auto;
+    padding: 0;
+    width: 330px;
+    height: 40px;
+    background: lightgray;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+@media (min-width: 600px) {
+    .SearchBar {
+        display: flex;
+    }
+}
+
+@media (min-width: 1365px) {
+    .ProgressNav {
+        width: 633px;
+    }
+}
+@media (min-width: 1600px) {
+    .ProgressNav {
+        width: 666px;
+        * {
+            font-size: 10px !important;
+        }
+    }
+}

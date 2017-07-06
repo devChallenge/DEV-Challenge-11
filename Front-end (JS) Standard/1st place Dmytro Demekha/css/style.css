@@ -1,0 +1,389 @@
+html, body {
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #fff;
+    color: #333;
+    font-size: 14px;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+input[type='text'], select, textarea {
+    outline: none;
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    resize: none;
+}
+
+.board_outer {
+    width: 100%;
+    min-height: 100%;
+    height: 100%;
+    background: #f5f5f5;
+}
+
+.board_outer .board_column {
+    min-height: 100%;
+    height: 100%;
+    float: left;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.board_outer .board_column .board_title {
+    font-size: 14px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 0 0 10px;
+    background: #fff;
+    font-weight: bolder;
+    border-bottom: 3px #ccc solid;
+}
+
+.board_outer .board_column.columns-2 {
+    width: 50%;
+}
+
+.board_outer .board_column.columns-3 {
+    width: 33.3%;
+}
+
+.board_outer .board_column.columns-4 {
+    width: 25%;
+}
+
+.board_outer .board_column.columns-5 {
+    width: 20%;
+}
+
+.board_outer .board_column.columns-6 {
+    width: 16.6%;
+}
+
+.board_outer .board_column.columns-7 {
+    width: 14.2%;
+}
+
+.board_outer .board_column.columns-8 {
+    width: 12.5%;
+}
+
+.board_outer .board_column.columns-9 {
+    width: 11.11%;
+}
+
+.board_outer .board_column.columns-10 {
+    width: 10%;
+}
+
+.tasks_list .task_item {
+    width: 100%;
+    min-height: 100px;
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin: 10px 0 0 0;
+    position: relative;
+}
+
+.tasks_list .task_item .task_name {
+    color: #f7941e;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.tasks_list .task_item .task_desc {
+    margin: 5px 0 0 0;
+}
+
+.control_panel {
+    width: 100%;
+    height: 70px;
+    background: #fff;
+    border-bottom: 3px #ccc solid;
+    margin: 0 0 10px 0;
+    padding: 0 10px;
+}
+
+.control_panel:before {
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    content: '';
+    width: 0;
+}
+
+.orange_btn {
+    display: inline-block;
+    vertical-align: middle;
+    background: #f7941e;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bolder;
+    padding: 0 20px;
+    height: 32px;
+    line-height: 32px;
+    outline: none;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.orange_btn:hover {
+    background: #f78017;
+}
+
+.grey_btn {
+    display: inline-block;
+    vertical-align: middle;
+    background: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #333;
+    font-weight: bolder;
+    padding: 0 20px;
+    height: 32px;
+    line-height: 32px;
+    outline: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.grey_btn:hover {
+    background: #333;
+    color: #fff;
+}
+
+.task_form {
+    margin: 20px 0 0 0;
+}
+
+.task_form > div {
+    margin: 0 0 20px 0;
+}
+
+input[type='text'], textarea, select {
+    background: #fff;
+    border: 1px solid #f7941e;
+    border-radius: 3px;
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #333;
+    height: 32px;
+    line-height: 32px;
+}
+
+textarea {
+    height: 100px;
+    line-height: normal;
+}
+
+button:disabled, select:disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+
+.tasks_list .task_item .task_actions {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20%;
+    height: 100%;
+    display: none;
+    border-left: 1px #ccc solid;
+}
+
+.tasks_list .task_item .task_actions > div {
+    height: 33.3%;
+    border-top: 1px #fff solid;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+}
+
+.tasks_list .task_item .task_actions > div.edit_task {
+    background: #67ab49;
+}
+
+.tasks_list .task_item .task_actions > div.archive_task {
+    background: #f7941e;
+}
+
+.tasks_list .task_item .task_actions > div.delete_task {
+    background: #ce0000;
+}
+
+.tasks_list .task_item .task_actions > div p {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 12px;
+    color: #fff;
+}
+
+.tasks_list .task_item .task_actions > div:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: '';
+    height: 100%;
+    width: 0;
+}
+
+.tasks_list .task_item .task_actions > div:first-child {
+    border: none;
+}
+
+.tasks_list .task_item:hover .task_actions {
+    display: block;
+}
+
+.alert_content, .dialog_content {
+    margin: 30px 0;
+}
+
+.archive_list li {
+    padding: 5px;
+    background: #fff;
+    border: 1px solid #ccc;
+    margin: 5px 0 0 0;
+    position: relative;
+}
+
+.archive_list li .task_name {
+    color: #f7941e;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 0 0 5px 0;
+}
+
+.archive_list li:first-child {
+    margin: 0;
+}
+
+.archive_list .task_actions {
+    display: none;
+}
+
+.archive_list li:hover .task_actions {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20%;
+    height: 100%;
+    border-left: 1px #333 solid;
+}
+
+.archive_list li:hover .task_actions > div {
+    height: 50%;
+    border-top: 1px #fff solid;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+}
+
+.archive_list li:hover .task_actions > div:first-child {
+    border: none;
+}
+
+.archive_list li:hover .task_actions > div.restore {
+    background: #f7941e;
+}
+
+.archive_list li:hover .task_actions > div.delete {
+    background: #ce0000;
+}
+
+.archive_list li:hover .task_actions > div p {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 12px;
+    color: #fff;
+}
+
+.archive_list li:hover .task_actions > div:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: '';
+    height: 100%;
+    width: 0;
+}
+
+ul.tasks_list {
+    min-height: 100%;
+}
+
+.column_list {
+    margin: 0 0 5px 0;
+}
+
+.column_list li {
+    height: 50px;
+    line-height: 50px;
+    background: #fff;
+    border: 1px #ccc solid;
+    padding: 0 10px;
+    margin: 5px 0 0 0;
+    position: relative;
+}
+
+.column_list li:first-child {
+    margin: 0;
+}
+
+.column_list li .delete_column {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background: #ce0000;
+    width: 20%;
+    z-index: 9;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+}
+
+.dialog_content .input_outer {
+    margin: 0 0 5px 0;
+}
+
+.control_panel .tasks_search {
+    width: 200px;
+}
+
+.tasks_list .task_item.selected {
+    background: #f7f4bc!important;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+    border: 1px solid #f7941e;
+}
+
+.categories_list li {
+    margin: 0 0 5px 0;
+}
+
+.clear:after {
+    display: block;
+    content: '';
+    clear: both;
+}

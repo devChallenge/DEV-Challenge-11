@@ -1,0 +1,22 @@
+PODS:
+  - ReactiveCocoa (5.0.4):
+    - ReactiveSwift (~> 1.1)
+  - ReactiveSwift (1.1.3):
+    - Result (~> 3.2)
+  - Result (3.2.3)
+  - SpreadsheetView (0.7.2)
+
+DEPENDENCIES:
+  - ReactiveCocoa
+  - ReactiveSwift
+  - SpreadsheetView
+
+SPEC CHECKSUMS:
+  ReactiveCocoa: b31e754d15937811ede648fc83cd68f5de70a3d4
+  ReactiveSwift: f54ba12c2e799003432930fa55495315ae44f32b
+  Result: 128640a6347e8d2ae48b142556739a2d13f90ce6
+  SpreadsheetView: 84accc93f46aab9ecd95e08e384e6ab073ffb14b
+
+PODFILE CHECKSUM: 176ed57b8f96f86a73ad3cbe2243389929b56419
+
+COCOAPODS: 1.2.1

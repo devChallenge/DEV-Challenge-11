@@ -1,0 +1,31 @@
+{
+  "name": "dev-challenge",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "lodash": "^4.17.4",
+    "react": "^15.6.1",
+    "react-dnd": "^2.4.0",
+    "react-dnd-html5-backend": "^2.4.1",
+    "react-dom": "^15.6.1",
+    "react-form": "^1.2.8",
+    "react-router-dom": "^4.1.1",
+    "semantic-ui-css": "^2.2.10",
+    "semantic-ui-react": "^0.70.0"
+  },
+  "devDependencies": {
+    "node-sass": "^4.5.3",
+    "npm-run-all": "^4.0.2",
+    "react-scripts": "1.0.7"
+  },
+  "scripts": {
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "yarn run build-css && react-scripts build",
+    "build-css": "node-sass src/ -o src/",
+    "watch-css": "yarn run build-css && node-sass src/ -o src/ --watch --recursive",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

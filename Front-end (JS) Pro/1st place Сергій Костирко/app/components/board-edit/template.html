@@ -1,0 +1,16 @@
+<div class="c-card">
+  <header class="c-card__header">
+    <button type="button" class="c-button c-button--close" data-bind="click: cancel">×</button>
+    <span class="c-heading" data-bind="">&nbsp;</span>
+  </header>
+  <div class="c-card__body">
+    <div class="o-form-element">
+      <label class="c-label" for="name">Назва:</label>
+      <input class="c-field" id="name" data-bind="value: model.name" />
+    </div>
+    <footer class="c-card__footer">
+      <button type="button" class="c-button c-button--brand c-button--success" data-bind="click: save">Зберегти</button>
+      <button type="button" class="c-button c-button--brand c-button--error" data-bind="click: cancel">Відміна</button>
+    </footer>
+  </div>
+</div>

@@ -1,0 +1,97 @@
+.location-city {
+  @include absoluteCenterY();
+  left: 160px;
+  font-size: 16px;
+  line-height: 18px;
+  @include main-font2();
+
+  &.opened {
+
+    .location-city__selected {
+
+      &:after {
+        transform: translateY(-50%) rotate(180deg);
+      }
+
+    }
+    .location-city__list {
+      opacity: 1;
+      visibility: visible;
+    }
+
+  }
+
+  &__selected {
+    position: relative;
+    display: block;
+    padding: 10px 12px 10px 20px;
+    color: #fff;
+    cursor: default;
+
+    &:after {
+      @include absoluteCenterY();
+      right: 0;
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid #fff;
+      content: '';
+    }
+
+  }
+  &__list {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 38px;
+    left: 0;
+    width: 100px;
+    background: #404040;
+    transition: opacity .2s linear, visibility .2s linear;
+
+    button {
+      display: block;
+      width: 100%;
+      margin: 0;
+      color: #fff;
+      background: transparent;
+      border: none;
+      padding: 10px 20px;
+      @include main-font2();
+      transition: background-color .2s linear;
+      text-align: left;
+
+      &:hover {
+        background-color: #363636;
+      }
+
+    }
+
+  }
+
+}
+
+@media (min-width: $phone-landscape) {
+  .location-city {
+    left: 200px;
+  }
+}
+@media (min-width: $tablet-landscape) {
+
+  .location-city {
+    left: 277px;
+
+    &__selected {
+      padding: 10px 20px;
+
+      &:after {
+        border-top: 4px solid #fff;
+      }
+
+    }
+
+  }
+
+}
+

@@ -1,0 +1,77 @@
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+// $widthContent: 960px;
+$widthPageMax: none;
+$widthPageMin: 0;
+
+html {
+    height: 100%;
+}
+
+body {
+    .no-flexbox & {
+        min-height: 100%;
+        height: 100%;
+        display: block !important;
+    }
+}
+
+.footer,
+.page-wrapper {
+    max-width: $widthPageMax;
+    min-width: $widthPageMin;
+    width: 100%;
+    margin: 0 auto;
+
+    .no-flexbox & {
+        width: auto;
+    }
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    .lt-ie-11 &,
+    .lte-ie-11 & {
+        min-height: 0;
+    }
+
+    .no-flexbox & {
+        display: block !important;
+        width: auto;
+        min-height: 100%;
+        height: auto !important;
+        height: 100%;
+    }
+}
+
+.page-body {
+    flex: 1;
+
+    &.flex-none {
+        flex: none;
+    }
+}
+
+.footer {}
+
+.wrapper {
+    // .pr;
+}

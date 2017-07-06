@@ -1,0 +1,280 @@
+.hero {
+
+  &__slider {
+    margin-bottom: 34px;
+  }
+  &__banner {
+    position: relative;
+    height: 555px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &__content {
+    position: absolute;
+    bottom: 38px;
+    left: 49px;
+    right: 97px;
+
+    .btn {
+      display: none;
+    }
+
+  }
+  &__time {
+    margin: 0 0 10px;
+    display: inline-block;
+    vertical-align: top;
+    padding: 4px 8px 0;
+    color: #fff;
+    font-size: 28px;
+    line-height: 32px;
+
+    span {
+      @include main-font2();
+    }
+
+  }
+  &__title {
+    display: inline-block;
+    margin: 0 0 3px;
+    padding: 2px 8px 0;
+    color: #fff;
+    font-size: 28px;
+    line-height: 32px;
+    @include main-font2();
+  }
+  &__category {
+    display: inline-block;
+    margin: 0 0 3px;
+    padding: 5px 8px 2px;
+    color: #fff;
+    font-size: 18px;
+    line-height: 22px;
+  }
+  &__timeline {
+    margin: 0 0 7px;
+
+    .slick-track {
+
+      &:after {
+        position: absolute;
+        z-index: -1;
+        left: 5px;
+        top: 29px;
+        width: 130%;
+        height: 1px;
+        background: #4d4e4d;
+        content: '';
+      }
+
+    }
+    .slick-list {
+      padding-left: 48px;
+      padding-right: 100px;
+    }
+
+    &-decor-line {
+      z-index: 1;
+      @include absoluteCenterX();
+      left: 0;
+      top: 29px;
+      width: 0;
+      height: 1px;
+      transition: width .2s linear;
+    }
+    &-decor-circle {
+      z-index: 1;
+      position: absolute;
+      top: 25px;
+      left: -1px;
+      width: 9px;
+      height: 9px;
+      border-radius: 100%;
+      background: #fff;
+      transform: scale(0);
+      transition: transform .2s linear;
+    }
+    &-item {
+      position: relative;
+      padding-right: 2%;
+
+      &:after {
+        position: absolute;
+        top: 26px;
+        left: 0;
+        width: 3px;
+        height: 3px;
+        border-radius: 100%;
+        background: #fff;
+        border: 2px solid #4d4d4d;
+        content: '';
+      }
+
+      &.slick-current {
+
+        .hero__timeline-decor-circle {
+          transform: scale(1);
+        }
+        .hero__timeline-decor-line {
+          width: 100%;
+        }
+
+      }
+
+    }
+    &-time {
+      display: block;
+      margin: 0 0 28px;
+      color: #252525;
+      font-size: 20px;
+      line-height: 20px;
+
+      span {
+        @include main-font2();
+      }
+    }
+    &-name {
+      margin: 0 0 12px;
+      color: #252525;
+      font-size: 20px;
+      line-height: 22px;
+      @include main-font2();
+    }
+    &-category {
+      color: #707070;
+      font-size: 16px;
+      line-height: 16px;
+    }
+
+  }
+  &__all {
+    color: #556fa6;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0 0 0 49px;
+    transition: color .2s linear;
+    @include main-font2();
+
+    &:hover {
+      color: #252525;
+    }
+
+  }
+
+}
+
+@media (min-width: $phone-landscape) {
+
+  .hero {
+
+    &__timeline {
+
+      &-item {
+        padding-right: 5%;
+      }
+
+    }
+
+  }
+
+}
+@media (min-width: $tablet-landscape) {
+
+  .hero {
+
+    &__slider {
+      margin-bottom: 60px;
+    }
+    &__banner {
+      height: 655px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    &__content {
+      bottom: 60px;
+      left: 98px;
+      right: 97px;
+
+      .btn {
+        @include inline-flex();
+      }
+
+    }
+    &__time {
+      margin: 0 0 40px;
+      padding: 10px 10px 5px 15px;
+      font-size: 56px;
+      line-height: 56px;
+    }
+    &__title {
+      margin: 0 0 4px;
+      padding: 11px 15px 4px;
+      font-size: 56px;
+      line-height: 56px;
+    }
+    &__category {
+      margin: 0 0 40px;
+      padding: 11px 13px 10px 17px;
+      font-size: 36px;
+      line-height: 36px;
+      font-weight: 400;
+    }
+    &__timeline {
+      margin: 0 0 35px;
+
+      .slick-track {
+
+        &:after {
+          top: 42px;
+        }
+
+      }
+      .slick-list {
+        padding-left: 97px;
+        padding-right: 80px;
+      }
+
+      &-decor-circle {
+        top: 38px;
+        left: 3px;
+      }
+      &-decor-line {
+        top: 42px;
+      }
+      &-item {
+        padding-right: 8%;
+
+        &:after {
+          top: 39px;
+          left: 4px;
+        }
+
+      }
+      &-time {
+        margin: 0 0 39px;
+        font-size: 26px;
+        line-height: 26px;
+        white-space: nowrap;
+      }
+      &-name {
+        margin: 0 0 10px;
+        font-size: 26px;
+        line-height: 28px;
+      }
+      &-category {
+        color: #707070;
+        font-size: 16px;
+        line-height: 16px;
+      }
+
+    }
+    &__all {
+      font-size: 20px;
+      line-height: 20px;
+      margin: 0 0 0 96px;
+    }
+
+  }
+
+}
+

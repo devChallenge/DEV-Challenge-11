@@ -1,0 +1,23 @@
+#page {
+  >section {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
+md-toolbar {
+  position: relative;
+  >button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+}
+
+.filter {
+  font-size: 14px !important;
+  background: white;
+  >md-select {
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+}

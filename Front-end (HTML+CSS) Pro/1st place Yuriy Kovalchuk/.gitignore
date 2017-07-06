@@ -1,0 +1,5 @@
+# Lines starting with '#' are considered comments.
+/
+.idea
+
+node_modules

@@ -1,0 +1,17 @@
+
+<div class="kanban__toolbar container-fluid">
+  <div class="row">
+    <div class="kanban__search col-9">
+      <search (changeSearchCriteriaBeacon)="searchCriteria = $event" (changeSearchColourBeacon)="handleSearchColourChange($event)" [searchColour]="searchColour"></search>
+    </div>
+    <div class="kanban__buttons col">
+      <div class="btn-group"><a class="btn btn-primary" [routerLink]="[{ outlets: { overlay: [&quot;add-task&quot;] } }]">Add Task</a><a class="btn btn-primary" [routerLink]="[{ outlets: { overlay: [&quot;add-column&quot;] } }]">Add Column</a></div>
+    </div>
+  </div>
+</div>
+<div class="kanban__columns">
+  <ng-container *ngIf="!columns.length">
+    <div class="kanban__no-columns">Please add some columns.</div>
+  </ng-container>
+  <column class="kanban__column" droppable="true" *ngFor="let column of columns" [highlightedIDs]="kanbanService.filterIDsBySearchCriteria(tasks, searchCriteria)" [column]="column" [tasks]="kanbanService.filterTasks(tasks, column.id, searchColour)" (removeTaskBeacon)="tasksService.remove($event)" (removeBeacon)="columnsService.remove($event)" (drop)="handleDrop($event, column.id)"></column>
+</div>

@@ -1,0 +1,19 @@
+<h2>Edit columns</h2>
+<div class="dialog_content">
+    <ul dnd-list="$dialogCtrl.columns" class="column_list">
+        <li dnd-draggable="column"
+            dnd-moved="$dialogCtrl.columns.splice($index, 1)"
+            dnd-effect-allowed="move"
+            dnd-dragend="$dialogCtrl.columnMoved()"
+            ng-repeat="column in $dialogCtrl.columns">
+            <p ng-bind="column.name"></p>
+            <div ng-click="$dialogCtrl.deleteColumn($index)" class="delete_column">Delete</div>
+        </li>
+    </ul>
+    <div class="input_outer" ng-if="$dialogCtrl.addColumnIsActive">
+        <input placeholder="Column name" type="text" ng-model="$dialogCtrl.columnModel.name" />
+    </div>
+    <button ng-if="!$dialogCtrl.addColumnIsActive" ng-click="$dialogCtrl.addColumnIsActive = !$dialogCtrl.addColumnIsActive" class="orange_btn">Add column</button>
+    <button ng-disabled="!$dialogCtrl.columnModel.name.length" ng-if="$dialogCtrl.addColumnIsActive" ng-click="$dialogCtrl.addColumn()" class="orange_btn">Save</button>
+    <button ng-if="$dialogCtrl.addColumnIsActive" ng-click="$dialogCtrl.addColumnIsActive = !$dialogCtrl.addColumnIsActive" class="grey_btn">Cancel</button>
+</div>

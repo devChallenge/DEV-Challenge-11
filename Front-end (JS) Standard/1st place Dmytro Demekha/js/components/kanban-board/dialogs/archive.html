@@ -1,0 +1,18 @@
+<h2>Archive</h2>
+<div class="dialog_content">
+    <ul class="archive_list" ng-if="$dialogCtrl.archiveList.length">
+        <li ng-repeat="item in $dialogCtrl.archiveList">
+            <p class="task_name" ng-bind="item.name"></p>
+            <p class="task_desc" ng-bind="item.description"></p>
+            <div class="task_actions">
+                <div ng-click="$dialogCtrl.restoreTask($index)" class="restore">
+                    <p>Restore</p>
+                </div>
+                <div ng-click="$dialogCtrl.removeTask($index)" class="delete">
+                    <p>Delete</p>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <p ng-if="!$dialogCtrl.archiveList.length">Your archive is empty</p>
+</div>

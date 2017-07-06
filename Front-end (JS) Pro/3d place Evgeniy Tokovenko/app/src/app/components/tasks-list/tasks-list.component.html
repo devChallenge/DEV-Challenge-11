@@ -1,0 +1,9 @@
+<div class="tasks">
+  <div *ngFor="let task of tasks">
+    <div class="tasks__item" draggable [dragData]="task">
+      <app-task
+        [task]="task" 
+      ></app-task>
+    </div>
+  </div>
+</div>

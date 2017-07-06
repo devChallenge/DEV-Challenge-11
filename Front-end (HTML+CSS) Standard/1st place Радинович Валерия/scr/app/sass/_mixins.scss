@@ -1,0 +1,38 @@
+//fonts
+@mixin main-font1() {
+  font-family: "Intro Book", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+@mixin main-font2() {
+  font-family: "Intro Bold", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin justify() {
+  text-align: justify;
+
+  &:after {
+    display: inline-block;
+    width: 100%;
+    content: '';
+  }
+}
+
+@mixin absoluteCenter() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate( -50%, -50% );
+}
+@mixin absoluteCenterX() {
+  position: absolute;
+  left: 50%;
+  transform: translateX( -50% );
+}
+@mixin absoluteCenterY() {
+  position: absolute;
+  top: 50%;
+  transform: translateY( -50% );
+}

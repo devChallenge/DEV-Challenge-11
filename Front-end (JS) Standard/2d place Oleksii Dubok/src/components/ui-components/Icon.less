@@ -1,0 +1,24 @@
+@import '../../assets/variables.less';
+
+.Icon {
+    display           : inline-flex;
+    background-repeat : no-repeat !important;
+
+
+    &.radioOn, &.radioOff {
+        width:       14px;
+        display:     flex;
+        align-items: center;
+        z-index:     999;
+    }
+
+    &.close {
+        * {
+            stroke: #939393;
+        }
+        &:hover * {
+            stroke: black;
+        }
+    }
+}
+

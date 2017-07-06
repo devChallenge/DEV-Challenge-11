@@ -1,0 +1,1076 @@
+  [1m[35m (8.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Processing by CallController#index as HTML
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by RegisterController#index as HTML
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Processing by ResetController#index as HTML
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "employee_areas"[0m
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Processing by CallController#index as HTML
+  [1m[36mEmployeeArea Load (0.7ms)[0m  [1m[34mSELECT  "employee_areas".* FROM "employee_areas" WHERE "employee_areas"."area" IS NULL ORDER BY "employee_areas"."created_at" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 2.9ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Processing by RegisterController#index as HTML
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "employee_areas" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2017-07-01 12:57:12.730243"], ["updated_at", "2017-07-01 12:57:12.730243"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 18ms (Views: 0.2ms | ActiveRecord: 5.9ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by ResetController#index as HTML
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "employee_areas"[0m
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (21.6ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "employee_areas" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (0.8ms)[0m  [1m[31mDELETE FROM "employee_areas"[0m
+  [1m[36mFixture Insert (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2017-07-01 13:18:52.902126', '2017-07-01 13:18:52.902126', 980190962)[0m
+  [1m[36mFixture Insert (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2017-07-01 13:18:52.902126', '2017-07-01 13:18:52.902126', 298486374)[0m
+  [1m[35m (13.3ms)[0m  [1m[34mselect MAX("id") from "employee_areas"[0m
+  [1m[35m (45.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "employee_areas" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------
+CallControllerTest: test_should_get_index
+-----------------------------------------
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------
+ResetControllerTest: test_should_get_index
+------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------------
+RegisterControllerTest: test_should_get_index
+---------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "employee_areas" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (0.6ms)[0m  [1m[31mDELETE FROM "employee_areas"[0m
+  [1m[36mFixture Insert (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2017-07-01 13:19:49.879834', '2017-07-01 13:19:49.879834', 980190962)[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2017-07-01 13:19:49.879834', '2017-07-01 13:19:49.879834', 298486374)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mselect MAX("id") from "employee_areas"[0m
+  [1m[35m (9.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "employee_areas" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------
+CallControllerTest: test_should_get_index
+-----------------------------------------
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------
+ResetControllerTest: test_should_get_index
+------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------------
+RegisterControllerTest: test_should_get_index
+---------------------------------------------
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Processing by CallController#index as HTML
+  [1m[36mEmployeeArea Load (0.9ms)[0m  [1m[34mSELECT  "employee_areas".* FROM "employee_areas" WHERE "employee_areas"."area" IS NULL ORDER BY "employee_areas"."created_at" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 8ms (Views: 0.4ms | ActiveRecord: 3.3ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by RegisterController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "employee_areas" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2017-07-01 13:20:04.051753"], ["updated_at", "2017-07-01 13:20:04.051753"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 16ms (Views: 0.2ms | ActiveRecord: 6.3ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Processing by ResetController#index as HTML
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "employee_areas"[0m
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Processing by CallController#index as HTML
+  [1m[36mEmployeeArea Load (0.8ms)[0m  [1m[34mSELECT  "employee_areas".* FROM "employee_areas" WHERE "employee_areas"."area" IS NULL ORDER BY "employee_areas"."created_at" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 2.9ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by RegisterController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "employee_areas" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2017-07-01 13:20:59.159747"], ["updated_at", "2017-07-01 13:20:59.159747"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 5.9ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Processing by ResetController#index as HTML
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "employee_areas"[0m
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Processing by CallController#index as HTML
+  [1m[36mEmployeeArea Load (0.7ms)[0m  [1m[34mSELECT  "employee_areas".* FROM "employee_areas" WHERE "employee_areas"."area" IS NULL ORDER BY "employee_areas"."created_at" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 2.7ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by RegisterController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "employee_areas" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2017-07-01 13:23:18.496182"], ["updated_at", "2017-07-01 13:23:18.496182"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 16ms (Views: 0.2ms | ActiveRecord: 5.9ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by ResetController#index as HTML
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "employee_areas"[0m
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Processing by CallController#index as HTML
+  [1m[36mEmployeeArea Load (0.7ms)[0m  [1m[34mSELECT  "employee_areas".* FROM "employee_areas" WHERE "employee_areas"."area" IS NULL ORDER BY "employee_areas"."created_at" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 2.8ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by RegisterController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "employee_areas" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2017-07-01 13:30:31.569027"], ["updated_at", "2017-07-01 13:30:31.569027"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 16ms (Views: 0.3ms | ActiveRecord: 5.3ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Processing by ResetController#index as HTML
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "employee_areas"[0m
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Processing by CallController#index as HTML
+  [1m[36mEmployeeArea Load (0.8ms)[0m  [1m[34mSELECT  "employee_areas".* FROM "employee_areas" WHERE "employee_areas"."area" IS NULL ORDER BY "employee_areas"."created_at" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 3.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by RegisterController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "employee_areas" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2017-07-01 13:41:58.423654"], ["updated_at", "2017-07-01 13:41:58.423654"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 16ms (Views: 0.3ms | ActiveRecord: 6.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Processing by ResetController#index as HTML
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "employee_areas"[0m
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "employee_areas"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "bills"], ["created_at", "2017-07-01 13:41:58.441486"], ["updated_at", "2017-07-01 13:41:58.441486"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "contracts"], ["created_at", "2017-07-01 13:41:58.444328"], ["updated_at", "2017-07-01 13:41:58.444328"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "special-offers"], ["created_at", "2017-07-01 13:41:58.446948"], ["updated_at", "2017-07-01 13:41:58.446948"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "bills"], ["created_at", "2017-07-01 13:41:58.449441"], ["updated_at", "2017-07-01 13:41:58.449441"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "contracts"], ["created_at", "2017-07-01 13:41:58.451984"], ["updated_at", "2017-07-01 13:41:58.451984"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "special-offers"], ["created_at", "2017-07-01 13:41:58.454717"], ["updated_at", "2017-07-01 13:41:58.454717"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "employee_areas"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Processing by CallController#index as HTML
+  [1m[36mEmployeeArea Load (0.7ms)[0m  [1m[34mSELECT  "employee_areas".* FROM "employee_areas" WHERE "employee_areas"."area" IS NULL ORDER BY "employee_areas"."created_at" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 3.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by RegisterController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "employee_areas" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2017-07-01 13:42:31.605494"], ["updated_at", "2017-07-01 13:42:31.605494"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 16ms (Views: 0.2ms | ActiveRecord: 6.2ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by ResetController#index as HTML
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "employee_areas"[0m
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "employee_areas"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "bills"], ["created_at", "2017-07-01 13:42:31.619165"], ["updated_at", "2017-07-01 13:42:31.619165"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "contracts"], ["created_at", "2017-07-01 13:42:31.621933"], ["updated_at", "2017-07-01 13:42:31.621933"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "special-offers"], ["created_at", "2017-07-01 13:42:31.624530"], ["updated_at", "2017-07-01 13:42:31.624530"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "bills"], ["created_at", "2017-07-01 13:42:31.626944"], ["updated_at", "2017-07-01 13:42:31.626944"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "contracts"], ["created_at", "2017-07-01 13:42:31.629379"], ["updated_at", "2017-07-01 13:42:31.629379"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "special-offers"], ["created_at", "2017-07-01 13:42:31.632111"], ["updated_at", "2017-07-01 13:42:31.632111"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "employee_areas"[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "employee_areas" WHERE "employee_areas"."name" = $1[0m  [["name", "empl1"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "employee_areas"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Processing by CallController#index as HTML
+  [1m[36mEmployeeArea Load (0.9ms)[0m  [1m[34mSELECT  "employee_areas".* FROM "employee_areas" WHERE "employee_areas"."area" IS NULL ORDER BY "employee_areas"."created_at" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 9ms (Views: 0.4ms | ActiveRecord: 2.5ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by RegisterController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "employee_areas" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2017-07-01 13:43:18.398343"], ["updated_at", "2017-07-01 13:43:18.398343"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 14ms (Views: 0.2ms | ActiveRecord: 4.8ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Processing by ResetController#index as HTML
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "employee_areas"[0m
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "employee_areas"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "bills"], ["created_at", "2017-07-01 13:43:18.414452"], ["updated_at", "2017-07-01 13:43:18.414452"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "contracts"], ["created_at", "2017-07-01 13:43:18.417513"], ["updated_at", "2017-07-01 13:43:18.417513"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "special-offers"], ["created_at", "2017-07-01 13:43:18.420016"], ["updated_at", "2017-07-01 13:43:18.420016"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "bills"], ["created_at", "2017-07-01 13:43:18.422316"], ["updated_at", "2017-07-01 13:43:18.422316"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "contracts"], ["created_at", "2017-07-01 13:43:18.424521"], ["updated_at", "2017-07-01 13:43:18.424521"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "special-offers"], ["created_at", "2017-07-01 13:43:18.426731"], ["updated_at", "2017-07-01 13:43:18.426731"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "employee_areas"[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "employee_areas" WHERE "employee_areas"."name" = $1[0m  [["name", "empl1"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "employee_areas"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Processing by CallController#index as HTML
+  [1m[36mEmployeeArea Load (0.8ms)[0m  [1m[34mSELECT  "employee_areas".* FROM "employee_areas" WHERE "employee_areas"."area" IS NULL ORDER BY "employee_areas"."created_at" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 3.3ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by RegisterController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "employee_areas" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2017-07-01 13:43:49.600474"], ["updated_at", "2017-07-01 13:43:49.600474"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 17ms (Views: 0.2ms | ActiveRecord: 6.4ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by ResetController#index as HTML
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "employee_areas"[0m
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "employee_areas"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "bills"], ["created_at", "2017-07-01 13:43:49.617079"], ["updated_at", "2017-07-01 13:43:49.617079"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "contracts"], ["created_at", "2017-07-01 13:43:49.619802"], ["updated_at", "2017-07-01 13:43:49.619802"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "special-offers"], ["created_at", "2017-07-01 13:43:49.622488"], ["updated_at", "2017-07-01 13:43:49.622488"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "bills"], ["created_at", "2017-07-01 13:43:49.625197"], ["updated_at", "2017-07-01 13:43:49.625197"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "contracts"], ["created_at", "2017-07-01 13:43:49.627788"], ["updated_at", "2017-07-01 13:43:49.627788"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "special-offers"], ["created_at", "2017-07-01 13:43:49.630421"], ["updated_at", "2017-07-01 13:43:49.630421"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "employee_areas"[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "employee_areas" WHERE "employee_areas"."name" = $1[0m  [["name", "emp1"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "employee_areas"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Processing by CallController#index as HTML
+  [1m[36mEmployeeArea Load (0.8ms)[0m  [1m[34mSELECT  "employee_areas".* FROM "employee_areas" WHERE "employee_areas"."area" IS NULL ORDER BY "employee_areas"."created_at" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 2.9ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Processing by RegisterController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "employee_areas" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2017-07-01 13:49:27.231047"], ["updated_at", "2017-07-01 13:49:27.231047"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 17ms (Views: 0.3ms | ActiveRecord: 5.8ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by ResetController#index as HTML
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "employee_areas"[0m
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "employee_areas"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "bills"], ["created_at", "2017-07-01 13:49:27.243942"], ["updated_at", "2017-07-01 13:49:27.243942"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "contracts"], ["created_at", "2017-07-01 13:49:27.246793"], ["updated_at", "2017-07-01 13:49:27.246793"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "special-offers"], ["created_at", "2017-07-01 13:49:27.249453"], ["updated_at", "2017-07-01 13:49:27.249453"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "bills"], ["created_at", "2017-07-01 13:49:27.252199"], ["updated_at", "2017-07-01 13:49:27.252199"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "contracts"], ["created_at", "2017-07-01 13:49:27.254782"], ["updated_at", "2017-07-01 13:49:27.254782"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "special-offers"], ["created_at", "2017-07-01 13:49:27.257280"], ["updated_at", "2017-07-01 13:49:27.257280"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "employee_areas"[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[31mDELETE FROM "employee_areas" WHERE "employee_areas"."name" = $1[0m  [["name", "emp1"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "employee_areas"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "employee_areas"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "bills"], ["created_at", "2017-07-01 13:49:27.268828"], ["updated_at", "2017-07-01 13:49:27.268828"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "contracts"], ["created_at", "2017-07-01 13:49:27.271810"], ["updated_at", "2017-07-01 13:49:27.271810"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "special-offers"], ["created_at", "2017-07-01 13:49:27.274698"], ["updated_at", "2017-07-01 13:49:27.274698"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "bills"], ["created_at", "2017-07-01 13:49:27.277459"], ["updated_at", "2017-07-01 13:49:27.277459"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "contracts"], ["created_at", "2017-07-01 13:49:27.280150"], ["updated_at", "2017-07-01 13:49:27.280150"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "special-offers"], ["created_at", "2017-07-01 13:49:27.282985"], ["updated_at", "2017-07-01 13:49:27.282985"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "employee_areas"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl3"], ["area", "google"], ["created_at", "2017-07-01 13:49:27.287220"], ["updated_at", "2017-07-01 13:49:27.287220"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "employee_areas"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl4"], ["area", "google"], ["created_at", "2017-07-01 13:49:27.291416"], ["updated_at", "2017-07-01 13:49:27.291416"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl4"], ["area", "facebook"], ["created_at", "2017-07-01 13:49:27.294298"], ["updated_at", "2017-07-01 13:49:27.294298"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "employee_areas"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Processing by CallController#index as HTML
+  [1m[36mEmployeeArea Load (0.7ms)[0m  [1m[34mSELECT  "employee_areas".* FROM "employee_areas" WHERE "employee_areas"."area" IS NULL ORDER BY "employee_areas"."created_at" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 2.7ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Processing by RegisterController#index as HTML
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "employee_areas" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2017-07-01 13:49:39.583219"], ["updated_at", "2017-07-01 13:49:39.583219"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 20ms (Views: 0.3ms | ActiveRecord: 6.4ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Processing by ResetController#index as HTML
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "employee_areas"[0m
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "employee_areas"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "bills"], ["created_at", "2017-07-01 13:49:39.602502"], ["updated_at", "2017-07-01 13:49:39.602502"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "contracts"], ["created_at", "2017-07-01 13:49:39.605277"], ["updated_at", "2017-07-01 13:49:39.605277"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "special-offers"], ["created_at", "2017-07-01 13:49:39.608025"], ["updated_at", "2017-07-01 13:49:39.608025"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "bills"], ["created_at", "2017-07-01 13:49:39.610598"], ["updated_at", "2017-07-01 13:49:39.610598"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "contracts"], ["created_at", "2017-07-01 13:49:39.613036"], ["updated_at", "2017-07-01 13:49:39.613036"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "special-offers"], ["created_at", "2017-07-01 13:49:39.616568"], ["updated_at", "2017-07-01 13:49:39.616568"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "employee_areas"[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "employee_areas" WHERE "employee_areas"."name" = $1[0m  [["name", "emp1"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "employee_areas"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "employee_areas"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "bills"], ["created_at", "2017-07-01 13:49:39.628263"], ["updated_at", "2017-07-01 13:49:39.628263"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "contracts"], ["created_at", "2017-07-01 13:49:39.631163"], ["updated_at", "2017-07-01 13:49:39.631163"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "special-offers"], ["created_at", "2017-07-01 13:49:39.633836"], ["updated_at", "2017-07-01 13:49:39.633836"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "bills"], ["created_at", "2017-07-01 13:49:39.636342"], ["updated_at", "2017-07-01 13:49:39.636342"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "contracts"], ["created_at", "2017-07-01 13:49:39.638956"], ["updated_at", "2017-07-01 13:49:39.638956"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "special-offers"], ["created_at", "2017-07-01 13:49:39.641508"], ["updated_at", "2017-07-01 13:49:39.641508"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "employee_areas"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl3"], ["area", "google"], ["created_at", "2017-07-01 13:49:39.645414"], ["updated_at", "2017-07-01 13:49:39.645414"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "employee_areas"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl4"], ["area", "google"], ["created_at", "2017-07-01 13:49:39.649306"], ["updated_at", "2017-07-01 13:49:39.649306"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl4"], ["area", "facebook"], ["created_at", "2017-07-01 13:49:39.652384"], ["updated_at", "2017-07-01 13:49:39.652384"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "employee_areas"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Processing by CallController#index as HTML
+  [1m[36mEmployeeArea Load (0.7ms)[0m  [1m[34mSELECT  "employee_areas".* FROM "employee_areas" WHERE "employee_areas"."area" IS NULL ORDER BY "employee_areas"."created_at" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 2.6ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by RegisterController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "employee_areas" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2017-07-01 13:58:10.187694"], ["updated_at", "2017-07-01 13:58:10.187694"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 15ms (Views: 0.1ms | ActiveRecord: 5.6ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by ResetController#index as HTML
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "employee_areas"[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "employee_areas"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "bills"], ["created_at", "2017-07-01 13:58:10.200562"], ["updated_at", "2017-07-01 13:58:10.200562"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "contracts"], ["created_at", "2017-07-01 13:58:10.203411"], ["updated_at", "2017-07-01 13:58:10.203411"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "special-offers"], ["created_at", "2017-07-01 13:58:10.206048"], ["updated_at", "2017-07-01 13:58:10.206048"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "bills"], ["created_at", "2017-07-01 13:58:10.208652"], ["updated_at", "2017-07-01 13:58:10.208652"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "contracts"], ["created_at", "2017-07-01 13:58:10.211185"], ["updated_at", "2017-07-01 13:58:10.211185"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "special-offers"], ["created_at", "2017-07-01 13:58:10.213636"], ["updated_at", "2017-07-01 13:58:10.213636"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "employee_areas"[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[31mDELETE FROM "employee_areas" WHERE "employee_areas"."name" = $1[0m  [["name", "emp1"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "employee_areas"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "employee_areas"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "bills"], ["created_at", "2017-07-01 13:58:10.223790"], ["updated_at", "2017-07-01 13:58:10.223790"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "contracts"], ["created_at", "2017-07-01 13:58:10.226391"], ["updated_at", "2017-07-01 13:58:10.226391"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "special-offers"], ["created_at", "2017-07-01 13:58:10.228606"], ["updated_at", "2017-07-01 13:58:10.228606"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "bills"], ["created_at", "2017-07-01 13:58:10.231210"], ["updated_at", "2017-07-01 13:58:10.231210"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "contracts"], ["created_at", "2017-07-01 13:58:10.233504"], ["updated_at", "2017-07-01 13:58:10.233504"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "special-offers"], ["created_at", "2017-07-01 13:58:10.235768"], ["updated_at", "2017-07-01 13:58:10.235768"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "employee_areas"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl3"], ["area", "google"], ["created_at", "2017-07-01 13:58:10.239391"], ["updated_at", "2017-07-01 13:58:10.239391"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "employee_areas"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl4"], ["area", "google"], ["created_at", "2017-07-01 13:58:10.242675"], ["updated_at", "2017-07-01 13:58:10.242675"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl4"], ["area", "facebook"], ["created_at", "2017-07-01 13:58:10.244986"], ["updated_at", "2017-07-01 13:58:10.244986"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "employee_areas"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "employee_areas"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "bills"], ["created_at", "2017-07-01 13:58:10.251478"], ["updated_at", "2017-07-01 13:58:10.251478"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "contracts"], ["created_at", "2017-07-01 13:58:10.254004"], ["updated_at", "2017-07-01 13:58:10.254004"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "special-offers"], ["created_at", "2017-07-01 13:58:10.256290"], ["updated_at", "2017-07-01 13:58:10.256290"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "bills"], ["created_at", "2017-07-01 13:58:10.258600"], ["updated_at", "2017-07-01 13:58:10.258600"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "contracts"], ["created_at", "2017-07-01 13:58:10.260854"], ["updated_at", "2017-07-01 13:58:10.260854"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "special-offers"], ["created_at", "2017-07-01 13:58:10.263290"], ["updated_at", "2017-07-01 13:58:10.263290"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mEmployeeArea Load (0.4ms)[0m  [1m[34mSELECT  "employee_areas".* FROM "employee_areas" WHERE "employee_areas"."area" = $1 ORDER BY "employee_areas"."created_at" ASC LIMIT $2[0m  [["area", "bills"], ["LIMIT", 1]]
+  [1m[36mEmployeeArea Load (0.7ms)[0m  [1m[34mSELECT  "employee_areas".* FROM "employee_areas" WHERE "employee_areas"."area" = $1 ORDER BY "employee_areas"."created_at" ASC LIMIT $2[0m  [["area", "style"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Processing by CallController#index as HTML
+  [1m[36mEmployeeArea Load (1.0ms)[0m  [1m[34mSELECT  "employee_areas".* FROM "employee_areas" WHERE "employee_areas"."area" IS NULL ORDER BY "employee_areas"."created_at" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 3.5ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by RegisterController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "employee_areas" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2017-07-01 14:35:26.939397"], ["updated_at", "2017-07-01 14:35:26.939397"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 15ms (Views: 0.1ms | ActiveRecord: 5.9ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by ResetController#index as HTML
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "employee_areas"[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "employee_areas"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "bills"], ["created_at", "2017-07-01 14:35:26.953120"], ["updated_at", "2017-07-01 14:35:26.953120"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "contracts"], ["created_at", "2017-07-01 14:35:26.956113"], ["updated_at", "2017-07-01 14:35:26.956113"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "special-offers"], ["created_at", "2017-07-01 14:35:26.958815"], ["updated_at", "2017-07-01 14:35:26.958815"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "bills"], ["created_at", "2017-07-01 14:35:26.961366"], ["updated_at", "2017-07-01 14:35:26.961366"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "contracts"], ["created_at", "2017-07-01 14:35:26.963969"], ["updated_at", "2017-07-01 14:35:26.963969"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "special-offers"], ["created_at", "2017-07-01 14:35:26.966593"], ["updated_at", "2017-07-01 14:35:26.966593"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "employee_areas"[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[31mDELETE FROM "employee_areas" WHERE "employee_areas"."name" = $1[0m  [["name", "emp1"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "employee_areas"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "employee_areas"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "bills"], ["created_at", "2017-07-01 14:35:26.987765"], ["updated_at", "2017-07-01 14:35:26.987765"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "contracts"], ["created_at", "2017-07-01 14:35:26.990398"], ["updated_at", "2017-07-01 14:35:26.990398"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "special-offers"], ["created_at", "2017-07-01 14:35:26.992828"], ["updated_at", "2017-07-01 14:35:26.992828"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "bills"], ["created_at", "2017-07-01 14:35:26.995343"], ["updated_at", "2017-07-01 14:35:26.995343"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "contracts"], ["created_at", "2017-07-01 14:35:26.997758"], ["updated_at", "2017-07-01 14:35:26.997758"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "special-offers"], ["created_at", "2017-07-01 14:35:27.000051"], ["updated_at", "2017-07-01 14:35:27.000051"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "employee_areas"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl3"], ["area", "google"], ["created_at", "2017-07-01 14:35:27.003376"], ["updated_at", "2017-07-01 14:35:27.003376"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "employee_areas"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl4"], ["area", "google"], ["created_at", "2017-07-01 14:35:27.006612"], ["updated_at", "2017-07-01 14:35:27.006612"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl4"], ["area", "facebook"], ["created_at", "2017-07-01 14:35:27.008765"], ["updated_at", "2017-07-01 14:35:27.008765"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "employee_areas"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "employee_areas"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "bills"], ["created_at", "2017-07-01 14:35:27.014792"], ["updated_at", "2017-07-01 14:35:27.014792"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "contracts"], ["created_at", "2017-07-01 14:35:27.017209"], ["updated_at", "2017-07-01 14:35:27.017209"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "special-offers"], ["created_at", "2017-07-01 14:35:27.019477"], ["updated_at", "2017-07-01 14:35:27.019477"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "bills"], ["created_at", "2017-07-01 14:35:27.021643"], ["updated_at", "2017-07-01 14:35:27.021643"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "contracts"], ["created_at", "2017-07-01 14:35:27.023803"], ["updated_at", "2017-07-01 14:35:27.023803"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "special-offers"], ["created_at", "2017-07-01 14:35:27.025897"], ["updated_at", "2017-07-01 14:35:27.025897"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mEmployeeArea Load (0.4ms)[0m  [1m[34mSELECT  "employee_areas".* FROM "employee_areas" WHERE "employee_areas"."area" = $1 ORDER BY "employee_areas"."created_at" ASC LIMIT $2[0m  [["area", "bills"], ["LIMIT", 1]]
+  [1m[36mEmployeeArea Load (0.4ms)[0m  [1m[34mSELECT  "employee_areas".* FROM "employee_areas" WHERE "employee_areas"."area" = $1 ORDER BY "employee_areas"."created_at" ASC LIMIT $2[0m  [["area", "style"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Processing by CallController#index as HTML
+  [1m[36mEmployeeArea Load (0.7ms)[0m  [1m[34mSELECT  "employee_areas".* FROM "employee_areas" WHERE "employee_areas"."area" IS NULL ORDER BY "employee_areas"."created_at" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 2.9ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Processing by RegisterController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "employee_areas" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2017-07-01 14:35:55.803221"], ["updated_at", "2017-07-01 14:35:55.803221"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 15ms (Views: 0.1ms | ActiveRecord: 6.1ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by ResetController#index as HTML
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "employee_areas"[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "employee_areas"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "bills"], ["created_at", "2017-07-01 14:35:55.816436"], ["updated_at", "2017-07-01 14:35:55.816436"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "contracts"], ["created_at", "2017-07-01 14:35:55.819322"], ["updated_at", "2017-07-01 14:35:55.819322"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "special-offers"], ["created_at", "2017-07-01 14:35:55.821826"], ["updated_at", "2017-07-01 14:35:55.821826"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "bills"], ["created_at", "2017-07-01 14:35:55.824330"], ["updated_at", "2017-07-01 14:35:55.824330"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "contracts"], ["created_at", "2017-07-01 14:35:55.826932"], ["updated_at", "2017-07-01 14:35:55.826932"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "special-offers"], ["created_at", "2017-07-01 14:35:55.829421"], ["updated_at", "2017-07-01 14:35:55.829421"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "employee_areas"[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[31mDELETE FROM "employee_areas" WHERE "employee_areas"."name" = $1[0m  [["name", "emp1"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "employee_areas"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "employee_areas"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "bills"], ["created_at", "2017-07-01 14:35:55.839943"], ["updated_at", "2017-07-01 14:35:55.839943"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "contracts"], ["created_at", "2017-07-01 14:35:55.842927"], ["updated_at", "2017-07-01 14:35:55.842927"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "special-offers"], ["created_at", "2017-07-01 14:35:55.845480"], ["updated_at", "2017-07-01 14:35:55.845480"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "bills"], ["created_at", "2017-07-01 14:35:55.848748"], ["updated_at", "2017-07-01 14:35:55.848748"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "contracts"], ["created_at", "2017-07-01 14:35:55.851952"], ["updated_at", "2017-07-01 14:35:55.851952"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "special-offers"], ["created_at", "2017-07-01 14:35:55.854568"], ["updated_at", "2017-07-01 14:35:55.854568"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "employee_areas"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl3"], ["area", "google"], ["created_at", "2017-07-01 14:35:55.859052"], ["updated_at", "2017-07-01 14:35:55.859052"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "employee_areas"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl4"], ["area", "google"], ["created_at", "2017-07-01 14:35:55.863616"], ["updated_at", "2017-07-01 14:35:55.863616"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl4"], ["area", "facebook"], ["created_at", "2017-07-01 14:35:55.866748"], ["updated_at", "2017-07-01 14:35:55.866748"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "employee_areas"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "employee_areas"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "bills"], ["created_at", "2017-07-01 14:35:55.873710"], ["updated_at", "2017-07-01 14:35:55.873710"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "contracts"], ["created_at", "2017-07-01 14:35:55.876173"], ["updated_at", "2017-07-01 14:35:55.876173"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "special-offers"], ["created_at", "2017-07-01 14:35:55.878401"], ["updated_at", "2017-07-01 14:35:55.878401"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "bills"], ["created_at", "2017-07-01 14:35:55.880820"], ["updated_at", "2017-07-01 14:35:55.880820"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "contracts"], ["created_at", "2017-07-01 14:35:55.883388"], ["updated_at", "2017-07-01 14:35:55.883388"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "special-offers"], ["created_at", "2017-07-01 14:35:55.885750"], ["updated_at", "2017-07-01 14:35:55.885750"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mEmployeeArea Load (0.5ms)[0m  [1m[34mSELECT  "employee_areas".* FROM "employee_areas" WHERE "employee_areas"."area" = $1 ORDER BY "employee_areas"."created_at" ASC LIMIT $2[0m  [["area", "bills"], ["LIMIT", 1]]
+  [1m[36mEmployeeArea Load (0.5ms)[0m  [1m[34mSELECT  "employee_areas".* FROM "employee_areas" WHERE "employee_areas"."area" = $1 ORDER BY "employee_areas"."created_at" ASC LIMIT $2[0m  [["area", "style"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Processing by CallController#index as HTML
+  [1m[36mEmployeeArea Load (0.8ms)[0m  [1m[34mSELECT  "employee_areas".* FROM "employee_areas" WHERE "employee_areas"."area" IS NULL ORDER BY "employee_areas"."created_at" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 3.2ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by RegisterController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "employee_areas" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2017-07-01 14:43:00.067786"], ["updated_at", "2017-07-01 14:43:00.067786"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 17ms (Views: 0.1ms | ActiveRecord: 6.7ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by ResetController#index as HTML
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "employee_areas"[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "employee_areas"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "bills"], ["created_at", "2017-07-01 14:43:00.081907"], ["updated_at", "2017-07-01 14:43:00.081907"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "contracts"], ["created_at", "2017-07-01 14:43:00.084611"], ["updated_at", "2017-07-01 14:43:00.084611"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "special-offers"], ["created_at", "2017-07-01 14:43:00.087189"], ["updated_at", "2017-07-01 14:43:00.087189"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "bills"], ["created_at", "2017-07-01 14:43:00.089864"], ["updated_at", "2017-07-01 14:43:00.089864"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "contracts"], ["created_at", "2017-07-01 14:43:00.092403"], ["updated_at", "2017-07-01 14:43:00.092403"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "special-offers"], ["created_at", "2017-07-01 14:43:00.095121"], ["updated_at", "2017-07-01 14:43:00.095121"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "employee_areas"[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "employee_areas" WHERE "employee_areas"."name" = $1[0m  [["name", "emp1"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "employee_areas"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "employee_areas"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "bills"], ["created_at", "2017-07-01 14:43:00.115438"], ["updated_at", "2017-07-01 14:43:00.115438"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "contracts"], ["created_at", "2017-07-01 14:43:00.118088"], ["updated_at", "2017-07-01 14:43:00.118088"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "special-offers"], ["created_at", "2017-07-01 14:43:00.120582"], ["updated_at", "2017-07-01 14:43:00.120582"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "bills"], ["created_at", "2017-07-01 14:43:00.123202"], ["updated_at", "2017-07-01 14:43:00.123202"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "contracts"], ["created_at", "2017-07-01 14:43:00.125724"], ["updated_at", "2017-07-01 14:43:00.125724"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "special-offers"], ["created_at", "2017-07-01 14:43:00.128300"], ["updated_at", "2017-07-01 14:43:00.128300"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "employee_areas"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl3"], ["area", "google"], ["created_at", "2017-07-01 14:43:00.132096"], ["updated_at", "2017-07-01 14:43:00.132096"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "employee_areas"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl4"], ["area", "google"], ["created_at", "2017-07-01 14:43:00.135938"], ["updated_at", "2017-07-01 14:43:00.135938"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl4"], ["area", "facebook"], ["created_at", "2017-07-01 14:43:00.138500"], ["updated_at", "2017-07-01 14:43:00.138500"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "employee_areas"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "employee_areas"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "bills"], ["created_at", "2017-07-01 14:43:00.145494"], ["updated_at", "2017-07-01 14:43:00.145494"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "contracts"], ["created_at", "2017-07-01 14:43:00.148370"], ["updated_at", "2017-07-01 14:43:00.148370"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "special-offers"], ["created_at", "2017-07-01 14:43:00.151169"], ["updated_at", "2017-07-01 14:43:00.151169"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "bills"], ["created_at", "2017-07-01 14:43:00.153840"], ["updated_at", "2017-07-01 14:43:00.153840"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "contracts"], ["created_at", "2017-07-01 14:43:00.156348"], ["updated_at", "2017-07-01 14:43:00.156348"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "special-offers"], ["created_at", "2017-07-01 14:43:00.159495"], ["updated_at", "2017-07-01 14:43:00.159495"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mEmployeeArea Load (0.5ms)[0m  [1m[34mSELECT  "employee_areas".* FROM "employee_areas" WHERE "employee_areas"."area" = $1 ORDER BY "employee_areas"."created_at" ASC LIMIT $2[0m  [["area", "bills"], ["LIMIT", 1]]
+  [1m[36mEmployeeArea Load (0.5ms)[0m  [1m[34mSELECT  "employee_areas".* FROM "employee_areas" WHERE "employee_areas"."area" = $1 ORDER BY "employee_areas"."created_at" ASC LIMIT $2[0m  [["area", "style"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Processing by CallController#index as HTML
+  [1m[36mEmployeeArea Load (0.8ms)[0m  [1m[34mSELECT  "employee_areas".* FROM "employee_areas" WHERE "employee_areas"."area" IS NULL ORDER BY "employee_areas"."created_at" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 3.3ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by RegisterController#index as HTML
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "employee_areas" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2017-07-01 14:44:48.254808"], ["updated_at", "2017-07-01 14:44:48.254808"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 16ms (Views: 0.1ms | ActiveRecord: 6.3ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by ResetController#index as HTML
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "employee_areas"[0m
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "employee_areas"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "bills"], ["created_at", "2017-07-01 14:44:48.271292"], ["updated_at", "2017-07-01 14:44:48.271292"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "contracts"], ["created_at", "2017-07-01 14:44:48.273898"], ["updated_at", "2017-07-01 14:44:48.273898"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "special-offers"], ["created_at", "2017-07-01 14:44:48.276582"], ["updated_at", "2017-07-01 14:44:48.276582"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "bills"], ["created_at", "2017-07-01 14:44:48.279205"], ["updated_at", "2017-07-01 14:44:48.279205"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "contracts"], ["created_at", "2017-07-01 14:44:48.281518"], ["updated_at", "2017-07-01 14:44:48.281518"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "special-offers"], ["created_at", "2017-07-01 14:44:48.283958"], ["updated_at", "2017-07-01 14:44:48.283958"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "employee_areas"[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "employee_areas" WHERE "employee_areas"."name" = $1[0m  [["name", "emp1"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "employee_areas"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "employee_areas"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "bills"], ["created_at", "2017-07-01 14:44:48.293419"], ["updated_at", "2017-07-01 14:44:48.293419"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "contracts"], ["created_at", "2017-07-01 14:44:48.296006"], ["updated_at", "2017-07-01 14:44:48.296006"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "special-offers"], ["created_at", "2017-07-01 14:44:48.298189"], ["updated_at", "2017-07-01 14:44:48.298189"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "bills"], ["created_at", "2017-07-01 14:44:48.300337"], ["updated_at", "2017-07-01 14:44:48.300337"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "contracts"], ["created_at", "2017-07-01 14:44:48.302616"], ["updated_at", "2017-07-01 14:44:48.302616"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "special-offers"], ["created_at", "2017-07-01 14:44:48.304669"], ["updated_at", "2017-07-01 14:44:48.304669"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "employee_areas"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl3"], ["area", "google"], ["created_at", "2017-07-01 14:44:48.307834"], ["updated_at", "2017-07-01 14:44:48.307834"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "employee_areas"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl4"], ["area", "google"], ["created_at", "2017-07-01 14:44:48.311067"], ["updated_at", "2017-07-01 14:44:48.311067"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl4"], ["area", "facebook"], ["created_at", "2017-07-01 14:44:48.313292"], ["updated_at", "2017-07-01 14:44:48.313292"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "employee_areas"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "employee_areas"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "bills"], ["created_at", "2017-07-01 14:44:48.320056"], ["updated_at", "2017-07-01 14:44:48.320056"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "contracts"], ["created_at", "2017-07-01 14:44:48.322572"], ["updated_at", "2017-07-01 14:44:48.322572"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "emp1"], ["area", "special-offers"], ["created_at", "2017-07-01 14:44:48.325004"], ["updated_at", "2017-07-01 14:44:48.325004"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "bills"], ["created_at", "2017-07-01 14:44:48.327741"], ["updated_at", "2017-07-01 14:44:48.327741"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "contracts"], ["created_at", "2017-07-01 14:44:48.330353"], ["updated_at", "2017-07-01 14:44:48.330353"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employee_areas" ("name", "area", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "empl2"], ["area", "special-offers"], ["created_at", "2017-07-01 14:44:48.332852"], ["updated_at", "2017-07-01 14:44:48.332852"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mEmployeeArea Load (0.4ms)[0m  [1m[34mSELECT  "employee_areas".* FROM "employee_areas" WHERE "employee_areas"."area" = $1 ORDER BY "employee_areas"."created_at" ASC LIMIT $2[0m  [["area", "bills"], ["LIMIT", 1]]
+  [1m[36mEmployeeArea Load (0.5ms)[0m  [1m[34mSELECT  "employee_areas".* FROM "employee_areas" WHERE "employee_areas"."area" = $1 ORDER BY "employee_areas"."created_at" ASC LIMIT $2[0m  [["area", "style"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m

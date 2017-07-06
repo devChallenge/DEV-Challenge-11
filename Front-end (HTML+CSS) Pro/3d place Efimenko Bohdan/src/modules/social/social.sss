@@ -1,0 +1,27 @@
+.c-social
+  display: flex
+  align-items: center
+  font-size: 14px
+  margin: 0
+  font-weight: 800
+  &__title
+    margin-right: 10px
+    @media (max-width: 480px)
+      display: none
+  &-list
+    display: flex
+    padding-left: 0
+    list-style-type: none
+    &__item
+      height: 18px
+      margin-right: 20px
+      transition: transform .2s ease-in-out
+      will-change: transform
+      &:--hover
+        transform: translateY(-3px)
+      &_tw
+        max-width: 19px
+      &_fb
+        max-width: 9px
+      &_vk
+        max-width: 28px

@@ -1,0 +1,36 @@
+<div class="c-overlay" data-bind="click: params.close"></div>
+<div class="o-modal">
+  <div class="c-card">
+    <header class="c-card__header">
+      <button type="button" class="c-button c-button--close" data-bind="click: params.close">×</button>
+      <span class="c-heading">Категорії</span>
+    </header>
+    <div class="c-card__body">
+      <table class="c-table">
+        <thead class="c-table__head">
+          <tr class="c-table__row c-table__row--heading">
+            <td class="c-table__cell">Назва</td>
+            <td class="c-table__cell">Колір</td>
+            <td class="c-table__cell" style="width: 20px;">&nbsp;</td>
+          </tr>
+        </thead>
+        <tbody data-bind="foreach: params.categories" class="c-table__body">
+          <tr class="c-table__row">
+            <td class="c-table__cell">
+              <input type="text" class="c-field" data-bind="value: name" />
+            </td>
+            <td class="c-table__cell">
+              <input type="text" class="c-field" data-bind="spectrum: color" />
+            </td>
+            <td class="c-table__cell">
+              <span class="icon-delete" data-bind="click: $parent.params.removeCategory"></span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <footer class="c-card__footer">
+      <button type="button" class="c-button c-button--brand c-button--success" data-bind="click: params.addCategory">Додати нову</button>
+    </footer>
+  </div>
+</div>

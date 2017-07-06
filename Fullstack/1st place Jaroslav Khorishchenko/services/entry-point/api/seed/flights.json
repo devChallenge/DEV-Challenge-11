@@ -1,0 +1,12 @@
+[
+    {"id": 1, "start": "00:30", "duration": 60, "origin": "guangzhou", "destination": "budapest", "cost": 200},
+    {"id": 2, "start": "01:00", "duration": 700, "origin": "cairo", "destination": "bangkok", "cost": 1100},
+    {"id": 3, "start": "12:00", "duration": 600, "origin": "istanbul", "destination": "mumbai", "cost": 1000},
+    {"id": 4, "start": "13:00", "duration": 450, "origin": "suzhou", "destination": "lahore", "cost": 1240},
+    {"id": 5, "start": "14:30", "duration": 310, "origin": "cairo", "destination": "kinshasa", "cost": 2942},
+    {"id": 6, "start": "15:00", "duration": 340, "origin": "jakarta", "destination": "seoul", "cost": 854},
+    {"id": 7, "start": "16:00", "duration": 420, "origin": "lima", "destination": "xian", "cost": 345},
+    {"id": 8, "start": "16:30", "duration": 210, "origin": "london", "destination": "new york city", "cost": 600},
+    {"id": 9, "start": "17:00", "duration": 620, "origin": "bengaluru", "destination": "bangkok", "cost": 729},
+    {"id": 10, "start": "17:30", "duration": 100, "origin": "nanjing", "destination": "dongguan", "cost": 675}
+]

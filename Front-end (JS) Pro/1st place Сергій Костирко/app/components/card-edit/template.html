@@ -1,0 +1,55 @@
+<div class="c-card">
+  <header class="c-card__header">
+    <button type="button" class="c-button c-button--close" data-bind="click: finishEdit">×</button>
+    <input class="c-field" type="text" data-bind="value: model.name" />
+  </header>
+  <div class="c-card__body">
+    <div class="o-grid">
+      <div class="o-grid__cell o-grid__cell--width-66">
+        <div class="o-form-element">
+          <markdown-field params="field: model.description">
+        </div>
+
+        <div class="o-form-element">
+          <label class="c-label" for="tags">Теги:</label>
+          <div class="c-tags">
+            <span class="c-tags__container" data-bind="foreach: model.tags">
+            <button type="button" class="c-button c-tag" data-bind="click: $parent.model.removeTag">
+            <span data-bind="text: $data"></span><span class="c-tag__close">×</span>
+            </button>
+            </span>
+            <div class="c-tags__field-container">
+              <input class="c-field" data-bind="value: model.tagName, valueUpdate: 'afterkeydown', enterKey: model.addTag" />
+            </div>
+          </div>
+        </div>
+        <div class="o-form-element">
+          <label class="c-label" for="commentText">Комментарі:</label>
+          <textarea class="c-field" id="commentText" data-bind="value: model.commentText, valueUpdate: 'afterkeydown'"></textarea>
+          <button class="c-button c-button--success" data-bind="click: model.addComment, disable: !model.commentText()">Додати</button>
+          <div data-bind="foreach: model.comments">
+            <comment params="model: $data, remove: $parent.model.removeComment"></comment>
+          </div>
+        </div>
+      </div>
+      <div class="o-grid__cell">
+        <button class="c-button c-button--block u-small" data-bind="click: model.archive, visible: !model.archived()">До архіву</button>
+        <button class="c-button c-button--block u-small" data-bind="click: model.unarchive, visible: model.archived">З архіву</button>
+        <div class="o-form-element">
+          <label class="c-label" for="status">Статус:</label>
+          <select class="c-field" data-bind="value: model.status, options: $root.boards, optionsText: 'name', optionsValue: 'id'">
+          </select>
+        </div>
+        <div class="o-form-element">
+          <label class="c-label" for="assignedTo">Категорія:</label>
+          <select class="c-field" data-bind="value: model.category, options: $root.categories, optionsText: 'name', optionsValue: 'id', optionsCaption: 'Виберіть категорію'">
+          </select>
+        </div>
+        <div class="o-form-element">
+          <label class="c-label" for="assignedTo">Назначено:</label>
+          <select class="c-field" data-bind="value: model.assignedTo, options: $root.users, optionsText: 'name', optionsValue: 'id', optionsCaption: 'Виберіть користувача'">
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>

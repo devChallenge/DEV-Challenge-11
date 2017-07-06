@@ -1,0 +1,9 @@
+
+<div class="column__title container-fluid" draggable="true">
+  <div class="row">
+    <div class="col">{{ column.title }}</div>
+    <div class="col-5 column__description">{{ column.description }}</div>
+  </div>
+  <div class="row justify-content-md-center align-items-center"><a class="badge badge-info column__draggable" href="javascript:">drag here</a><a class="badge badge-primary" [routerLink]="[{ outlets: { overlay: [&quot;update-column&quot;, column.id] } }]">update</a><a class="badge badge-danger" href="javascript:" (click)="removeBeacon.emit(column)">remove</a></div>
+</div>
+<task [class.dimmed]="highlightedIDs.indexOf(task.id) === -1" draggable="true" droppable="true" *ngFor="let task of tasks" [task]="task" (removeBeacon)="removeTaskBeacon.emit(task)"></task>

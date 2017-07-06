@@ -1,0 +1,30 @@
+version: '2'
+services:
+  db:
+    restart: always
+    image: postgres:9.5.7
+    env_file:
+      - ./etc/docker/postgres.env
+    environment:
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    volumes:
+      - ./.docker_data/postgresql:/var/lib/postgresql/data/pgdata
+    ports:
+      - "5555:5432"
+  web:
+    restart: always
+    build:
+      context: .
+      dockerfile: ./etc/docker/Dockerfile
+    command: /bin/bash -c "python3 etc/wait-for.py && python3 project/manage.py migrate && python3 project/manage.py loaddata etc/fixtures/* && python3 project/manage.py runserver 0.0.0.0:8000"
+    env_file:
+      - ./etc/docker/postgres.env
+      - ./etc/docker/web.env
+    environment:
+      - DEBUG=True
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db

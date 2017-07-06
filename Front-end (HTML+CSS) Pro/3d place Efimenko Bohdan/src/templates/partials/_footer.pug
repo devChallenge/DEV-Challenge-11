@@ -1,0 +1,36 @@
+include ../../../bower_components/bemto/bemto
+
+= '\n'
+// begin c-footer
++b.FOOTER.c-footer
+  = '\n'
+  // begin o-container
+  .o-container
+    +b.c-social
+      +e.title Розповісти всім:
+      +b.UL.c-social-list
+        +e.item_tw
+          +e.A(href="#" title="Twitter").link
+            +b.I.c-icon
+              +e.SVG.inner
+                use(xlink:href="assets/img/sprite.svg#tw")
+        +e.item_fb
+          +e.A(href="#" title="Facebook").link
+            +b.I.c-icon
+              +e.SVG.inner
+                use(xlink:href="assets/img/sprite.svg#fb")
+        +e.item_vk
+          +e.A(href="#" title="Вконтакті").link
+            +b.I.c-icon
+              +e.SVG.inner
+                use(xlink:href="assets/img/sprite.svg#vk")
+    +b.c-chat
+      +e.BUTTON(type="button" title="Задати питання").btn
+        +e.btn-icon
+          +b.I.c-icon
+            +e.SVG.inner
+              use(xlink:href="assets/img/sprite.svg#chat")
+  // end o-container
+  = '\n'
+// end c-footer
+= '\n'

@@ -1,0 +1,114 @@
+.address-company {
+  padding: 57px 0 30px;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #252525;
+
+  span {
+    display: block;
+    @include main-font2();
+    margin: 0 0 8px;
+  }
+  a {
+    font-size: 16px;
+    color: #556fa6;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+  }
+
+  &__layout {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+
+    address {
+      margin: 0 0 16px;
+      font-style: normal;
+    }
+
+  }
+  &__social {
+
+    &-item {
+      display: inline-block;
+      vertical-align: top;
+      width: 32px;
+      height: 32px;
+      margin: 0 2px;
+
+      svg {
+        width: 32px;
+        height: 32px;
+        fill: #556fa6;
+      }
+
+    }
+    &_insta {
+
+      svg {
+        border-radius: 9px;
+        background: #556fa6;
+        fill: #fff;
+        transition: background .2s linear;
+      }
+
+      &:hover {
+
+        svg {
+          background: #3d97e6;
+        }
+
+      }
+
+    }
+    &_facebook {
+
+      circle {
+        fill: #556fa6 !important;
+        transition: fill .2s linear;
+      }
+
+      &:hover {
+
+        circle {
+          fill: #3d97e6 !important;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+@media (min-width: $tablet-landscape) {
+
+  .address-company {
+    padding: 78px 0 20px;
+    font-size: 26px;
+    line-height: 30px;
+
+    span {
+      margin: 0 0 10px;
+    }
+    a {
+      font-size: 22px;
+    }
+    &__layout {
+
+      address {
+        margin: 0 0 14px;
+      }
+
+    }
+
+  }
+
+}
+

@@ -1,0 +1,19 @@
+form
+  .form-group
+    input.form-control(type='search', placeholder='type to search...' '(input)'='changeSearchCriteriaBeacon.emit($event.target.value)')
+  .form-group
+    small.text-muted filter by color:
+    label.custom-control.custom-radio
+      input.custom-control-input('value'='-1', type='radio', name='colour', checked, '(change)'='changeSearchColourBeacon.emit($event.target.value)')
+      span.custom-control-indicator
+      span.custom-control-description disable
+    label.custom-control.custom-radio('*ngFor'='let colour of colourService.getAllColours()')
+      input.custom-control-input(
+        '[value]'='colour[0]',
+        type='radio',
+        name='colour',
+        '[checked]'='searchColour === colour[0]',
+        '(change)'='changeSearchColourBeacon.emit($event.target.value)'
+      )
+      span.custom-control-indicator('[style.backgroundColor]'='colour[1]')
+      span.custom-control-description {{ colour[2] }}

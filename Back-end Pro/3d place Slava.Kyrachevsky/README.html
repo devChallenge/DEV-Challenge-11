@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        .fixed {
+            position: fixed;
+        }
+
+        /* sidebar */
+        .bs-docs-sidebar {
+            padding-left: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* all links */
+        .bs-docs-sidebar .nav>li>a {
+            color: #999;
+            border-left: 2px solid transparent;
+            padding: 4px 20px;
+            font-size: 13px;
+            font-weight: 400;
+        }
+
+        /* nested links */
+        .bs-docs-sidebar .nav .nav>li>a {
+            padding-top: 1px;
+            padding-bottom: 1px;
+            padding-left: 30px;
+            font-size: 12px;
+        }
+
+        /* active & hover links */
+        .bs-docs-sidebar .nav>.active>a,
+        .bs-docs-sidebar .nav>li>a:hover,
+        .bs-docs-sidebar .nav>li>a:focus {
+            color: #563d7c;
+            text-decoration: none;
+            background-color: transparent;
+            border-left-color: #563d7c;
+        }
+        /* all active links */
+        .bs-docs-sidebar .nav>.active>a,
+        .bs-docs-sidebar .nav>.active:hover>a,
+        .bs-docs-sidebar .nav>.active:focus>a {
+            font-weight: 700;
+        }
+        /* nested active links */
+        .bs-docs-sidebar .nav .nav>.active>a,
+        .bs-docs-sidebar .nav .nav>.active:hover>a,
+        .bs-docs-sidebar .nav .nav>.active:focus>a {
+            font-weight: 500;
+        }
+
+        /* hide inactive nested list */
+        .bs-docs-sidebar .nav ul.nav {
+            display: none;
+        }
+        /* show active nested list */
+        .bs-docs-sidebar .nav>.active>ul.nav {
+            display: block;
+        }
+    </style>
+</head>
+<body data-spy="scroll" data-target=".bs-docs-sidebar" data-offset="40">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <h2 id="info">General information</h2>
+                <p>The development of the project used the MTV pattern (Model-Template-View). This design pattern is very close to the classic MVC, and most importantly, what it allows is a good way to separate business logic from design.</p>
+
+                <h2 id="start">Start project</h2>
+                <p>This project is started with the Docker software. The project is configured in debug mode, its current settings are suitable for local development, as well as for server development. For the production server, you need to slightly expand the project settings.</p>
+                <p>To create an image and lift the containers, execute the command:</p>
+                <pre>docker-compose up -d --build<br>(Alternate command: make up)</pre>
+                <p>Now the project is available at <a href="http://127.0.0.1:8000/" target="_blank">127.0.0.1:8000</a></p>
+
+                <h2 id="api">API</h2>
+                <p>Registration new employee example:</p>
+                <pre>http://127.0.0.1:8000/register?name=user1&area=bills&area=contracts</pre>
+                <p>Example of list area and employees:</p>
+                <pre>http://127.0.0.1:8000/call?area=moto&area=bills&area=leases&area=contracts&area=bills</pre>
+                <p>Employees status reset example:</p>
+                <pre>http://127.0.0.1:8000/reset</pre>
+
+                <h2 id="tests">Tests</h2>
+                <p>There are unit tests in the project that cover the API. To run the tests, run the command:</p>
+                <pre>docker-compose exec web python3 project/manage.py test project/<br>(Alternate command: make test)</pre>
+
+                <h2 id="admin">Panel administration</h2>
+                <p>You can found panel administration located at <a href="http://127.0.0.1:8000/admin/" target="_blank">127.0.0.1:8000/admin/</a> with next credentials: username - admin, password - adminadmin.</p>
+            </div>
+
+            <div class="col-md-3">
+                <nav class="bs-docs-sidebar">
+                    <ul class="nav nav-stacked fixed">
+                        <li><a href="#info">General information</a></li>
+                        <li><a href="#start">Start project</a></li>
+                        <li><a href="#api">API</a></li>
+                        <li><a href="#tests">Tests</a></li>
+                        <li><a href="#admin">Panel administration</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.js" defer></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" defer></script>
+</body>
+</html>

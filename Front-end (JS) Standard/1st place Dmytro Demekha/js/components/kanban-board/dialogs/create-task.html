@@ -1,0 +1,23 @@
+<h2>Create task</h2>
+<form name="taskForm" class="task_form">
+    <div class="input_outer">
+        <input type="text" name="name" ng-model="$dialogCtrl.taskModel.name" required />
+    </div>
+    <div class="textarea_outer">
+        <textarea name="description" ng-model="$dialogCtrl.taskModel.description" required></textarea>
+    </div>
+    <div class="select_outer">
+        <select ng-model="$dialogCtrl.taskStatus" ng-options="item as item.name for item in $dialogCtrl.columnsList" ng-disabled="$dialogCtrl.isEditing">
+            <option value="">Select status</option>
+        </select>
+    </div>
+    <div class="select_outer">
+        <select ng-model="$dialogCtrl.taskModel.color" ng-options="item.id as item.name for item in $dialogCtrl.colorCategories track by item.id">
+            <option value="">Select category</option>
+        </select>
+    </div>
+    <div class="btns_group">
+        <button ng-click="$dialogCtrl.saveTask()" class="orange_btn" ng-disabled="taskForm.$invalid">Save</button>
+        <button ng-click="$dialogCtrl.cancel()" class="grey_btn">Cancel</button>
+    </div>
+</form>

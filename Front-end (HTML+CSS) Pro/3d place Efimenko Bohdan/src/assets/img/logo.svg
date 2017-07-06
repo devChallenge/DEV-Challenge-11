@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="33px" viewBox="0 0 36 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45 (43475) - http://www.bohemiancoding.com/sketch -->
+    <title>Лого</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="26.2276411%" y1="82.7333631%" x2="131.910932%" y2="-17.1376272%" id="linearGradient-1">
+            <stop stop-color="#E53656" offset="0%"></stop>
+            <stop stop-color="#6082D8" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Стартовая" transform="translate(-30.000000, -22.000000)" fill="url(#linearGradient-1)">
+            <path d="M48,25 C46.038,23.5008174 43.032,22 40,22 C34.347,22 30,26.4746594 30,32 C30,39.1852861 36.12,44.9013624 46,53 L46.3392727,53.5089091 C47.2564671,54.8847006 48.7447262,54.8829107 49.6607273,53.5089091 L50,53 C59.88,44.9013624 66,39.1852861 66,32 C66,26.4746594 61.653,22 56,22 C52.968,22 49.962,23.5008174 48,25 Z" id="Лого"></path>
+        </g>
+    </g>
+</svg>

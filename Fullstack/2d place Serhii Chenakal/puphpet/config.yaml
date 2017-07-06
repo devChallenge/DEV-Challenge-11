@@ -1,0 +1,427 @@
+vagrantfile:
+    target: local
+    vm:
+        provider:
+            local:
+                box: puphpet/ubuntu1604-x64
+                box_url: 'false'
+                box_version: '0'
+                chosen_virtualizer: virtualbox
+                virtualizers:
+                    virtualbox:
+                        modifyvm:
+                            natdnshostresolver1: false
+                        showgui: 0
+                    vmware:
+                        numvcpus: 1
+                    parallels:
+                        linked_clone: 0
+                        check_guest_tools: 0
+                        update_guest_tools: 0
+                machines:
+                    vflm_k3qtsquxgg96:
+                        id: dev
+                        hostname: dev.puphpet
+                        network:
+                            private_network: 192.192.192.111
+                            forwarded_port:
+                                vflmnfp_6u6od6spjk6s:
+                                    host: '8717'
+                                    guest: '22'
+                                mysql:
+                                    host: '3306'
+                                    guest: '3306'
+                        memory: '4096'
+                        cpus: '2'
+        provision:
+            puppet:
+                manifests_path: puphpet/puppet/manifests
+                module_path:
+                    - puphpet/puppet/modules
+                    - puphpet/puppet/manifests
+                options:
+                    - '--verbose'
+                    - '--hiera_config /vagrant/puphpet/puppet/hiera.yaml'
+        synced_folder:
+            vflsf_q995n4ugvw61:
+                owner: www-data
+                group: www-data
+                source: ./
+                target: /var/www/vagrant
+                sync_type: default
+                smb:
+                    smb_host: ''
+                    smb_username: ''
+                    smb_password: ''
+                    mount_options:
+                        dir_mode: '0775'
+                        file_mode: '0664'
+                rsync:
+                    args:
+                        - '--verbose'
+                        - '--archive'
+                        - '-z'
+                    exclude:
+                        - .vagrant/
+                        - .git/
+                    auto: 'true'
+        usable_port_range:
+            start: 10200
+            stop: 10500
+        post_up_message: ''
+    ssh:
+        host: 'false'
+        port: 'false'
+        private_key_path: 'false'
+        username: vagrant
+        guest_port: 'false'
+        keep_alive: '1'
+        forward_agent: 'false'
+        forward_x11: 'false'
+        shell: 'bash -l'
+        insert_key: 'false'
+    vagrant:
+        host: detect
+    proxy:
+        http: ''
+        https: ''
+        ftp: ''
+        no_proxy: ''
+server:
+    install: '1'
+    packages:
+        - vim
+        - htop
+        - supervisor
+        - git
+        - memcached
+        - zip
+        - zsh
+        - curl
+        - libcurl4-openssl-dev
+        - gcc
+        - make
+        - mc
+        - pkg-config
+        - dialog
+users_groups:
+    install: '1'
+    groups: {  }
+    users: {  }
+locale:
+    install: '1'
+    settings:
+        default_locale: en_US.UTF-8
+        locales:
+            - en_GB.UTF-8
+            - en_US.UTF-8
+        timezone: Europe/Kiev
+firewall:
+    install: '1'
+    rules: {  }
+resolv:
+    install: '1'
+    nameservers:
+        - 8.8.8.8
+        - 8.8.4.4
+    domainname: ''
+    searchpath: {  }
+cron:
+    install: '1'
+nginx:
+    install: '1'
+    settings:
+        version: present
+        default_vhost: 1
+        proxy_buffers: '4 256k'
+        proxy_buffer_size: 128k
+        proxy_connect_timeout: 600s
+        proxy_send_timeout: 600s
+        proxy_read_timeout: 600s
+        names_hash_bucket_size: 128
+    upstreams: {  }
+    vhosts:
+        dev1.dev:
+            server_name: dev1.dev
+            www_root: /vagrant/prodect1
+            listen_port: '80'
+            client_max_body_size: 1m
+            ssl: '0'
+            rewrite_to_https: '1'
+        dev2.dev:
+            server_name: dev2.dev
+            www_root: /vagrant/prodect2
+            listen_port: '80'
+            client_max_body_size: 1m
+            ssl: '0'
+            rewrite_to_https: '1'
+    proxies: {  }
+apache:
+    install: '0'
+    settings:
+        version: 2.4
+        user: www-data
+        group: www-data
+        default_vhost: true
+        manage_user: false
+        manage_group: false
+        sendfile: 0
+    modules:
+        - proxy_fcgi
+        - rewrite
+    vhosts:
+        av_klmrc0xf0frg:
+            servername: awesome.dev
+            serveraliases:
+                - www.awesome.dev
+            docroot: /var/www/awesome/web
+            port: '80'
+            setenvif:
+                - 'Authorization "(.*)" HTTP_AUTHORIZATION=$1'
+            custom_fragment: ''
+            ssl: '0'
+            ssl_cert: LETSENCRYPT
+            ssl_key: LETSENCRYPT
+            ssl_chain: LETSENCRYPT
+            ssl_certs_dir: LETSENCRYPT
+            ssl_protocol: ''
+            ssl_cipher: ''
+            directories:
+                avd_ugo4ww1p00yz:
+                    path: /var/www/awesome/web
+                    directoryindex: 'index.php app.dev'
+                    options:
+                        - Indexes
+                        - FollowSymlinks
+                        - MultiViews
+                    allow_override:
+                        - All
+                    require:
+                        - 'all granted'
+                    custom_fragment: ''
+                    provider: directory
+            files_match:
+                avfm_46bxgu595vdk:
+                    path: (app_dev|config)\.php$
+                    sethandler: 'proxy:fcgi://127.0.0.1:9000'
+                    setenv:
+                        - 'APP_ENV dev'
+                    custom_fragment: ''
+                    provider: filesmatch
+                avfm_2rk34q5m7lyb:
+                    path: app\.php$
+                    sethandler: 'proxy:fcgi://127.0.0.1:9000'
+                    setenv:
+                        - 'APP_ENV prod'
+                    custom_fragment: ''
+                    provider: filesmatch
+                avfm_1tfjvwuzl7ms:
+                    path: \.php$
+                    sethandler: 'proxy:fcgi://127.0.0.1:9000'
+                    custom_fragment: ''
+                    provider: filesmatch
+letsencrypt:
+    install: '1'
+    settings:
+        email: ''
+        webserver_service: ''
+    domains: {  }
+php:
+    install: '1'
+    settings:
+        version: '7.1'
+    modules:
+        php:
+            - cli
+            - intl
+            - xml
+            - common
+            - mysql
+            - gd
+            - cgi
+            - mcrypt
+            - geoip
+            - zip
+            - curl
+            - memcached
+            - mbstring
+            - bcmath
+        pear: {  }
+        pecl: {  }
+    ini:
+        display_errors: 'On'
+        error_reporting: '-1'
+        session.save_path: /var/lib/php/session
+        date.timezone: UTC
+    fpm_ini:
+        error_log: /vagrant/vagrant/log/php-fpm.log
+    fpm_pools:
+        phpfp_2kwe9riaom3a:
+            ini:
+                prefix: www
+                listen: '127.0.0.1:9000'
+                security.limit_extensions: .php
+                user: www-user
+                group: www-data
+    composer: '1'
+    composer_home: ''
+xdebug:
+    install: '1'
+    settings:
+        xdebug.default_enable: '1'
+        xdebug.remote_connect_back: '1'
+        xdebug.remote_enable: '1'
+        xdebug.remote_handler: dbgp
+        xdebug.remote_port: '9000'
+        xdebug.remote_autostart: '1'
+        xdebug.remote_host: '192.192.192.1'
+        xdebug.idekey: 'PHPSTORM'
+        xdebug.remote_log: '/vagrant/vagrant/log/xdebug.log'
+blackfire:
+    install: '0'
+    settings:
+        server_id: ''
+        server_token: ''
+        agent:
+            http_proxy: ''
+            https_proxy: ''
+            log_file: stderr
+            log_level: '1'
+        php:
+            agent_timeout: '0.25'
+            log_file: ''
+            log_level: '1'
+xhprof:
+    install: '0'
+wpcli:
+    install: '0'
+    version: v1.1.0
+drush:
+    install: '0'
+    version: 8.0.5
+ruby:
+    install: '1'
+    versions:
+        rv_d4nfbpywolvi:
+            default: '1'
+            bundler: '1'
+            version: 2.3.1
+            gems:
+                - deep_merge@1.0.1
+                - activesupport@4.2.6
+                - vine@0.2
+python:
+    install: '1'
+    packages: {  }
+    versions: {  }
+nodejs:
+    install: '0'
+    settings:
+        version: '7'
+    npm_packages: {  }
+mariadb:
+    install: '0'
+    settings:
+        version: '10.2'
+        root_password: root
+        override_options: {  }
+    users:
+        mariadbnu_d6lxoelxz66w:
+            name: udev
+            password: pdev
+    databases:
+        mariadbnd_wn9e8ta3qx27:
+            name: dev
+            sql: ''
+    grants:
+        mariadbng_f498ao8gnu7o:
+            user: udev
+            table: '*.*'
+            privileges:
+                - ALL
+mysql:
+    install: '1'
+    settings:
+        version: '5.7'
+        root_password: 'root'
+        override_options: {  }
+    users:
+        mysqlnu_ge6v5vtc1bp0:
+            name: udev
+            password: pdev
+    databases:
+        mysqlnd_1kz4qvlrjt7a:
+            name: dev
+            sql: '/vagrant/vagrant/sql.sql'
+    grants:
+        mysqlng_xligfd84ima4:
+            user: udev
+            table: '*.*'
+            privileges:
+                - ALL
+postgresql:
+    install: '0'
+    settings:
+        global:
+            encoding: UTF8
+            version: '9.6'
+        server:
+            postgres_password: '123'
+    databases: {  }
+    users: {  }
+    grants: {  }
+mongodb:
+    install: '0'
+    settings:
+        bind_ip: 127.0.0.1
+        port: '27017'
+    globals:
+        version: 2.6.0
+    databases: {  }
+redis:
+    install: '0'
+    settings:
+        port: '6379'
+sqlite:
+    install: '0'
+    databases: {  }
+mailhog:
+    install: '0'
+    settings:
+        smtp_ip: 0.0.0.0
+        smtp_port: 1025
+        http_ip: 0.0.0.0
+        http_port: '8025'
+        path: /usr/local/bin/mailhog
+beanstalkd:
+    install: '0'
+    settings:
+        listenaddress: 0.0.0.0
+        listenport: '11300'
+        maxjobsize: '65535'
+        maxconnections: '1024'
+        binlogdir: /var/lib/beanstalkd/binlog
+        binlogfsync: null
+        binlogsize: '10485760'
+    beanstalk_console: 0
+rabbitmq:
+    install: '1'
+    settings:
+        port: '5672'
+    users: {  }
+    vhosts: {  }
+    plugins: {  }
+elastic_search:
+    install: '0'
+    settings:
+        version: 2.3.1
+        java_install: true
+    instances:
+        esi_spha2hu86cqb:
+            name: es-01
+solr:
+    install: '0'
+    settings:
+        version: 5.5.2
+        port: '8984'
+

@@ -1,0 +1,117 @@
+.news-subscribe {
+  padding: 31px 0 40px;
+  background: #8c7a66;
+  color: #fff;
+  text-align: left;
+
+  &__layout {
+    max-width: 540px;
+    padding: 0 49px;
+    margin: 0 auto;
+  }
+  &__title {
+    margin: 0 0 11px;
+    font-size: 28px;
+    line-height: 24px;
+    @include main-font2();
+  }
+  &__form {
+    position: relative;
+    max-width: 361px;
+
+    input {
+      display: block;
+      width: 100%;
+      height: 54px;
+      padding: 20px 100px 20px 20px;
+      background: #fff;
+      border-radius: 0;
+      font-size: 16px;
+      line-height: 16px;
+      @include main-font1();
+      border: none;
+      color: #252525;
+      -webkit-appearance: none;
+      transition: box-shadow .2s linear;
+
+      &:focus {
+        box-shadow: 0 0 10px 0 rgba(0,0,0,0.3) inset;
+      }
+      &::-webkit-input-placeholder {
+        color: #969595;
+      }
+      &:-moz-placeholder {
+        color: #969595;
+      }
+      &.placeholder {
+        color: #969595;
+      }
+    }
+    button[type=submit] {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 85px;
+      height: 100%;
+      background: #2f2f2f;
+      border: none;
+      color: #fff;
+      font-size: 16px;
+      line-height: 16px;
+      @include main-font1();
+      transition: background .2s linear;
+
+      &:hover {
+        background: #000000;
+      }
+      &:active {
+        background: rgba(0, 0, 0, 0.72);
+      }
+
+    }
+
+  }
+  p {
+    margin: 0 0 14px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+}
+
+@media (min-width: $tablet-landscape) {
+
+  .news-subscribe {
+    padding: 39px 0 40px;
+    text-align: center;
+
+    &__layout {
+      padding: 0 15px;
+    }
+    &__title {
+      margin: 0 0 5px;
+      font-size: 42px;
+      line-height: 42px;
+    }
+    &__form {
+      margin: 0 auto;
+
+      input {
+        height: 72px;
+        padding: 25px 100px 25px 30px;
+        font-size: 18px;
+        line-height: 18px;
+      }
+      button[type=submit] {
+        font-size: 18px;
+        line-height: 18px;
+      }
+
+    }
+    p {
+      margin: 0 0 24px;
+    }
+
+  }
+
+}

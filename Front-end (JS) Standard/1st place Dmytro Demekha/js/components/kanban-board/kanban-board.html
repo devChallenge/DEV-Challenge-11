@@ -1,0 +1,36 @@
+<div class="board_outer clear">
+    <div class="control_panel">
+        <button ng-click="$ctrl.createTask()" class="orange_btn">Create</button>
+        <button ng-click="$ctrl.openArchive()" class="grey_btn">Archive ({{$ctrl.archiveLength}})</button>
+        <button ng-click="$ctrl.editColumns()" class="grey_btn">Edit columns</button>
+        <button ng-click="$ctrl.editColorsCategories()" class="grey_btn">Edit colors categories</button>
+        <input class="tasks_search" type="text" placeholder="Tasks search" ng-model="searchKeyword" />
+    </div>
+    <div ng-repeat="column in $ctrl.columnsList | orderBy: 'order'" ng-class="'columns-'+$ctrl.columnsList.length" class="board_column">
+        <p class="board_title" ng-bind="column.name"></p>
+        <ul dnd-list="column.tasks" class="tasks_list">
+            <li dnd-draggable="task"
+                dnd-moved="column.tasks.splice($index, 1)"
+                dnd-effect-allowed="move"
+                dnd-dragend="$ctrl.taskMoved()"
+                class="task_item"
+                ng-class="{'selected': searchKeyword.length&&task.name.toLowerCase().indexOf(searchKeyword.toLowerCase())>-1}"
+                ng-style="{'background-color': $ctrl.colorCategoriesList[task.color].color}"
+                ng-repeat="task in column.tasks">
+                <p class="task_name" ng-bind="task.name"></p>
+                <p class="task_desc" ng-bind="task.description"></p>
+                <div class="task_actions">
+                    <div ng-click="$ctrl.editTask($parent.$index, $index)" class="edit_task">
+                        <p>Edit</p>
+                    </div>
+                    <div ng-click="$ctrl.archiveTask($parent.$index, $index)" class="archive_task">
+                        <p>Archive</p>
+                    </div>
+                    <div ng-click="$ctrl.deleteTask($parent.$index, $index)" class="delete_task">
+                        <p>Delete</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

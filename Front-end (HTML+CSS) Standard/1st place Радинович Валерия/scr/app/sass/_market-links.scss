@@ -1,0 +1,59 @@
+.market-links {
+  @include flexbox();
+  @include flex-direction();
+  @include justify-content();
+  @include align-items();
+
+  >a {
+    padding: 20px 20px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 16px;
+
+    &:first-child {
+      display: none;
+    }
+
+    >span {
+      display: block;
+      margin: 0 0 10px;
+    }
+
+  }
+  &__title {
+    margin: 0 0 1px;
+    font-size: 22px;
+    line-height: 24px;
+    @include main-font2();
+  }
+
+}
+
+@media (min-width: $phone-landscape) {
+
+}
+
+@media (min-width: $tablet-landscape) {
+
+  .market-links {
+    @include flexbox();
+    @include flex-direction();
+    @include justify-content();
+    @include align-items();
+
+    >a {
+      width: 50%;
+
+      &:first-child {
+        display: block;
+      }
+
+    }
+
+  }
+
+}
+
+@media (min-width: $desktop) {
+
+}

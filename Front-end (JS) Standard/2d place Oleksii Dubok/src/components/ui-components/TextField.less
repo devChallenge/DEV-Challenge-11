@@ -1,0 +1,89 @@
+@import '../../assets/variables.less';
+
+.TextField {
+    display: flex;
+    align-items: center;
+    flex-shrink : 0;
+    width: 100%;
+    height: 40px;
+    position    : relative;
+    &.multiline {
+        height: 100px;
+    }
+
+    .label {
+        position: absolute;
+        font-size: 16px;
+        left: 10px;
+        top: 10px;
+        font-family    : 'Roboto';
+        color          : @label-color;
+        pointer-events : none;
+        user-select    : none;
+        transform-origin: left;
+        transform      : translate(0);
+        transition     : transform .4s cubic-bezier(.28, .87, .3, .93);
+    }
+    .inputText, .textArea {
+        height:           40px;
+        width:            100%;
+        user-select:      text;
+        border:           none;
+        padding:      0 10px;
+        outline:          0;
+        color:            @text-color;
+        font-family:      'Roboto';
+        font-size:        14px;
+        background-color: transparent;
+    }
+
+    .textArea {
+        height: 100px;
+        padding-top: 20px;
+    }
+
+    .underline {
+        display:         flex;
+        justify-content: center;
+        height:          1px;
+        width:           100%;
+        position:        absolute;
+        bottom:          0;
+        left:            0;
+        z-index:         1;
+        background:      @text-color;
+        > div {
+            flex-basis:       0;
+            height:           1px;
+            background-color: @text-color;
+            transition:       all .4s ease;
+        }
+    }
+    &.active {
+        .underline > div {
+            flex-basis: 100%;
+        }
+        .label {
+            transform  : translateY(-15px) scale(0.6);
+        }
+    }
+    &.invalid {
+        .underline {
+            background : @error;
+        }
+        .label {
+            color : @error;
+        }
+    }
+    .error {
+        padding-top : 3px;
+        color       : @error;
+        font-size   : 12px;
+    }
+}
+
+@media (min-width: 1599px) {
+    .inputText {
+        font-size: 20px !important;
+    }
+}

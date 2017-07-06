@@ -1,0 +1,640 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F80116BE30F4FA66C66CDB23CF3966D /* SpreadsheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D033A09EFCA9C1327FB6BDACDDC051 /* SpreadsheetView.swift */; };
+		12535EE17BCAB09A52352A375C48861C /* ScrollPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D0ACDFCDE242C15E431FCCCB52A5F3 /* ScrollPosition.swift */; };
+		21DEF47F31512882221511123256D186 /* CircularScrolling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0E071F7C4C084B4666F5E061304B9E /* CircularScrolling.swift */; };
+		2865A25B1CF4409DD8DE3E383D83C42E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		2F4BC2C1075D87BDC5D48A33E4BF1686 /* SpreadsheetView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0ABCF71814D9EC78759469EAEB9355 /* SpreadsheetView-dummy.m */; };
+		3238C2E23BCD724018B877F139F3E834 /* Borders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCB1EC7F748CAC157156F809E45FC20 /* Borders.swift */; };
+		34C996F2AA32F32B7B71EA51C95DAFD6 /* SpreadsheetView+UIScrollViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D7C55E531B4B3C84E1317E6F439F25 /* SpreadsheetView+UIScrollViewDelegate.swift */; };
+		3FD3496FADDED3807115CEEC20D97271 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		4C9891C9735C1227AB97DD852BA4BA31 /* Pods-Spreadsheet-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CFB1E1E49A643E3237C97944BD874F2 /* Pods-Spreadsheet-dummy.m */; };
+		58064FF6EFD6C02DB72FE77142AC2E6E /* SpreadsheetViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C03BBDFDECA48D91D27C6F5CB0B6263 /* SpreadsheetViewDelegate.swift */; };
+		59CC044D6F5B7815B9BA793F96410B77 /* SpreadsheetView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E7E615377D40EE58C2C0934E54ED8E5E /* SpreadsheetView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F225C83DDC01E0E513C7954755980EA /* SpreadsheetView+CirclularScrolling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C22EDDB0BE6F1715A23825B9345A94A /* SpreadsheetView+CirclularScrolling.swift */; };
+		645FCC4E197CF45563E4EF0B48DA6A77 /* SpreadsheetView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662C2486036DE5B6AF0D360A451546A2 /* SpreadsheetView+Layout.swift */; };
+		73E5123C07F520E8B381A8DA2A82E8E1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
+		76F894D920B5091C2F4AA577C932B1C7 /* ReuseQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677CFB7A6E84779053ED4A4FEBA0A87B /* ReuseQueue.swift */; };
+		7DA04B2E3D6D7238D41B23A6D15A00E8 /* SpreadsheetView+UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB6458B95068D7DE9FC4A3FD8B02615 /* SpreadsheetView+UIScrollView.swift */; };
+		8F4EDE35FAC8DFFAE7B2862A3CF3566D /* SpreadsheetView+Touches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D845472BC619C67261A9B113B8C5B16 /* SpreadsheetView+Touches.swift */; };
+		99EF554B8B79002D67245DA690D2BE4E /* SpreadsheetView+UIViewHierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BE2F85F5B02E099B781E3086242F57 /* SpreadsheetView+UIViewHierarchy.swift */; };
+		B501CD40D4C0FE23674A591EE8E86C80 /* Gridlines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B0C05C6B1FD96190B7AA40E1409190 /* Gridlines.swift */; };
+		B90C31A6B52F309A149A2497A773311C /* Array+BinarySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5632F8CB68EFB6DBD7ADE62FCCCE903D /* Array+BinarySearch.swift */; };
+		BF2A763C42C89C001E87606981FA908D /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F085F840814CD03D946C598D6DA4A4 /* ScrollView.swift */; };
+		C85911D71EE83DADA4161F6B3F8C8436 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFE449AB1D167E5FA7666141AC207F7 /* Location.swift */; };
+		C8DA35506EDE96114759C80249AC9E2A /* LayoutEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351A83ADE2B5F24BD3D97B7954B99B05 /* LayoutEngine.swift */; };
+		CFED0BF13F2BD0FB3030126F51983084 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBEBEF7DF03CB461912C9C9E6DD7FD6 /* Cell.swift */; };
+		D160964F80C69F5797041107655D0A8E /* SpreadsheetViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0709FD1A8B9D6BB8362390E2C48530 /* SpreadsheetViewDataSource.swift */; };
+		D2D06EDB3392CAC8DB6BC4540D97EA1B /* Pods-Spreadsheet-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C9F72ED219765D3136BEDA23A7007907 /* Pods-Spreadsheet-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF924D519039999033838BF23CAC05F9 /* CellRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ABB8E2004E8972C5A3302DAA60608C /* CellRange.swift */; };
+		FAC5CA35CD4F22FC2CB47AB340783446 /* IndexPath+Column.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4A9CA7BECFE87826D9A5E0DC7B8238 /* IndexPath+Column.swift */; };
+		FC5C8F8C48666E77ECE76E6D8B607C64 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA64A8327D11FD756B94746F41FD992 /* Address.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		549E8EB60B65217731E6E87246D1F696 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 93D8FFC6DCE294A275BFAABBA5E37E42;
+			remoteInfo = SpreadsheetView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02DFDDF1B2A7DC431B690E52D42D9562 /* Pods-Spreadsheet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Spreadsheet.release.xcconfig"; sourceTree = "<group>"; };
+		05BE2F85F5B02E099B781E3086242F57 /* SpreadsheetView+UIViewHierarchy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SpreadsheetView+UIViewHierarchy.swift"; path = "Framework/Sources/SpreadsheetView+UIViewHierarchy.swift"; sourceTree = "<group>"; };
+		05F085F840814CD03D946C598D6DA4A4 /* ScrollView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScrollView.swift; path = Framework/Sources/ScrollView.swift; sourceTree = "<group>"; };
+		0C03BBDFDECA48D91D27C6F5CB0B6263 /* SpreadsheetViewDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpreadsheetViewDelegate.swift; path = Framework/Sources/SpreadsheetViewDelegate.swift; sourceTree = "<group>"; };
+		17343025A4473FD9E4B26486AB0BD7C1 /* SpreadsheetView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SpreadsheetView.framework; path = SpreadsheetView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F0E071F7C4C084B4666F5E061304B9E /* CircularScrolling.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CircularScrolling.swift; path = Framework/Sources/CircularScrolling.swift; sourceTree = "<group>"; };
+		1FD4997C4A96D02DCC0F21BDD3835DF3 /* SpreadsheetView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SpreadsheetView.xcconfig; sourceTree = "<group>"; };
+		241673F48329A5C2F0828747E4AA20EF /* Pods-Spreadsheet-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Spreadsheet-resources.sh"; sourceTree = "<group>"; };
+		2EBEBEF7DF03CB461912C9C9E6DD7FD6 /* Cell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cell.swift; path = Framework/Sources/Cell.swift; sourceTree = "<group>"; };
+		351A83ADE2B5F24BD3D97B7954B99B05 /* LayoutEngine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutEngine.swift; path = Framework/Sources/LayoutEngine.swift; sourceTree = "<group>"; };
+		45B0C05C6B1FD96190B7AA40E1409190 /* Gridlines.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Gridlines.swift; path = Framework/Sources/Gridlines.swift; sourceTree = "<group>"; };
+		48591DBE7A5F8E39B69CA222DA55C0BC /* Pods_Spreadsheet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Spreadsheet.framework; path = "Pods-Spreadsheet.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C0ABCF71814D9EC78759469EAEB9355 /* SpreadsheetView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SpreadsheetView-dummy.m"; sourceTree = "<group>"; };
+		4C22EDDB0BE6F1715A23825B9345A94A /* SpreadsheetView+CirclularScrolling.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SpreadsheetView+CirclularScrolling.swift"; path = "Framework/Sources/SpreadsheetView+CirclularScrolling.swift"; sourceTree = "<group>"; };
+		4D067276873366903E9477B33912A9AD /* SpreadsheetView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SpreadsheetView.modulemap; sourceTree = "<group>"; };
+		5632F8CB68EFB6DBD7ADE62FCCCE903D /* Array+BinarySearch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+BinarySearch.swift"; path = "Framework/Sources/Array+BinarySearch.swift"; sourceTree = "<group>"; };
+		586F0BCFDC108F5B438F16BE0CBDA39C /* Pods-Spreadsheet-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Spreadsheet-frameworks.sh"; sourceTree = "<group>"; };
+		5AA64A8327D11FD756B94746F41FD992 /* Address.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Address.swift; path = Framework/Sources/Address.swift; sourceTree = "<group>"; };
+		662C2486036DE5B6AF0D360A451546A2 /* SpreadsheetView+Layout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SpreadsheetView+Layout.swift"; path = "Framework/Sources/SpreadsheetView+Layout.swift"; sourceTree = "<group>"; };
+		677CFB7A6E84779053ED4A4FEBA0A87B /* ReuseQueue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReuseQueue.swift; path = Framework/Sources/ReuseQueue.swift; sourceTree = "<group>"; };
+		746CE88E86F2F22E04F08ED54946A15B /* SpreadsheetView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SpreadsheetView-prefix.pch"; sourceTree = "<group>"; };
+		7D845472BC619C67261A9B113B8C5B16 /* SpreadsheetView+Touches.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SpreadsheetView+Touches.swift"; path = "Framework/Sources/SpreadsheetView+Touches.swift"; sourceTree = "<group>"; };
+		8BC1492C566059FF6831DF7BEEA529C6 /* Pods-Spreadsheet-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Spreadsheet-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8BCB1EC7F748CAC157156F809E45FC20 /* Borders.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Borders.swift; path = Framework/Sources/Borders.swift; sourceTree = "<group>"; };
+		8EFE449AB1D167E5FA7666141AC207F7 /* Location.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Location.swift; path = Framework/Sources/Location.swift; sourceTree = "<group>"; };
+		92057627D72226E1EDB2100D55E49B25 /* Pods-Spreadsheet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Spreadsheet.debug.xcconfig"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		97D033A09EFCA9C1327FB6BDACDDC051 /* SpreadsheetView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpreadsheetView.swift; path = Framework/Sources/SpreadsheetView.swift; sourceTree = "<group>"; };
+		99D7C55E531B4B3C84E1317E6F439F25 /* SpreadsheetView+UIScrollViewDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SpreadsheetView+UIScrollViewDelegate.swift"; path = "Framework/Sources/SpreadsheetView+UIScrollViewDelegate.swift"; sourceTree = "<group>"; };
+		9CFB1E1E49A643E3237C97944BD874F2 /* Pods-Spreadsheet-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Spreadsheet-dummy.m"; sourceTree = "<group>"; };
+		9D4A9CA7BECFE87826D9A5E0DC7B8238 /* IndexPath+Column.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IndexPath+Column.swift"; path = "Framework/Sources/IndexPath+Column.swift"; sourceTree = "<group>"; };
+		9F5B527F9E602731CAA2F7AD5197A830 /* Pods-Spreadsheet-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Spreadsheet-acknowledgements.plist"; sourceTree = "<group>"; };
+		A2F8FF9DB60F7BBB454E2759988D017A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB0709FD1A8B9D6BB8362390E2C48530 /* SpreadsheetViewDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpreadsheetViewDataSource.swift; path = Framework/Sources/SpreadsheetViewDataSource.swift; sourceTree = "<group>"; };
+		B0ABB8E2004E8972C5A3302DAA60608C /* CellRange.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CellRange.swift; path = Framework/Sources/CellRange.swift; sourceTree = "<group>"; };
+		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		BB1EB6418F288AA600E74077AF3A62CE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1D0ACDFCDE242C15E431FCCCB52A5F3 /* ScrollPosition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScrollPosition.swift; path = Framework/Sources/ScrollPosition.swift; sourceTree = "<group>"; };
+		C9F72ED219765D3136BEDA23A7007907 /* Pods-Spreadsheet-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Spreadsheet-umbrella.h"; sourceTree = "<group>"; };
+		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		DAB6458B95068D7DE9FC4A3FD8B02615 /* SpreadsheetView+UIScrollView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SpreadsheetView+UIScrollView.swift"; path = "Framework/Sources/SpreadsheetView+UIScrollView.swift"; sourceTree = "<group>"; };
+		E1554BE6B635FDE2655F7F3B7E935896 /* Pods-Spreadsheet.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Spreadsheet.modulemap"; sourceTree = "<group>"; };
+		E7E615377D40EE58C2C0934E54ED8E5E /* SpreadsheetView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SpreadsheetView-umbrella.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		43FAF31DA2806B1154561BFF0AD5BFA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FD3496FADDED3807115CEEC20D97271 /* Foundation.framework in Frameworks */,
+				73E5123C07F520E8B381A8DA2A82E8E1 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77497FDF249613A320AADB105AA5DDE3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2865A25B1CF4409DD8DE3E383D83C42E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1E83077778987F1B0ED0D8D7A4AB3DB9 /* SpreadsheetView */ = {
+			isa = PBXGroup;
+			children = (
+				5AA64A8327D11FD756B94746F41FD992 /* Address.swift */,
+				5632F8CB68EFB6DBD7ADE62FCCCE903D /* Array+BinarySearch.swift */,
+				8BCB1EC7F748CAC157156F809E45FC20 /* Borders.swift */,
+				2EBEBEF7DF03CB461912C9C9E6DD7FD6 /* Cell.swift */,
+				B0ABB8E2004E8972C5A3302DAA60608C /* CellRange.swift */,
+				1F0E071F7C4C084B4666F5E061304B9E /* CircularScrolling.swift */,
+				45B0C05C6B1FD96190B7AA40E1409190 /* Gridlines.swift */,
+				9D4A9CA7BECFE87826D9A5E0DC7B8238 /* IndexPath+Column.swift */,
+				351A83ADE2B5F24BD3D97B7954B99B05 /* LayoutEngine.swift */,
+				8EFE449AB1D167E5FA7666141AC207F7 /* Location.swift */,
+				677CFB7A6E84779053ED4A4FEBA0A87B /* ReuseQueue.swift */,
+				C1D0ACDFCDE242C15E431FCCCB52A5F3 /* ScrollPosition.swift */,
+				05F085F840814CD03D946C598D6DA4A4 /* ScrollView.swift */,
+				97D033A09EFCA9C1327FB6BDACDDC051 /* SpreadsheetView.swift */,
+				4C22EDDB0BE6F1715A23825B9345A94A /* SpreadsheetView+CirclularScrolling.swift */,
+				662C2486036DE5B6AF0D360A451546A2 /* SpreadsheetView+Layout.swift */,
+				7D845472BC619C67261A9B113B8C5B16 /* SpreadsheetView+Touches.swift */,
+				DAB6458B95068D7DE9FC4A3FD8B02615 /* SpreadsheetView+UIScrollView.swift */,
+				99D7C55E531B4B3C84E1317E6F439F25 /* SpreadsheetView+UIScrollViewDelegate.swift */,
+				05BE2F85F5B02E099B781E3086242F57 /* SpreadsheetView+UIViewHierarchy.swift */,
+				AB0709FD1A8B9D6BB8362390E2C48530 /* SpreadsheetViewDataSource.swift */,
+				0C03BBDFDECA48D91D27C6F5CB0B6263 /* SpreadsheetViewDelegate.swift */,
+				59DA75F880C8CAF6381005D48F3462D7 /* Support Files */,
+			);
+			name = SpreadsheetView;
+			path = SpreadsheetView;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				438B396F6B4147076630CAEFE34282C1 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		438B396F6B4147076630CAEFE34282C1 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */,
+				B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		59DA75F880C8CAF6381005D48F3462D7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BB1EB6418F288AA600E74077AF3A62CE /* Info.plist */,
+				4D067276873366903E9477B33912A9AD /* SpreadsheetView.modulemap */,
+				1FD4997C4A96D02DCC0F21BDD3835DF3 /* SpreadsheetView.xcconfig */,
+				4C0ABCF71814D9EC78759469EAEB9355 /* SpreadsheetView-dummy.m */,
+				746CE88E86F2F22E04F08ED54946A15B /* SpreadsheetView-prefix.pch */,
+				E7E615377D40EE58C2C0934E54ED8E5E /* SpreadsheetView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SpreadsheetView";
+			sourceTree = "<group>";
+		};
+		705E59AC1AD0587792B95370FB0FA9C5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1E83077778987F1B0ED0D8D7A4AB3DB9 /* SpreadsheetView */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				705E59AC1AD0587792B95370FB0FA9C5 /* Pods */,
+				AF109E4FCAC4E8DC2BCD722703C8E156 /* Products */,
+				DA3B07CD6F48D05FF20722DD7BC926E0 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		AF109E4FCAC4E8DC2BCD722703C8E156 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				48591DBE7A5F8E39B69CA222DA55C0BC /* Pods_Spreadsheet.framework */,
+				17343025A4473FD9E4B26486AB0BD7C1 /* SpreadsheetView.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D87D310A87B7E3B2C7B696B1088403C5 /* Pods-Spreadsheet */ = {
+			isa = PBXGroup;
+			children = (
+				A2F8FF9DB60F7BBB454E2759988D017A /* Info.plist */,
+				E1554BE6B635FDE2655F7F3B7E935896 /* Pods-Spreadsheet.modulemap */,
+				8BC1492C566059FF6831DF7BEEA529C6 /* Pods-Spreadsheet-acknowledgements.markdown */,
+				9F5B527F9E602731CAA2F7AD5197A830 /* Pods-Spreadsheet-acknowledgements.plist */,
+				9CFB1E1E49A643E3237C97944BD874F2 /* Pods-Spreadsheet-dummy.m */,
+				586F0BCFDC108F5B438F16BE0CBDA39C /* Pods-Spreadsheet-frameworks.sh */,
+				241673F48329A5C2F0828747E4AA20EF /* Pods-Spreadsheet-resources.sh */,
+				C9F72ED219765D3136BEDA23A7007907 /* Pods-Spreadsheet-umbrella.h */,
+				92057627D72226E1EDB2100D55E49B25 /* Pods-Spreadsheet.debug.xcconfig */,
+				02DFDDF1B2A7DC431B690E52D42D9562 /* Pods-Spreadsheet.release.xcconfig */,
+			);
+			name = "Pods-Spreadsheet";
+			path = "Target Support Files/Pods-Spreadsheet";
+			sourceTree = "<group>";
+		};
+		DA3B07CD6F48D05FF20722DD7BC926E0 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D87D310A87B7E3B2C7B696B1088403C5 /* Pods-Spreadsheet */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8D2A226CE503DAFD526932FB870B06E4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59CC044D6F5B7815B9BA793F96410B77 /* SpreadsheetView-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6546D057A83F049CF45BD7A3C74C43C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2D06EDB3392CAC8DB6BC4540D97EA1B /* Pods-Spreadsheet-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		61B54F264782E15FB022A263BDAA9F11 /* Pods-Spreadsheet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83E503A02A13448C7D9215FE5CCDC5C2 /* Build configuration list for PBXNativeTarget "Pods-Spreadsheet" */;
+			buildPhases = (
+				85B4EA9CD8689B4A922632BA6E77155F /* Sources */,
+				77497FDF249613A320AADB105AA5DDE3 /* Frameworks */,
+				D6546D057A83F049CF45BD7A3C74C43C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6907C37164195E62C83CD022BA058A0D /* PBXTargetDependency */,
+			);
+			name = "Pods-Spreadsheet";
+			productName = "Pods-Spreadsheet";
+			productReference = 48591DBE7A5F8E39B69CA222DA55C0BC /* Pods_Spreadsheet.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		93D8FFC6DCE294A275BFAABBA5E37E42 /* SpreadsheetView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2368EF7AAB0D08C84A2D59B61CA6CEC /* Build configuration list for PBXNativeTarget "SpreadsheetView" */;
+			buildPhases = (
+				1C0E1E152F710FE421E3689472CCF4BA /* Sources */,
+				43FAF31DA2806B1154561BFF0AD5BFA3 /* Frameworks */,
+				8D2A226CE503DAFD526932FB870B06E4 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpreadsheetView;
+			productName = SpreadsheetView;
+			productReference = 17343025A4473FD9E4B26486AB0BD7C1 /* SpreadsheetView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = AF109E4FCAC4E8DC2BCD722703C8E156 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				61B54F264782E15FB022A263BDAA9F11 /* Pods-Spreadsheet */,
+				93D8FFC6DCE294A275BFAABBA5E37E42 /* SpreadsheetView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1C0E1E152F710FE421E3689472CCF4BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC5C8F8C48666E77ECE76E6D8B607C64 /* Address.swift in Sources */,
+				B90C31A6B52F309A149A2497A773311C /* Array+BinarySearch.swift in Sources */,
+				3238C2E23BCD724018B877F139F3E834 /* Borders.swift in Sources */,
+				CFED0BF13F2BD0FB3030126F51983084 /* Cell.swift in Sources */,
+				EF924D519039999033838BF23CAC05F9 /* CellRange.swift in Sources */,
+				21DEF47F31512882221511123256D186 /* CircularScrolling.swift in Sources */,
+				B501CD40D4C0FE23674A591EE8E86C80 /* Gridlines.swift in Sources */,
+				FAC5CA35CD4F22FC2CB47AB340783446 /* IndexPath+Column.swift in Sources */,
+				C8DA35506EDE96114759C80249AC9E2A /* LayoutEngine.swift in Sources */,
+				C85911D71EE83DADA4161F6B3F8C8436 /* Location.swift in Sources */,
+				76F894D920B5091C2F4AA577C932B1C7 /* ReuseQueue.swift in Sources */,
+				12535EE17BCAB09A52352A375C48861C /* ScrollPosition.swift in Sources */,
+				BF2A763C42C89C001E87606981FA908D /* ScrollView.swift in Sources */,
+				5F225C83DDC01E0E513C7954755980EA /* SpreadsheetView+CirclularScrolling.swift in Sources */,
+				645FCC4E197CF45563E4EF0B48DA6A77 /* SpreadsheetView+Layout.swift in Sources */,
+				8F4EDE35FAC8DFFAE7B2862A3CF3566D /* SpreadsheetView+Touches.swift in Sources */,
+				7DA04B2E3D6D7238D41B23A6D15A00E8 /* SpreadsheetView+UIScrollView.swift in Sources */,
+				34C996F2AA32F32B7B71EA51C95DAFD6 /* SpreadsheetView+UIScrollViewDelegate.swift in Sources */,
+				99EF554B8B79002D67245DA690D2BE4E /* SpreadsheetView+UIViewHierarchy.swift in Sources */,
+				2F4BC2C1075D87BDC5D48A33E4BF1686 /* SpreadsheetView-dummy.m in Sources */,
+				0F80116BE30F4FA66C66CDB23CF3966D /* SpreadsheetView.swift in Sources */,
+				D160964F80C69F5797041107655D0A8E /* SpreadsheetViewDataSource.swift in Sources */,
+				58064FF6EFD6C02DB72FE77142AC2E6E /* SpreadsheetViewDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85B4EA9CD8689B4A922632BA6E77155F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C9891C9735C1227AB97DD852BA4BA31 /* Pods-Spreadsheet-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6907C37164195E62C83CD022BA058A0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SpreadsheetView;
+			target = 93D8FFC6DCE294A275BFAABBA5E37E42 /* SpreadsheetView */;
+			targetProxy = 549E8EB60B65217731E6E87246D1F696 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4E487F173E6C9664F4E9E26B9635D23C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		65CCD08A75447B640627763A079AA671 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02DFDDF1B2A7DC431B690E52D42D9562 /* Pods-Spreadsheet.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Spreadsheet/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Spreadsheet/Pods-Spreadsheet.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Spreadsheet;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6F74ACC8424BD2C01DF28EB8239DFE1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FD4997C4A96D02DCC0F21BDD3835DF3 /* SpreadsheetView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SpreadsheetView/SpreadsheetView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SpreadsheetView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SpreadsheetView/SpreadsheetView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SpreadsheetView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B913FD3C3FABCFD172603E4BC52F3BDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92057627D72226E1EDB2100D55E49B25 /* Pods-Spreadsheet.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Spreadsheet/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Spreadsheet/Pods-Spreadsheet.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Spreadsheet;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BDD0139D6EB93FA375F887ABD62DAB2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ECB9AA12BE032217251C110A852B0724 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FD4997C4A96D02DCC0F21BDD3835DF3 /* SpreadsheetView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SpreadsheetView/SpreadsheetView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SpreadsheetView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SpreadsheetView/SpreadsheetView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SpreadsheetView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E487F173E6C9664F4E9E26B9635D23C /* Debug */,
+				BDD0139D6EB93FA375F887ABD62DAB2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83E503A02A13448C7D9215FE5CCDC5C2 /* Build configuration list for PBXNativeTarget "Pods-Spreadsheet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B913FD3C3FABCFD172603E4BC52F3BDE /* Debug */,
+				65CCD08A75447B640627763A079AA671 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2368EF7AAB0D08C84A2D59B61CA6CEC /* Build configuration list for PBXNativeTarget "SpreadsheetView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECB9AA12BE032217251C110A852B0724 /* Debug */,
+				6F74ACC8424BD2C01DF28EB8239DFE1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

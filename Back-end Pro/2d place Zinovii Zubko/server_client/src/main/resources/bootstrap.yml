@@ -1,0 +1,15 @@
+# Properties active for ALL profiles:
+---
+spring:
+  cloud:
+    config:
+      uri: http://config:8000	# Expect the Spring Cloud Config server to be running on localhost, port 8000.
+  application:
+    name: callcenter
+server:
+  port: ${PORT:${SERVER_PORT:0}}   # Select any available port if neither port nor server port are specified.
+
+# Allow server_register (Eureka) to recognize two apps of the same type on the same host as separate instances:
+eureka:
+    instance:
+      instanceId: ${spring.cloud.client.hostname}:${spring.application.instance_id:${random.value}}

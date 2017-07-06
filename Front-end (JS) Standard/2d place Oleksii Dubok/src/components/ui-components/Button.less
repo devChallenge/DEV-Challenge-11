@@ -1,0 +1,41 @@
+@import '../../assets/variables.less';
+
+.Button {
+    height: 36px;
+    min-width: 50px;
+    padding: 0 15px;
+    font-family: 'Roboto';
+    font-size: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: none;
+    text-decoration: none;
+
+    &.disabled {
+        opacity: 0.4;
+    }
+
+    &.green {
+        background: @green;
+        color: white;
+        &:hover {
+            background: @green-hover;
+        }
+        &:active {
+            background: @green-active;
+        }
+    }
+    &.gray {
+        background: @gray;
+        color: white;
+        &:hover {
+            background: @gray-hover;
+        }
+        &:active {
+            background: @gray-active;
+        }
+    }
+}
+

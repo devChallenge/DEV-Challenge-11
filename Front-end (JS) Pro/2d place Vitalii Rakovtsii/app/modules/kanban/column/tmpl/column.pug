@@ -1,0 +1,17 @@
+.column__title.container-fluid(draggable='true')
+  .row
+    .col {{ column.title }}
+
+    .col-5.column__description {{ column.description }}
+  .row.justify-content-md-center.align-items-center
+    a.badge.badge-info.column__draggable('href'='javascript:') drag here
+    a.badge.badge-primary('[routerLink]'='[{ outlets: { overlay: ["update-column", column.id] } }]') update
+    a.badge.badge-danger('href'='javascript:', '(click)'='removeBeacon.emit(column)') remove
+
+task(
+'[class.dimmed]'='highlightedIDs.indexOf(task.id) === -1',
+'draggable'='true',
+'droppable'='true',
+'*ngFor'='let task of tasks',
+'[task]'='task',
+'(removeBeacon)'='removeTaskBeacon.emit(task)')

@@ -1,0 +1,45 @@
+.board {
+	.tools {
+		margin: 1em;
+		display: flex;
+		align-items: center;
+
+		.tool {
+			margin-right: 1em;
+		}
+	}
+
+	.all-tags {
+		margin: 1em;
+		border: 1px solid #dededf;
+		padding: 1em;
+	}
+
+	.archive-cards {
+		margin: 1em;
+		border: 1px solid #dededf;
+		padding: 1em;
+		display: flex;
+
+		.archived-card {
+			background: #dededf;
+			padding: 1em;
+			border-radius: .28571429rem;
+		}
+
+		.restore-button {
+			margin-top: 1em;
+		}
+	}
+
+	.columns {
+		display: flex;
+		margin: 1em;
+		border: 1px solid #dededf;
+		overflow: scroll;
+
+		.new-column {
+			padding: 1em;
+		}
+	}
+}

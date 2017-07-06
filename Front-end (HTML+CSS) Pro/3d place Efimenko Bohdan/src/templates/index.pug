@@ -1,0 +1,41 @@
+extends layouts/_gradient
+
+block title
+  title Головна
+
+block content
+  +b.c-overlay
+    +e.IMG(src="assets/img/gradient-bg.svg" alt="Підложка").pic
+    +e.icon-wrapper
+      +e.IMG(src="assets/img/big-heart.svg" alt="Серце").icon
+  +b.MAIN.o-content
+    .o-container
+      +b.c-title-wrapper
+        +b.c-title 
+          +e.inner Добре Серце
+          +b.c-btn-link
+        +b.BUTTON(type="button" title="Детальніше про проект").c-btn-link.c-title-wrapper__item
+          +e.text Детальніше про проект
+          +e.icon
+            img(src="assets/img/circle-arrow.svg" alt="Іконка стрілки")
+                
+      +b.c-actions
+        +e.item
+          +e.title Вже зараз Ви можете допомогти тим, хто дійсно потребує допомоги
+          +e.footer_sm
+            +b.BUTTON(type="button" title="Як Ви можете допомогти?").c-btn-link
+              +e.text Як Ви можете допомогти?
+              +e.icon
+                img(src="assets/img/circle-arrow.svg" alt="Іконка стрілки")
+            +e.footer-item
+            +b.BUTTON(type="button" title="Допомогти вже зараз").c-btn
+              +e.overlay
+              +e.shadow
+              +e.text Допомогти вже зараз
+        +e.item
+          +e.title Якщо Вам необхідна допомога, додайте проект
+          +e.footer
+            +b.BUTTON(type="button" title="Як Ви можете допомогти?").c-btn-link
+              +e.text Додати проект
+              +e.icon
+                img(src="assets/img/circle-plus.svg" alt="Іконка плюса")

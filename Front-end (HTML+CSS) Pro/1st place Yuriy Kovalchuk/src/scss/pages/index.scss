@@ -1,0 +1,150 @@
+// $geometria: "Geometria",sans-serif;
+// $geometriaBold: "Geometria Bold",sans-serif;
+// $geometriaExtraBold: "Geometria Extra Bold",sans-serif;
+// $geometriaLight: "Geometria Light",sans-serif;
+// $gilroy: 'Gilroy';
+
+.link-glow {
+  font-family: $geometria;
+  font-size: 18px;
+  text-decoration: none;
+  color: #ffffff;
+  // opacity: 0.2;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 15px 10px rgba(#e53656, .2), 0 0 7px 2px rgba(#9d5e9a, .2);
+  display: inline-block;
+  padding: 13px 22px;
+
+  @media (max-width: $screen-sm-max){
+    margin-left: 12px;
+  }
+}
+
+.link-icon {
+  font-family: $geometria;
+  font-size: 18px;
+  color: #c5d5e6;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+
+  span {
+    margin-right: 1px;
+
+    letter-spacing: 0.2px;
+  }
+
+  svg {
+    width: 18px;
+    height: 18px;
+    transform: translateY(2px);
+    fill: "url(#a)";
+  }
+
+  &--plus {
+    span {
+      margin-right: 13px;
+    }
+  }
+}
+
+.main-page {
+  padding-left: 85px;
+
+  min-height: calc(100vh - 54px - 47px);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: $screen-lg-max) {
+    padding-left: 0;
+  }
+
+  &__title {
+    font-family: $geometriaBold;
+    font-size: 64px;
+    color: #ffffff;
+    margin-right: 13px;
+    @media (max-width: $screen-sm-max) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__helper-link-left {
+    display: inline-block;
+    margin-right: 100px;
+    @media (max-width: $screen-sm-max) {
+      margin-right: 0;
+      margin-bottom: 30px;
+      display: block;
+    }
+  }
+
+  &__helper-links {
+    display: flex;
+    align-items: center;
+    @media (max-width: $screen-sm-max) {
+      display: block;
+    }
+  }
+
+  &__title-wrapper {
+    display: flex;
+    align-items: center;
+    align-items: flex-end;
+    margin-bottom: 68px;
+
+    @media (max-width: $screen-sm-max) {
+      display: block;
+    }
+  }
+
+  &__title-detail {
+    transform: translateY(-12px);
+    // font-family: $geometria;
+    // font-size: 18px;
+    // color: #c5d5e6;
+    // text-decoration: none;
+    // display: flex;
+    // align-items: center;
+    //
+    // svg {
+    //     width: 18px;
+    //     height: 18px;
+    // }
+  }
+
+  &__helper-wrapper {
+    color: #fff;
+    margin-bottom: 71px;
+    max-width: 50vw;
+
+    @media (max-width: $screen-lg-max) {
+      max-width: 100%;
+    }
+  }
+
+  &__helper-title {
+    font-family: $gilroy;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.2;
+    position: relative;
+    padding-top: 21px;
+    letter-spacing: 0.3px;
+    margin-bottom: 17px;
+
+    &--bottom {
+      margin-bottom: 31px;
+    }
+
+    &:before {
+      content: '';
+      width: 50px;
+      height: 2px;
+      background-color: #ffffff;
+      @include position(absolute, 0 null null 0);
+    }
+  }
+}

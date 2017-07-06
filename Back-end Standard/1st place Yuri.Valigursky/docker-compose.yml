@@ -1,0 +1,53 @@
+version: "2"
+
+volumes:
+  postgres-data:
+    driver: local
+  app-gems:
+    driver: local
+
+services:
+
+  postgres:
+    image: postgres:9.5.4 # We'll use the official postgres image.
+    volumes:
+      # Mounts a persistable volume inside the postgres data folder, so we
+      # don't lose the created databases when this container is removed.
+      - postgres-data:/var/lib/postgresql/data
+    environment:
+      # The password we'll use to access the databases:
+      POSTGRES_PASSWORD: s0m3p455
+
+  web:
+    build:
+      context: .
+      dockerfile: dev.Dockerfile
+    # The name our development image will use:
+    image: my-namespace/my-app:development
+    command: rails server -b 0.0.0.0 -p 3000
+    ports:
+      # This will bind your port 3000 with the container's port 3000, so we can
+      # use 'http://localhost:3000' to see our Rails app:
+      - 8080:3000
+    links:
+      # Makes the postgres service a dependency for our app, and also makes it
+      # visible at the 'db' hostname from this container:
+      - postgres:db
+    entrypoint: ./scripts/backend_entrypoint.sh
+    volumes:
+      # Mounts the app code (".") into the container's "/usr/src/app" folder:
+      - .:/usr/src/app
+      # Mounts a persistable volume in the installed gems folder, so we can add
+      # gems to the app without having to build the development image again:
+      - app-gems:/usr/local/bundle
+    # Keeps the stdin open, so we can attach to our app container's process and
+    # do stuff such as `byebug` or `binding.pry`:
+    stdin_open: true
+    # Allows us to send signals (CTRL+C, CTRL+P + CTRL+Q) into the container:
+    tty: true
+    environment:
+      # Notice that this is the DB we'll use:
+      DATABASE_URL: postgres://postgres:s0m3p455@db:5432/my_app_development
+      # We'll use this env variable to make the log output gets directed
+      # to Docker:
+      RAILS_LOG_TO_STDOUT: "true"

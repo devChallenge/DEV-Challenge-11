@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<title>Frontend FINAL</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/owl.carousel.css" />
+
+	<link rel="stylesheet" href="css/fonts.css" />
+	<link rel="stylesheet" href="css/style.css" />
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/sly.min.js"></script>
+
+	<script type="text/javascript" src="js/common.js"></script>
+
+</head>
+<body>
+
+
+	<!-- header -->
+	<header class="header-wrapper">
+		<div class="container">
+			<div class="logo"><a href="#"><img src="img/logo.png" alt="logo"></a></div>
+			<div class="form__input-dropdown">
+		    <input class="drop-input" id="city" placeholder="Київ" readonly>
+		    <span class="down-arrow-wrapper"><img src="img/angle-down.png" alt=""></span> 
+		    <ul class="form__input-dropdown-list" id="city-list">
+						<li><a href="#">Київ</a></li>
+		        <li><a href="#">Львів</a></li>
+		        <li><a href="#">Одеса</a></li>
+		    </ul>
+			</div>
+			<div class="mobile-menu"><div class="buter"><div></div><div></div><div></div></div></div>
+			<nav class="menu-wrapper">
+				<ul class="menu">
+					<li><a href="#">Маркети</a></li>
+					<li><a href="#">Про проект</a></li>
+					<li><a href="#">Локація</a></li>
+					<li><a href="#">Контакти</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+
+	<!--main slider-->
+ <div class="gallery-wrapper">
+	 <div class="main-gallery">
+		 <div class="slider owl-carousel" id="main-slider">
+			 <div class="slide red" style="background-image: url(img/bg1.jpg);">
+				 <div class="container">
+				 	<div class="slide__inner-block">
+					 	<div class="slide__info">
+					 		<div class="slide__date"><span>3-4</span> червня</div>
+					 		<div class="slide__title">Гастрономічний пікнік</div>
+					 		<div class="slide__subtitle">Гастрономія</div>
+					 		<a href="" class="slide__link">Подати заявку</a>
+					 	</div>
+					</div>
+				 </div>
+			 </div>
+			 <div class="slide" style="background-image: url(img/bg2.jpg);">
+				 <div class="container">
+					<div class="slide__inner-block">
+						<div class="slide__info">
+							<div class="slide__date"><span>10-11</span> червня</div>
+							<div class="slide__title">Космос: новий дім</div>
+							<div class="slide__subtitle">Дім та декор</div>
+							<a href="" class="slide__link">Подати заявку</a>
+						</div>
+					</div>
+				 </div>
+			 </div>
+			 <div class="slide red" style="background-image: url(img/bg3.jpg);">
+				 <div class="container">
+					<div class="slide__inner-block">
+						<div class="slide__info">
+							<div class="slide__date"><span>17-18</span> червня</div>
+							<div class="slide__title">Літні барви, кращі колекції</div>
+							<div class="slide__subtitle">Одяг, взуття, аксесуари</div>
+							<a href="" class="slide__link">Подати заявку</a>
+						</div>
+					</div>
+				 </div>
+			 </div>
+			 <div class="slide" style="background-image: url(img/bg4.jpg);">
+				 <div class="container">
+					<div class="slide__inner-block">
+						<div class="slide__info">
+							<div class="slide__date"><span>1-2</span> липня</div>
+							<div class="slide__title">Космічні іграшки</div>
+							<div class="slide__subtitle">Діти</div>
+							<a href="" class="slide__link">Подати заявку</a>
+						</div>
+					</div>
+				 </div>
+			 </div>
+		 </div>
+	 </div>
+ </div>
+
+<!--navigation -->
+<div class="nav-wrapper">
+		<div class="nav" id="navigation">
+			<ul class="nav__container">
+				<li class="nav__item" id="nav1">
+					<div class="nav__date"><span>3-4</span> червня</div>
+					<div class="nav__dot"></div>
+					<div class="nav__title">Гастрономічний<br> пікнік</div>
+					<div class="nav__subtitle">Гастрономія</div>
+				</li>
+				<li class="nav__item" id="nav2">
+					<div class="nav__date"><span>10-11</span> червня</div>
+					<div class="nav__dot"></div>
+					<div class="nav__title">Космос:<br> новий дім</div>
+					<div class="nav__subtitle">Дім та декор</div>
+				</li>
+				<li class="nav__item" id="nav3">
+					<div class="nav__date"><span>17-18</span> червня</div>
+					<div class="nav__dot"></div>
+					<div class="nav__title">Літні барви,<br> Кращі колекції</div>
+					<div class="nav__subtitle">Одяк, взуття, аксесуари</div>
+				</li>
+				<li class="nav__item" id="nav4">
+					<div class="nav__date"><span>1-2</span> липня</div>
+					<div class="nav__dot"></div>
+					<div class="nav__title">Космічні<br> іграшки</div>
+					<div class="nav__subtitle">Діти</div>
+				</li>
+			</ul>
+		</div>
+</div>
+
+
+<!--market -->
+<div class="container">
+	<a href="#" class="all-markets-link">Всі маркети</a>
+	<div class="recent-markets-title"><span>Нещодавні маркети</span></div>
+</div>
+
+<div class="market-wrapper">
+		<div class="market" id="market">
+			<ul class="market__container">
+				<li class="market__item">
+					<div class="market__img" style="background-image: url(img/bg1.jpg);"></div>
+					<div class="nav__title">Те, що ми їмо</div>
+					<div class="nav__subtitle">Гастрономія</div>
+					<div class="nav__subtitle">48 фото 2 відео</div>
+				</li>
+				<li class="market__item">
+					<div class="market__img" style="background-image: url(img/bg2.jpg);"></div>
+					<div class="nav__title">Твій дім - космос</div>
+					<div class="nav__subtitle">Дім та декор</div>
+					<div class="nav__subtitle">51 фото</div>
+				</li>
+				<li class="market__item">
+					<div class="market__img" style="background-image: url(img/bg3.jpg);"></div>
+					<div class="nav__title">Так холодно без тебе</div>
+					<div class="nav__subtitle">Одяг взуття аксесуари</div>
+					<div class="nav__subtitle">32 фото 1 відео</div>
+				</li>
+				<li class="market__item">
+					<div class="market__img" style="background-image: url(img/bg4.jpg);"></div>
+					<div class="nav__title">Любов до дому</div>
+					<div class="nav__subtitle">Дім і декор</div>
+					<div class="nav__subtitle">87 фото</div>
+				</li>
+			</ul>
+		</div>
+</div>
+
+<!--subsribtion -->
+	<div class="subscribe">
+		<div class="subscribe__title">Підписатися на новини</div>
+		<div class="subscribe__subtitle">Отримуйте на пошту листи з останніми новинами та подіями!<br>Будьте першими!</div>
+		<form class="subscribe__form" id="subscribe__form">
+			<input type="email" name="milo" placeholder="Введіть Ваш e-mail" required>
+			<button>Ok</button>
+		</form>
+	</div>
+
+
+<!--map -->
+<div class="map-title">Київ, Десятинна, 12</div>
+<div class="map-link"><a href="mailto:vsi.svoi.food@gmail.com">vsi.svoi.food@gmail.com</a></div>
+<div class="social-icons">
+	<a href="#" class="social-icon facebook"></a>
+	<a href="#" class="social-icon instagram"></a>
+</div>
+
+
+<!--КОМЕНТАР: БАЖАНО ВІДКРИВАТИ ПРОСТО ФАЙЛ У РЕЖИМІ ПЕРЕГЛЯДУ, БО ЯКЩО ДИВИТИСЬ ЧЕРЕЗ ХОСТ ТО КАРТА БУДЕ ЗАБЛОКОВАНА ГУГЛОМ ЧЕРЕЗ ВІДСУТНІСТЬ API KEY. -->
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script>
+var myCenter=new google.maps.LatLng(50.4581356,30.5192522);
+
+function initialize()
+{
+	var mapProp = {
+		center:myCenter,
+		zoom:16,
+		scrollwheel: false,
+		mapTypeId:google.maps.MapTypeId.ROADMAP
+	};
+
+	var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+	var marker=new google.maps.Marker({
+		position:myCenter,
+		icon:'img/marker.png'
+	});
+
+	marker.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+<div class="my-google-map">
+	<div id="googleMap" style="width:100%;height:100%;"></div>
+</div>
+
+<footer class="footer">&copy; Всі. Свої. 2017</footer>
+
+
+
+</body>
+</html>

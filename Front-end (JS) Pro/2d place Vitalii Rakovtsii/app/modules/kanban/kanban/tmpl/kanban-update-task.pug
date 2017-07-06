@@ -1,0 +1,25 @@
+
+form.task-update__form('*ngIf'='task')
+  .form-group
+    label Title
+    input.form-control(name='title', '[(ngModel)]'='task.title')
+
+  .form-group
+    label Description
+    textarea.form-control(name='description', '[(ngModel)]'='task.description')
+    p.form-text.text-muted
+      a('href'='https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet', target='_blank') markdown supported.
+
+  .form-group('*ngIf'='columns')
+    label Status
+    select.form-control('[(ngModel)]'='task.columnID', name='columnID')
+      option('*ngFor'='let column of columns', '[value]'='column.id') {{column.title}}
+
+  .form-group
+    label Colour
+    select.form-control('[(ngModel)]'='task.colour', name='colour')
+      option('*ngFor'='let colour of colours', '[value]'='colour[0]') {{colour[1]}}
+
+
+  .form-group
+    a.btn.btn-block.btn-primary('[routerLink]'='[""]') Done

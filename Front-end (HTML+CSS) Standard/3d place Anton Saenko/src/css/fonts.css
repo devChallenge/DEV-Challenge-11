@@ -1,0 +1,16 @@
+
+/* font-family: "Intro-Book"; */
+@font-face {
+	font-family: "Intro-Book";
+	 src: url('../fonts/Intro-Book.eot?') format('eot'),
+         url('../fonts/Intro-Book.woff') format('woff'),
+         url('../fonts/Intro-Book.ttf')  format('truetype');
+}
+
+/* font-family: "Intro-Bold"; */
+@font-face {
+	font-family: "Intro-Bold";
+	 src: url('../fonts/Intro-Bold.eot?') format('eot'),
+         url('../fonts/Intro-Bold.woff') format('woff'),
+         url('../fonts/Intro-Bold.ttf')  format('truetype');
+}

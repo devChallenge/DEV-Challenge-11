@@ -1,0 +1,6 @@
+:host {
+  display: block;
+}
+.custom-radio .custom-control-input:checked ~ .custom-control-indicator {
+  border: 1px dashed #000;
+}

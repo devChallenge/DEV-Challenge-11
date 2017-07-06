@@ -1,0 +1,15 @@
+PODS:
+  - IQKeyboardManager (4.0.10)
+  - SpreadsheetView (0.7.2)
+
+DEPENDENCIES:
+  - IQKeyboardManager
+  - SpreadsheetView
+
+SPEC CHECKSUMS:
+  IQKeyboardManager: 593ee99b88381f4b9ccb22bd680f22606351bd41
+  SpreadsheetView: 84accc93f46aab9ecd95e08e384e6ab073ffb14b
+
+PODFILE CHECKSUM: a8e645f1b87056d069886a110adf018712b3e94a
+
+COCOAPODS: 1.2.0

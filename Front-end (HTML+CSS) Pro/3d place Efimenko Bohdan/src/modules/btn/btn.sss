@@ -1,0 +1,39 @@
+.c-btn
+  position: relative
+  border: none
+  background-color: transparent
+  font-size: 18px
+  border-radius: 10px
+  line-height: 50px
+  padding: 0 20px
+  color: var(--tColorL)
+  font-family: var(--mFont)
+  cursor: pointer
+  transition: transform .2s ease-in-out
+  will-change: transform
+  &__overlay
+    position: absolute
+    width: 100%
+    height: 100%
+    left: 0
+    top: 0
+    opacity: .2
+    border-radius: 10px
+    background-color: #000
+    box-shadow: 0 0 7px 2px #9d5e9a
+    z-index: 2
+  &__shadow
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    border-radius: 10px
+    background-color: #9c4454
+    filter: blur(20px)
+    z-index: 1
+  &__text
+    position: relative
+    z-index: 3
+  &:--hover
+    transform: translateY(-5px)

@@ -1,0 +1,20 @@
+Devchallenge 2017. Explenation for InPocket app
+ 
+ 
+
+I would Like to pay attention to the the log in stage , especially to the security which I offer to implement with finger print identification (or optional signing). As a user, I always suffer from that inconvenient way I get into Private24, and it would be easier if such feature included.
+ 
+ 
+In the analytics/goals flow user can be encouraged to succeed in their goals, this could be gold card, if he gains some amount of goals (or any other profitable proposition).
+ 
+Dashboard - the main idea was to create page which user wan’t have any need to leave. The Dashboard page includes all frequently used navigation: Transfers, Payments (mostly responsible for templates which allows him quick recharging), however user can click the button “Add Payment” and Choose between payment or transfer type also. As for transfers, this button leads user directly to the transfer screen where buy default the most frequent transfer would be. In payments user can also view this transactions history with preriod filter.
+Speaking about “More” button, it leads user on the the Banks Products Items.
+Adds, I’ve decided to include add bubl with ability to close it, I believe that it’s not to irritating and if user closes it by mistake, he can alway click on the app icon in the right top conner and read about it more.
+ 
+Analytics has a small expenses preview which becomes more extended with budget, expenses and goals tabs.
+On the section budget, at the begging, user has ability to create ones, by clicking add floating button (after creation it is substituted on Edit). On the creation stage user is offered to set the period (dates), set general budget and sprea
+
+
+
+
+Link to InVision https://invis.io/56CEU2K2P#/241766791_Dashboard

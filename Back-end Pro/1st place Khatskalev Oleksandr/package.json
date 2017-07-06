@@ -1,0 +1,29 @@
+{
+  "name": "devchallenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/.bin/mocha tests",
+    "start": "concurrently 'node app.js' 'cd docs && http-server'",
+    "eslint": "./node_modules/.bin/eslint -c .eslintrc.js . --quiet --ignore-path .eslintignore"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "helmet": "^3.6.1",
+    "mongoose": "^4.11.0",
+    "uuid": "^3.1.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "chai": "^4.0.2",
+    "eslint": "^4.1.1",
+    "eslint-plugin-mocha": "^4.11.0",
+    "express": "^4.15.3",
+    "getport": "^0.1.0",
+    "mocha": "^3.4.2",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1"
+  }
+}

@@ -1,0 +1,33 @@
+:host {
+  display: block;
+  padding: 0.25em 1em;
+  min-height: 2em;
+  border: 1px solid #ccc;
+}
+:host.droppable {
+  outline: 5px solid #f00;
+}
+.column__draggable {
+  cursor: move;
+}
+.column__title {
+  font-size: 1em;
+  font-weight: bold;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 1em 0;
+}
+.column__title a {
+  line-height: 1.5em;
+  margin: 0 0.25em;
+}
+.column__description {
+  text-align: right;
+  font-size: 0.8em;
+  font-weight: normal;
+  color: #ccc;
+}
+.dimmed {
+  opacity: 0.3;
+}

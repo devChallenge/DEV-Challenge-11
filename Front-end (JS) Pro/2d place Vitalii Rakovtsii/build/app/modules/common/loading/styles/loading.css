@@ -1,0 +1,7 @@
+:host {
+  display: block;
+}
+.row {
+  position: relative;
+  padding: 2em;
+}

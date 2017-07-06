@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/server_client/server_client.iml" filepath="$PROJECT_DIR$/server_client/server_client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server_config/server_config.iml" filepath="$PROJECT_DIR$/server_config/server_config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server_main/server_gateway.iml" filepath="$PROJECT_DIR$/server_main/server_gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server_main/server_main.iml" filepath="$PROJECT_DIR$/server_main/server_main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server_register/server_register.iml" filepath="$PROJECT_DIR$/server_register/server_register.iml" />
+    </modules>
+  </component>
+</project>

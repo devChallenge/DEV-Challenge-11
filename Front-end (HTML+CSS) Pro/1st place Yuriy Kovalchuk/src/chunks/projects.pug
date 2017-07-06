@@ -1,0 +1,383 @@
+.container
+    .projects
+        .projects__head
+            .projects__head-wrapper
+                a(href="#project-1").projects__head-link.active
+                    | Війна
+                    span.projects__head-link-count 24
+                a(href="#project-2").projects__head-link
+                    | Екологія
+                    span.projects__head-link-count 24
+                a(href="#project-3").projects__head-link
+                    | Діти
+                    span.projects__head-link-count 24
+                a(href="#project-4").projects__head-link
+                    | Освіта
+                    span.projects__head-link-count 24
+        .projects__help-type
+            a(href="#").link-icon.link-icon--plus
+                span Додати проект
+                +icon('plus')
+        .projects__body
+            .projects__body-item#project-1(style="display:block;")
+                .projects__item.active
+                    .projects__item-image
+                        img(src="img/projects/kids.jpg"                     srcset="img/projects/kids@2x.jpg 2x,                    img/projects/kids@3x.jpg 3x")
+                    .projects__item-info
+                        .projects__item-date.
+                            07.05.2017
+                        .projects__item-title.
+                            Необхідна допомога дитячому будинку
+                        .projects__item-text.
+                            Перебуваючи у сиротинцях ці діти мають різного роду матеріальні та нематеріальні потреби, якими зазвичай ніхто не займається. Ті, хто має займатися утриманням дитячих будинків, опікою над дітьми часто забувають про свій обов’язок або ж отримують недостатнє фінансування від держави. Тому вся надія цих діточок покладається на небайдужих людей, волонтерів, благодійні фонди.
+                        .projects__item-status.
+                            Зібрано 10 000  з 25 000 UAH
+                    .projects__item-info-controls
+                        a(href="#").projects__item-controls-link.projects__item-controls-link--hand
+                            +icon('hand')
+                            span.projects__item-controls-link-helper.
+                                Зробити  
+                        a(href="#").projects__item-controls-link.projects__item-controls-link--money
+                            +icon('money')
+                            span.projects__item-controls-link-helper.
+                                Фінансова допомога   
+                        a(href="#").projects__item-controls-link.projects__item-controls-link--clothes
+                            +icon('clothes')
+                            span.projects__item-controls-link-helper.
+                                Матеріальна допомога    
+                        a(href="#").projects__item-controls-link.projects__item-controls-link--donation
+                            +icon('donation')
+                            span.projects__item-controls-link-helper.
+                                Волонтерство   
+                                
+                -for (var i=0;i<5;i++)                
+                    .projects__item
+                        .projects__item-image
+                            img(src="img/projects/kids.jpg"                     srcset="img/projects/kids@2x.jpg 2x,                    img/projects/kids@3x.jpg 3x")
+                            .projects__item-image-status Терміново
+                        .projects__item-info
+                            .projects__item-date.
+                                07.05.2017
+                            .projects__item-title.
+                                Необхідна допомога дитячому будинку
+                            .projects__item-text.
+                                Перебуваючи у сиротинцях ці діти мають різного роду матеріальні та нематеріальні потреби, якими зазвичай ніхто не займається. Ті, хто має займатися утриманням дитячих будинків, опікою над дітьми часто забувають про свій обов’язок або ж отримують недостатнє фінансування від держави. Тому вся надія цих діточок покладається на небайдужих людей, волонтерів, благодійні фонди.
+                            .projects__item-status.
+                                Зібрано 10 000  з 25 000 UAH
+                        .projects__item-info-controls
+                            a(href="#").projects__item-controls-link.projects__item-controls-link--hand
+                                +icon('hand')
+                                span.projects__item-controls-link-helper.
+                                    Зробити  
+                            a(href="#").projects__item-controls-link.projects__item-controls-link--money
+                                +icon('money')
+                                span.projects__item-controls-link-helper.
+                                    Фінансова допомога   
+                            a(href="#").projects__item-controls-link.projects__item-controls-link--clothes
+                                +icon('clothes')
+                                span.projects__item-controls-link-helper.
+                                    Матеріальна допомога    
+                            a(href="#").projects__item-controls-link.projects__item-controls-link--donation
+                                +icon('donation')
+                                span.projects__item-controls-link-helper.
+                                    Волонтерство   
+            .projects__body-item#project-2(style="display:none;")
+                .projects__item.active
+                    .projects__item-image
+                        img(src="img/projects/kids.jpg"                     srcset="img/projects/kids@2x.jpg 2x,                    img/projects/kids@3x.jpg 3x")
+                    .projects__item-info
+                        .projects__item-date.
+                            07.05.2017
+                        .projects__item-title.
+                            Необхідна допомога дитячому будинку
+                        .projects__item-text.
+                            Перебуваючи у сиротинцях ці діти мають різного роду матеріальні та нематеріальні потреби, якими зазвичай ніхто не займається. Ті, хто має займатися утриманням дитячих будинків, опікою над дітьми часто забувають про свій обов’язок або ж отримують недостатнє фінансування від держави. Тому вся надія цих діточок покладається на небайдужих людей, волонтерів, благодійні фонди.
+                        .projects__item-status.
+                            Зібрано 10 000  з 25 000 UAH
+                    .projects__item-info-controls
+                        a(href="#").projects__item-controls-link.projects__item-controls-link--hand
+                            +icon('hand')
+                            span.projects__item-controls-link-helper.
+                                Зробити
+                        a(href="#").projects__item-controls-link.projects__item-controls-link--money
+                            +icon('money')
+                            span.projects__item-controls-link-helper.
+                                Фінансова допомога
+                        a(href="#").projects__item-controls-link.projects__item-controls-link--clothes
+                            +icon('clothes')
+                            span.projects__item-controls-link-helper.
+                                Матеріальна допомога
+                        a(href="#").projects__item-controls-link.projects__item-controls-link--donation
+                            +icon('donation')
+                            span.projects__item-controls-link-helper.
+                                Волонтерство
+                .projects__item
+                    .projects__item-image
+                        img(src="img/projects/kids.jpg"                     srcset="img/projects/kids@2x.jpg 2x,                    img/projects/kids@3x.jpg 3x")
+                        .projects__item-image-status Терміново
+                    .projects__item-info
+                        .projects__item-date.
+                            07.05.2017
+                        .projects__item-title.
+                            Необхідна допомога дитячому будинку
+                        .projects__item-text.
+                            Перебуваючи у сиротинцях ці діти мають різного роду матеріальні та нематеріальні потреби, якими зазвичай ніхто не займається. Ті, хто має займатися утриманням дитячих будинків, опікою над дітьми часто забувають про свій обов’язок або ж отримують недостатнє фінансування від держави. Тому вся надія цих діточок покладається на небайдужих людей, волонтерів, благодійні фонди.
+                        .projects__item-status.
+                            Зібрано 10 000  з 25 000 UAH
+                    .projects__item-info-controls
+                        a(href="#").projects__item-controls-link.projects__item-controls-link--hand
+                            +icon('hand')
+                            span.projects__item-controls-link-helper.
+                                Зробити
+                        a(href="#").projects__item-controls-link.projects__item-controls-link--money
+                            +icon('money')
+                            span.projects__item-controls-link-helper.
+                                Фінансова допомога
+                        a(href="#").projects__item-controls-link.projects__item-controls-link--clothes
+                            +icon('clothes')
+                            span.projects__item-controls-link-helper.
+                                Матеріальна допомога
+                        a(href="#").projects__item-controls-link.projects__item-controls-link--donation
+                            +icon('donation')
+                            span.projects__item-controls-link-helper.
+                                Волонтерство
+                .projects__item
+                    .projects__item-image
+                        img(src="img/projects/kids.jpg"                     srcset="img/projects/kids@2x.jpg 2x,                    img/projects/kids@3x.jpg 3x")
+                        .projects__item-image-status Терміново
+                    .projects__item-info
+                        .projects__item-date.
+                            07.05.2017
+                        .projects__item-title.
+                            Необхідна допомога дитячому будинку
+                        .projects__item-text.
+                            Перебуваючи у сиротинцях ці діти мають різного роду матеріальні та нематеріальні потреби, якими зазвичай ніхто не займається. Ті, хто має займатися утриманням дитячих будинків, опікою над дітьми часто забувають про свій обов’язок або ж отримують недостатнє фінансування від держави. Тому вся надія цих діточок покладається на небайдужих людей, волонтерів, благодійні фонди.
+                        .projects__item-status.
+                            Зібрано 10 000  з 25 000 UAH
+                    .projects__item-info-controls
+                        a(href="#").projects__item-controls-link.projects__item-controls-link--hand
+                            +icon('hand')
+                            span.projects__item-controls-link-helper.
+                                Зробити
+                        a(href="#").projects__item-controls-link.projects__item-controls-link--money
+                            +icon('money')
+                            span.projects__item-controls-link-helper.
+                                Фінансова допомога
+                        a(href="#").projects__item-controls-link.projects__item-controls-link--clothes
+                            +icon('clothes')
+                            span.projects__item-controls-link-helper.
+                                Матеріальна допомога
+                        a(href="#").projects__item-controls-link.projects__item-controls-link--donation
+                            +icon('donation')
+                            span.projects__item-controls-link-helper.
+                                Волонтерство
+            .projects__body-item#project-3(style="display:none;")
+                .projects__item.active
+                    .projects__item-image
+                        img(src="img/projects/kids.jpg"                     srcset="img/projects/kids@2x.jpg 2x,                    img/projects/kids@3x.jpg 3x")
+                    .projects__item-info
+                        .projects__item-date.
+                            07.05.2017
+                        .projects__item-title.
+                            Необхідна допомога дитячому будинку
+                        .projects__item-text.
+                            Перебуваючи у сиротинцях ці діти мають різного роду матеріальні та нематеріальні потреби, якими зазвичай ніхто не займається. Ті, хто має займатися утриманням дитячих будинків, опікою над дітьми часто забувають про свій обов’язок або ж отримують недостатнє фінансування від держави. Тому вся надія цих діточок покладається на небайдужих людей, волонтерів, благодійні фонди.
+                        .projects__item-status.
+                            Зібрано 10 000  з 25 000 UAH
+                    .projects__item-info-controls
+                        a(href="#").projects__item-controls-link.projects__item-controls-link--hand
+                            +icon('hand')
+                            span.projects__item-controls-link-helper.
+                                Зробити
+                        a(href="#").projects__item-controls-link.projects__item-controls-link--money
+                            +icon('money')
+                            span.projects__item-controls-link-helper.
+                                Фінансова допомога
+                        a(href="#").projects__item-controls-link.projects__item-controls-link--clothes
+                            +icon('clothes')
+                            span.projects__item-controls-link-helper.
+                                Матеріальна допомога
+                        a(href="#").projects__item-controls-link.projects__item-controls-link--donation
+                            +icon('donation')
+                            span.projects__item-controls-link-helper.
+                                Волонтерство
+                .projects__item
+                    .projects__item-image
+                        img(src="img/projects/kids.jpg"                     srcset="img/projects/kids@2x.jpg 2x,                    img/projects/kids@3x.jpg 3x")
+                        .projects__item-image-status Терміново
+                    .projects__item-info
+                        .projects__item-date.
+                            07.05.2017
+                        .projects__item-title.
+                            Необхідна допомога дитячому будинку
+                        .projects__item-text.
+                            Перебуваючи у сиротинцях ці діти мають різного роду матеріальні та нематеріальні потреби, якими зазвичай ніхто не займається. Ті, хто має займатися утриманням дитячих будинків, опікою над дітьми часто забувають про свій обов’язок або ж отримують недостатнє фінансування від держави. Тому вся надія цих діточок покладається на небайдужих людей, волонтерів, благодійні фонди.
+                        .projects__item-status.
+                            Зібрано 10 000  з 25 000 UAH
+                    .projects__item-info-controls
+                        a(href="#").projects__item-controls-link.projects__item-controls-link--hand
+                            +icon('hand')
+                            span.projects__item-controls-link-helper.
+                                Зробити
+                        a(href="#").projects__item-controls-link.projects__item-controls-link--money
+                            +icon('money')
+                            span.projects__item-controls-link-helper.
+                                Фінансова допомога
+                        a(href="#").projects__item-controls-link.projects__item-controls-link--clothes
+                            +icon('clothes')
+                            span.projects__item-controls-link-helper.
+                                Матеріальна допомога
+                        a(href="#").projects__item-controls-link.projects__item-controls-link--donation
+                            +icon('donation')
+                            span.projects__item-controls-link-helper.
+                                Волонтерство
+            .projects__body-item#project-4(style="display:none;")
+                .projects__item.active
+                    .projects__item-image
+                        img(src="img/projects/kids.jpg"                     srcset="img/projects/kids@2x.jpg 2x,                    img/projects/kids@3x.jpg 3x")
+                    .projects__item-info
+                        .projects__item-date.
+                            07.05.2017
+                        .projects__item-title.
+                            Необхідна допомога дитячому будинку
+                        .projects__item-text.
+                            Перебуваючи у сиротинцях ці діти мають різного роду матеріальні та нематеріальні потреби, якими зазвичай ніхто не займається. Ті, хто має займатися утриманням дитячих будинків, опікою над дітьми часто забувають про свій обов’язок або ж отримують недостатнє фінансування від держави. Тому вся надія цих діточок покладається на небайдужих людей, волонтерів, благодійні фонди.
+                        .projects__item-status.
+                            Зібрано 10 000  з 25 000 UAH
+                    .projects__item-info-controls
+                        a(href="#").projects__item-controls-link.projects__item-controls-link--hand
+                            +icon('hand')
+                            span.projects__item-controls-link-helper.
+                                Зробити
+                        a(href="#").projects__item-controls-link.projects__item-controls-link--money
+                            +icon('money')
+                            span.projects__item-controls-link-helper.
+                                Фінансова допомога
+                        a(href="#").projects__item-controls-link.projects__item-controls-link--clothes
+                            +icon('clothes')
+                            span.projects__item-controls-link-helper.
+                                Матеріальна допомога
+                        a(href="#").projects__item-controls-link.projects__item-controls-link--donation
+                            +icon('donation')
+                            span.projects__item-controls-link-helper.
+                                Волонтерство
+                .projects__item
+                    .projects__item-image
+                        img(src="img/projects/kids.jpg"                     srcset="img/projects/kids@2x.jpg 2x,                    img/projects/kids@3x.jpg 3x")
+                        .projects__item-image-status Терміново
+                    .projects__item-info
+                        .projects__item-date.
+                            07.05.2017
+                        .projects__item-title.
+                            Необхідна допомога дитячому будинку
+                        .projects__item-text.
+                            Перебуваючи у сиротинцях ці діти мають різного роду матеріальні та нематеріальні потреби, якими зазвичай ніхто не займається. Ті, хто має займатися утриманням дитячих будинків, опікою над дітьми часто забувають про свій обов’язок або ж отримують недостатнє фінансування від держави. Тому вся надія цих діточок покладається на небайдужих людей, волонтерів, благодійні фонди.
+                        .projects__item-status.
+                            Зібрано 10 000  з 25 000 UAH
+                    .projects__item-info-controls
+                        a(href="#").projects__item-controls-link.projects__item-controls-link--hand
+                            +icon('hand')
+                            span.projects__item-controls-link-helper.
+                                Зробити
+                        a(href="#").projects__item-controls-link.projects__item-controls-link--money
+                            +icon('money')
+                            span.projects__item-controls-link-helper.
+                                Фінансова допомога
+                        a(href="#").projects__item-controls-link.projects__item-controls-link--clothes
+                            +icon('clothes')
+                            span.projects__item-controls-link-helper.
+                                Матеріальна допомога
+                        a(href="#").projects__item-controls-link.projects__item-controls-link--donation
+                            +icon('donation')
+                            span.projects__item-controls-link-helper.
+                                Волонтерство
+                .projects__item
+                    .projects__item-image
+                        img(src="img/projects/kids.jpg"                     srcset="img/projects/kids@2x.jpg 2x,                    img/projects/kids@3x.jpg 3x")
+                        .projects__item-image-status Терміново
+                    .projects__item-info
+                        .projects__item-date.
+                            07.05.2017
+                        .projects__item-title.
+                            Необхідна допомога дитячому будинку
+                        .projects__item-text.
+                            Перебуваючи у сиротинцях ці діти мають різного роду матеріальні та нематеріальні потреби, якими зазвичай ніхто не займається. Ті, хто має займатися утриманням дитячих будинків, опікою над дітьми часто забувають про свій обов’язок або ж отримують недостатнє фінансування від держави. Тому вся надія цих діточок покладається на небайдужих людей, волонтерів, благодійні фонди.
+                        .projects__item-status.
+                            Зібрано 10 000  з 25 000 UAH
+                    .projects__item-info-controls
+                        a(href="#").projects__item-controls-link.projects__item-controls-link--hand
+                            +icon('hand')
+                            span.projects__item-controls-link-helper.
+                                Зробити
+                        a(href="#").projects__item-controls-link.projects__item-controls-link--money
+                            +icon('money')
+                            span.projects__item-controls-link-helper.
+                                Фінансова допомога
+                        a(href="#").projects__item-controls-link.projects__item-controls-link--clothes
+                            +icon('clothes')
+                            span.projects__item-controls-link-helper.
+                                Матеріальна допомога
+                        a(href="#").projects__item-controls-link.projects__item-controls-link--donation
+                            +icon('donation')
+                            span.projects__item-controls-link-helper.
+                                Волонтерство
+                .projects__item
+                    .projects__item-image
+                        img(src="img/projects/kids.jpg"                     srcset="img/projects/kids@2x.jpg 2x,                    img/projects/kids@3x.jpg 3x")
+                        .projects__item-image-status Терміново
+                    .projects__item-info
+                        .projects__item-date.
+                            07.05.2017
+                        .projects__item-title.
+                            Необхідна допомога дитячому будинку
+                        .projects__item-text.
+                            Перебуваючи у сиротинцях ці діти мають різного роду матеріальні та нематеріальні потреби, якими зазвичай ніхто не займається. Ті, хто має займатися утриманням дитячих будинків, опікою над дітьми часто забувають про свій обов’язок або ж отримують недостатнє фінансування від держави. Тому вся надія цих діточок покладається на небайдужих людей, волонтерів, благодійні фонди.
+                        .projects__item-status.
+                            Зібрано 10 000  з 25 000 UAH
+                    .projects__item-info-controls
+                        a(href="#").projects__item-controls-link.projects__item-controls-link--hand
+                            +icon('hand')
+                            span.projects__item-controls-link-helper.
+                                Зробити
+                        a(href="#").projects__item-controls-link.projects__item-controls-link--money
+                            +icon('money')
+                            span.projects__item-controls-link-helper.
+                                Фінансова допомога
+                        a(href="#").projects__item-controls-link.projects__item-controls-link--clothes
+                            +icon('clothes')
+                            span.projects__item-controls-link-helper.
+                                Матеріальна допомога
+                        a(href="#").projects__item-controls-link.projects__item-controls-link--donation
+                            +icon('donation')
+                            span.projects__item-controls-link-helper.
+                                Волонтерство
+                .projects__item
+                    .projects__item-image
+                        img(src="img/projects/kids.jpg"                     srcset="img/projects/kids@2x.jpg 2x,                    img/projects/kids@3x.jpg 3x")
+                        .projects__item-image-status Терміново
+                    .projects__item-info
+                        .projects__item-date.
+                            07.05.2017
+                        .projects__item-title.
+                            Необхідна допомога дитячому будинку
+                        .projects__item-text.
+                            Перебуваючи у сиротинцях ці діти мають різного роду матеріальні та нематеріальні потреби, якими зазвичай ніхто не займається. Ті, хто має займатися утриманням дитячих будинків, опікою над дітьми часто забувають про свій обов’язок або ж отримують недостатнє фінансування від держави. Тому вся надія цих діточок покладається на небайдужих людей, волонтерів, благодійні фонди.
+                        .projects__item-status.
+                            Зібрано 10 000  з 25 000 UAH
+                    .projects__item-info-controls
+                        a(href="#").projects__item-controls-link.projects__item-controls-link--hand
+                            +icon('hand')
+                            span.projects__item-controls-link-helper.
+                                Зробити
+                        a(href="#").projects__item-controls-link.projects__item-controls-link--money
+                            +icon('money')
+                            span.projects__item-controls-link-helper.
+                                Фінансова допомога
+                        a(href="#").projects__item-controls-link.projects__item-controls-link--clothes
+                            +icon('clothes')
+                            span.projects__item-controls-link-helper.
+                                Матеріальна допомога
+                        a(href="#").projects__item-controls-link.projects__item-controls-link--donation
+                            +icon('donation')
+                            span.projects__item-controls-link-helper.
+                                Волонтерство

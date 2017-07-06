@@ -1,0 +1,30 @@
+.SelectItem {
+    display: flex;
+    overflow: hidden;
+    height: 30px;
+    pointer-events: none;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    font-family: 'Roboto';
+    font-size: 12px;
+    &.active {
+        font-weight: 500;
+    }
+
+    > div:not(:first-child) {
+        display: flex;
+        flex-grow: 1;
+        flex-shrink: 0;
+    }
+
+    .name {
+        width: 170px;
+    }
+    .color {
+        height: 10px;
+        width: 15px;
+        margin-right: 20px;
+    }
+}
+

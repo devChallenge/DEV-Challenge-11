@@ -1,0 +1,12 @@
+
+<form class="task-update__form" *ngIf="column">
+  <div class="form-group">
+    <label>Title</label>
+    <input class="form-control" name="title" [(ngModel)]="column.title"/>
+  </div>
+  <div class="form-group">
+    <label>Brief Description</label>
+    <input class="form-control" name="description" [(ngModel)]="column.description"/>
+  </div>
+  <div class="form-group"><a class="btn btn-block btn-primary" [routerLink]="[&quot;&quot;]">Done</a></div>
+</form>

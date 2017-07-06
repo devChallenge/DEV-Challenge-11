@@ -1,0 +1,31 @@
+.logo {
+  @include absoluteCenterY();
+  z-index: 1;
+  left: 20px;
+  width: 150px;
+  height: 34px;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+}
+
+@media (min-width: $phone-landscape) {
+  .logo {
+    left: 50px;
+  }
+}
+
+@media (min-width: $tablet-landscape) {
+
+  .logo {
+    left: 100px;
+  }
+
+}
+
+@media (min-width: $desktop) {
+
+}

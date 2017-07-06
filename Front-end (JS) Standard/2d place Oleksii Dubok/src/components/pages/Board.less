@@ -1,0 +1,26 @@
+@import '../../assets/variables.less';
+
+.Board {
+    width: 90vw;
+    height: calc(~'100vh - 60px');
+    padding: 20px 20px 20px 0;
+    display: flex;
+    overflow-x: auto;
+    .column {
+        height: 100%;
+        width: 250px;
+        min-width: 200px;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        border: 1px solid @border-color;
+        overflow-y: auto;
+        .header {
+            height: 40px;
+            font-size: 21px;
+            font-weight: 300;
+            border-bottom: 1px solid @border-color;
+            text-transform: uppercase;
+        }
+    }
+}

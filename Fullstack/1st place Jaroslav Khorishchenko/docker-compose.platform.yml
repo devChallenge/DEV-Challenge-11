@@ -1,0 +1,24 @@
+version: '2'
+
+services:
+
+  mongo:
+    image: mongo:latest
+    volumes:
+      - "./data/mongo:/data/db"
+    ports:
+      - "27017:27017"
+
+  redis:
+    image: redis:latest
+    volumes:
+      - "./data/redis:/data"
+
+  entry-point:
+    image: node:7.9
+    volumes:
+      - ./services/entry-point:/usr/src/app
+    environment:
+      - EXPRESS_SESSION_SECRET=tHcxcGCeBRiuij61
+    ports:
+      - "8080:8080"

@@ -1,0 +1,48 @@
+{
+  "name": "ua-web-challenge-xi-final",
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "start": "gulp"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@angular/common": "^4.2.5",
+    "@angular/compiler": "^4.2.5",
+    "@angular/core": "^4.2.5",
+    "@angular/forms": "^4.2.5",
+    "@angular/http": "^4.2.5",
+    "@angular/platform-browser": "^4.2.5",
+    "@angular/platform-browser-dynamic": "^4.2.5",
+    "@angular/router": "^4.2.5",
+    "@types/node": "^8.0.7",
+    "autoprefixer": "^7.1.1",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-inject": "^4.2.0",
+    "gulp-inline-ng2-template": "^4.0.0",
+    "gulp-inline-source": "^3.1.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-stylus": "^2.6.0",
+    "gulp-tslint": "^8.0.0",
+    "gulp-typescript": "^3.1.7",
+    "gulp-uglify": "^3.0.0",
+    "marked": "^0.3.6",
+    "moment": "^2.18.1",
+    "reflect-metadata": "^0.1.10",
+    "rxjs": "^5.3.0",
+    "stream-series": "^0.1.1",
+    "stylus": "^0.54.5",
+    "systemjs": "^0.20.12",
+    "systemjs-builder": "^0.16.4",
+    "tslint": "^5.1.0",
+    "zone.js": "^0.8.9"
+  },
+  "dependencies": {
+    "typescript": "^2.4.1"
+  }
+}

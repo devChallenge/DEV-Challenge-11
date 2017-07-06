@@ -1,0 +1,42 @@
+//breakpoints variables
+
+$screen-lg-max: 1500px;
+$screen-md-max: 992px;
+$screen-sm-max: 768px;
+$screen-xs-max: 544px;
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    @media (min-width: $screen-xs-max) {
+        max-width: 576px;
+    }
+    @media (min-width: $screen-sm-max) {
+        max-width: 720px;
+    }
+    @media (min-width: $screen-md-max) {
+        max-width: 940px;
+    }
+    @media (min-width: $screen-lg-max) {
+        max-width: 1440px;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+  border: none;
+  vertical-align: top;
+  max-width: 100%;
+  height: auto;
+}

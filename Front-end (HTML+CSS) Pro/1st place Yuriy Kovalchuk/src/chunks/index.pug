@@ -1,0 +1,26 @@
+.container
+    .main-page
+        .main-page__wrapper
+            .main-page__title-wrapper
+                .main-page__title Добре Серце
+                a(href="#").main-page__title-detail.link-icon
+                    span детальніше про проект
+                    +icon('detail')
+            .main-page__helper-wrapper
+                .main-page__helper-title.
+                    Вже зараз Ви можете допомогти тим, хто дійсно<br>
+                    потребує допомоги
+                .main-page__helper-links    
+                    a(href="#help").link-icon.main-page__helper-link-left.js-show-pop
+                        span Як Ви можете допомогти?
+                        +icon('detail')
+                    a(href="#help").link-glow.js-show-pop.
+                        Допомогти вже зараз 
+                    
+            .main-page__helper-wrapper
+                .main-page__helper-title.main-page__helper-title--bottom.
+                    Якщо Вам необхідна допомога, додайте проект
+                a(href="#").link-icon.link-icon--plus
+                    span Додати проект
+                    +icon('plus')    
+              

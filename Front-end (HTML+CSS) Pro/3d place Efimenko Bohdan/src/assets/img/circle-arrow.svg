@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45 (43475) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="26.2276411%" y1="82.7333631%" x2="131.910932%" y2="-17.1376272%" id="linearGradient-1">
+            <stop stop-color="#E53656" offset="0%"></stop>
+            <stop stop-color="#6082D8" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Стартовая" transform="translate(-753.000000, -218.000000)" fill-rule="nonzero" fill="url(#linearGradient-1)">
+            <g id="Ссылки" transform="translate(100.000000, 182.000000)">
+                <g id="Детальнее-про-проект" transform="translate(437.000000, 35.000000)">
+                    <path d="M223.257176,5.38988235 L227.866235,10 L223.256118,14.6101176 L222.507529,13.8615294 L226.369059,10 L222.507529,6.13952941 L223.257176,5.38988235 L223.257176,5.38988235 Z M234,10 C234,14.9627059 229.962706,19 225,19 C220.037294,19 216,14.9627059 216,10 C216,5.03729412 220.037294,1 225,1 C229.962706,1 234,5.03729412 234,10 Z M232.941176,10 C232.941176,5.62070588 229.379294,2.05882353 225,2.05882353 C220.620706,2.05882353 217.058824,5.62070588 217.058824,10 C217.058824,14.3792941 220.620706,17.9411765 225,17.9411765 C229.379294,17.9411765 232.941176,14.3792941 232.941176,10 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

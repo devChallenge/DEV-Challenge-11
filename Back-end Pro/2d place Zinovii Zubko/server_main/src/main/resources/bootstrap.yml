@@ -1,0 +1,13 @@
+---
+spring:
+  application:
+    name: server_main
+  cloud:
+    config:
+      uri: http://config:8000
+server:
+  port: 8001
+eureka:
+  instance:
+    metadataMap:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}

@@ -1,0 +1,12 @@
+
+form.task-update__form('*ngIf'='column')
+  .form-group
+    label Title
+    input.form-control(name='title', '[(ngModel)]'='column.title')
+
+  .form-group
+    label Brief Description
+    input.form-control(name='description', '[(ngModel)]'='column.description')
+
+  .form-group
+    a.btn.btn-block.btn-primary('[routerLink]'='[""]') Done

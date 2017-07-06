@@ -1,0 +1,42 @@
+<div class="task-create">
+  <h2>Task Create</h2>
+  <div>
+    <md-input-container>
+      <input mdInput placeholder="Title" [(ngModel)]="taskName" required>
+    </md-input-container>
+  </div>
+  <div>
+    <md-input-container>
+      <input mdInput placeholder="Description" [(ngModel)]="taskDescription" required>
+    </md-input-container>
+  </div>
+  <div>
+    <md-select placeholder="User" [(ngModel)]="taskUser" required>
+      <md-option *ngFor="let user of users" [value]="user">
+        {{ user.name }}
+      </md-option>
+    </md-select>
+  </div>
+  <br>
+  <div>
+    <md-select placeholder="Category" [(ngModel)]="taskCategory" required>
+      <md-option *ngFor="let category of categories" [value]="category">
+        {{ category.title }}
+      </md-option>
+    </md-select>
+  </div>
+  <div>
+    <md-input-container required>
+      <input mdInput placeholder="Tags (Example: One, Two)" [(ngModel)]="taskTags">
+    </md-input-container>
+  </div>
+  <div class="task-create__buttons" fxLayout="row">
+    <div fxFlex="grow">
+      <button md-raised-button color="primary" (click)="onSave()">Save</button>
+      <button md-raised-button color="warn" (click)="onClose()">Cancel</button>
+    </div>
+    <!--<div>
+      <button md-raised-button color="accent" (click)="onRemove()">remove</button>
+    </div>-->
+  </div>
+</div>

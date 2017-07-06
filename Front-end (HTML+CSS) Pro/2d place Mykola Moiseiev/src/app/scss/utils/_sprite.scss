@@ -1,0 +1,134 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$arrow-small-name: 'arrow-small';
+$arrow-small-x: 102px;
+$arrow-small-y: 43px;
+$arrow-small-offset-x: -102px;
+$arrow-small-offset-y: -43px;
+$arrow-small-width: 6px;
+$arrow-small-height: 10px;
+$arrow-small-total-width: 122px;
+$arrow-small-total-height: 81px;
+$arrow-small-image: '../img/sprite.png';
+$arrow-small: (102px, 43px, -102px, -43px, 6px, 10px, 122px, 81px, '../img/sprite.png', 'arrow-small', );
+$arrow-name: 'arrow';
+$arrow-x: 102px;
+$arrow-y: 0px;
+$arrow-offset-x: -102px;
+$arrow-offset-y: 0px;
+$arrow-width: 20px;
+$arrow-height: 38px;
+$arrow-total-width: 122px;
+$arrow-total-height: 81px;
+$arrow-image: '../img/sprite.png';
+$arrow: (102px, 0px, -102px, 0px, 20px, 38px, 122px, 81px, '../img/sprite.png', 'arrow', );
+$calendar-name: 'calendar';
+$calendar-x: 0px;
+$calendar-y: 0px;
+$calendar-offset-x: 0px;
+$calendar-offset-y: 0px;
+$calendar-width: 56px;
+$calendar-height: 57px;
+$calendar-total-width: 122px;
+$calendar-total-height: 81px;
+$calendar-image: '../img/sprite.png';
+$calendar: (0px, 0px, 0px, 0px, 56px, 57px, 122px, 81px, '../img/sprite.png', 'calendar', );
+$checked-name: 'checked';
+$checked-x: 61px;
+$checked-y: 0px;
+$checked-offset-x: -61px;
+$checked-offset-y: 0px;
+$checked-width: 36px;
+$checked-height: 36px;
+$checked-total-width: 122px;
+$checked-total-height: 81px;
+$checked-image: '../img/sprite.png';
+$checked: (61px, 0px, -61px, 0px, 36px, 36px, 122px, 81px, '../img/sprite.png', 'checked', );
+$s41-name: 's41';
+$s41-x: 0px;
+$s41-y: 62px;
+$s41-offset-x: 0px;
+$s41-offset-y: -62px;
+$s41-width: 16px;
+$s41-height: 19px;
+$s41-total-width: 122px;
+$s41-total-height: 81px;
+$s41-image: '../img/sprite.png';
+$s41: (0px, 62px, 0px, -62px, 16px, 19px, 122px, 81px, '../img/sprite.png', 's41', );
+$spritesheet-width: 122px;
+$spritesheet-height: 81px;
+$spritesheet-image: '../img/sprite.png';
+$spritesheet-sprites: ($arrow-small, $arrow, $calendar, $checked, $s41, );
+$spritesheet: (122px, 81px, '../img/sprite.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

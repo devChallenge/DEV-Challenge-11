@@ -1,0 +1,150 @@
+@font-face {
+  font-family: "calendar";
+  src: url("fonts/calendar.eot");
+  src: url("fonts/calendar.eot?#iefix") format("embedded-opentype"),
+    url("fonts/calendar.woff") format("woff"),
+    url("fonts/calendar.ttf") format("truetype"),
+    url("fonts/calendar.svg#calendar") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[data-icon]:before {
+  font-family: "calendar" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "calendar" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-edit:before {
+  content: "\62";
+}
+.icon-arrow-move:before {
+  content: "\61";
+}
+.icon-delete:before {
+  content: "\63";
+}
+
+body,
+html {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+#root {
+  background: white;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.board-list {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  padding: 10px;
+  background: #4dabf5;
+}
+.board-list board {
+  flex: 1;
+  height: 100%;
+}
+.board {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.board .body {
+  flex: 1;
+  overflow-y: auto;
+}
+board + board {
+  margin-left: 10px;
+}
+.sortableCards {
+  min-height: 20px;
+}
+.board nav {
+  position: relative;
+  background: #b0bec5;
+  color: #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.icon-delete {
+  cursor: pointer;
+}
+.board nav .icon-delete {
+  position: absolute;
+  right: 2px;
+  top: 50%;
+  margin-top: -0.5em;
+}
+.board .body {
+  background: #fff;
+  padding: 5px;
+}
+.board .c-card {
+  margin-bottom: 10px;
+}
+.board .u-highest {
+  outline: 2px solid green;
+}
+.c-card__item--divider {
+  position: relative;
+}
+.c-card__item--divider .icons {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  margin-top: -0.5em;
+}
+.comment {
+  position: relative;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+.comment .icon-delete {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+.clickable {
+  cursor: pointer;
+}
+.archive {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.archive .c-card {
+  margin: 5px;
+}
+.c-paragraph p {
+  margin: 0 0 10px 0;
+}

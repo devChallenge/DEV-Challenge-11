@@ -1,0 +1,154 @@
+.recent-markets {
+  padding: 52px 0 49px;
+
+  &__title {
+    margin: 0 0 13px;
+    padding: 0 48px;
+    font-size: 28px;
+    line-height: 30px;
+    color: #252525;
+    @include main-font2();
+  }
+  &__slider {
+
+    .slick-list {
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+
+  }
+  &__item {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px;
+    font-size: 16px;
+    line-height: 18px;
+    color: #707070;
+
+    p {
+      margin: 0 0 6px;
+
+      span {
+        margin: 0 14px 0 0;
+      }
+
+    }
+
+  }
+  &__pic {
+    position: relative;
+    width: 100%;
+    padding-bottom: 94%;
+    margin: 0 0 23px;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &:before {
+      position: absolute;
+      left: 4px;
+      right: 4px;
+      bottom: -6px;
+      height: 6px;
+      background: rgba(255,255,255,0.5);
+      content: '';
+    }
+    &:after {
+      position: absolute;
+      left: 2px;
+      right: 2px;
+      bottom: -3px;
+      height: 3px;
+      background: rgba(255,255,255,0.5);
+      content: '';
+    }
+
+    .recent-markets__blur {
+      position: absolute;
+      top: 25px;
+      left: 5px;
+      right: 5px;
+      bottom: 0;
+      -moz-filter: blur(15px);
+      -o-filter: blur(15px);
+      -ms-filter: blur(15px);
+      filter: blur(15px);
+      -webkit-filter: blur(15px);
+      background-size: cover;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+
+    >div {
+
+      &:first-child {
+        &:before {
+          position: absolute;
+          left: 6px;
+          right: 6px;
+          bottom: -9px;
+          height: 9px;
+          background: rgba(255,255,255,0.5);
+          content: '';
+        }
+      }
+
+    }
+
+  }
+  &__name {
+    margin: 0 0 9px;
+    font-size: 20px;
+    line-height: 22px;
+    @include main-font2();
+    color: #252525;
+    @include main-font2();
+  }
+
+}
+
+@media (min-width: $tablet-landscape) {
+
+  .recent-markets {
+    padding: 72px 0 63px;
+
+    &__title {
+      margin: 0 0 18px;
+      padding: 0 94px;
+      font-size: 42px;
+      line-height: 44px;
+      color: #252525;
+    }
+    &__slider {
+
+      .slick-list {
+        padding-left: 80px;
+        padding-right: 80px;
+      }
+
+    }
+    &__item {
+
+      p {
+        margin: 0 0 12px;
+
+        span {
+          margin: 0 16px 0 0;
+        }
+
+      }
+
+    }
+    &__pic {
+      padding-bottom: 93.5%;
+      margin: 0 0 26px;
+    }
+    &__name {
+      margin: 0 0 9px;
+      font-size: 25px;
+      line-height: 30px;
+    }
+
+  }
+
+}
+

@@ -1,0 +1,30 @@
+<div class="board">
+  <nav>
+    <span class="c-nav__content" data-bind="text: model.name"></span>
+    <span class="icon-delete" data-bind="click: deleteBoard"></span>
+  </nav>
+  <div class="body">
+    <div class="sortableCards" data-bind="sortable: { data: cards, afterMove: afterMove, strategyMove: true }">
+      <div>
+        <card params="model: $data, editCard: $parent.editCard, deleteCard: $parent.deleteCard"></card>
+      </div>
+    </div>
+    <!-- ko if: showButton -->
+    <!-- ko ifnot: adding -->
+    <button class="c-button c-button--block c-button--success" data-bind="click: startAdding">Додати квиток</button>
+    <!-- /ko -->
+    <!-- ko if: adding -->
+    <input class="c-field" type="text" data-bind="value: cardName, hasFocus: true, valueUpdate: 'keyup', enterKey: add">
+    <button class="c-button c-button--success" data-bind="click: add, enable: cardName().length">Додати</button>
+    <button type="button" class="c-button c-button--close" data-bind="click: stopAdding">×</button>
+    <!-- /ko -->
+    <!-- /ko -->
+  </div>
+</div>
+<!-- ko if: editingCard -->
+<div class="c-overlay" data-bind="click: finishEdit"></div>
+<div class="o-modal">
+  <card-edit params="model: editingCard, finishEdit: finishEdit">
+  </card-edit>
+</div>
+<!-- /ko -->

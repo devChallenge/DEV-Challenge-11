@@ -1,0 +1,59 @@
+.Header {
+    height: 60px;
+    width: 100%;
+    background-color: #000000;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-family: 'Roboto';
+    .menu {
+        width: 84px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 15px;
+        font-weight: 300;
+        cursor: pointer;
+        path {
+            transition: fill .2s ease;
+        }
+        &:hover {
+            path {
+                fill: #bdbdbd;
+            }
+        }
+    }
+    .logo {
+        margin-left: 30px;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+    .cta {
+        margin-left: 20px;
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        cursor: pointer;
+        span {
+            margin-left: 15px;
+        }
+        path {
+            transition: fill .2s ease;
+        }
+        &:hover {
+            svg path:first-child {
+                fill: #bdbdbd;
+            }
+        }
+    }
+    .version {
+        position: absolute;
+        bottom: -15px;
+        right: 10px;
+        font-size: 11px;
+        color: black;
+    }
+}

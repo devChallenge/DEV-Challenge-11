@@ -1,0 +1,22 @@
+.c-btn-link
+  border: none
+  background-color: transparent
+  font-size: 18px
+  padding: 0
+  color: var(--tColor)
+  font-family: var(--mFont)
+  cursor: pointer
+  &__text
+    display: inline-block
+    vertical-align: middle
+  &__icon
+    position: relative
+    display: inline-block
+    width: 18px
+    height: 18px
+    vertical-align: middle
+    transition: transform .2s ease-in-out
+    will-change: transform
+  &:--hover
+    & .c-btn-link__icon
+      transform: translateX(5px)

@@ -1,0 +1,9 @@
+<div>
+  <!-- ko if: editing -->
+  <textarea class="c-field" id="description" data-bind="value: field, event: {blur: finishEditing}"></textarea>
+  <button class="c-button u-small" data-bind="click: finishEditing">Зберегти</button>
+  <!-- /ko -->
+  <!-- ko if: !editing() -->
+  <div class="clickable" data-bind="markdown: field, click: startEditing"></div>
+  <!-- /ko -->
+</div>

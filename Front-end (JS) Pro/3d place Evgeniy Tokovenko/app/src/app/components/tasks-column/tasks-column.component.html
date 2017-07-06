@@ -1,0 +1,8 @@
+<div class="column_tasks">
+    <h2>{{column.title}}</h2>
+    <div class="column_tasks__list" 
+         droppable 
+         (onDrop)="onItemDrop($event)">
+      <app-tasks-list [tasks]="columnTasks"></app-tasks-list>
+    </div>
+</div>

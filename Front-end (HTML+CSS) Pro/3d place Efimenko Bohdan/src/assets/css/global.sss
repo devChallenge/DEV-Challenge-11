@@ -1,0 +1,50 @@
+/* plugins */
+@import "normalize-css/normalize.css"
+
+/* global */
+:root
+  --mFont: 'Geometria', sans-serif
+  --secondFont: 'Gilroy', sans-serif
+  --mColor: #e73453
+  --mColorH: color(var(--mColor) lightness(-10%))
+  --tColor: #c5d5e6
+  --tColorL: #fff
+  --fSize: 16px
+  --bgColor: #363b5d
+
+@custom-selector :--hover :hover, :focus, :active
+
+html
+  height: 100%
+
+html,body
+  font-family: var(--mFont)
+  font-size: var(--fSize)
+  color: var(--tColor)
+  background: #fff
+
+body
+  min-height: 100%
+  position: relative
+  background: #fff linear-gradient(305deg, #4792e1, #4174b3 35%, #363b5d)
+
+img
+  height: auto
+  max-width: 100%
+
+*,
+*:before,
+*:after
+  box-sizing: border-box
+
+.o-wrapper
+  height: 100%
+  min-width: 320px
+
+.o-content
+  position: relative
+  padding-top: 107px
+  padding-bottom: 144px
+  z-index: 1
+  @media (max-width: 767px)
+    padding: 50px 0

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-SpreadSheet.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ReactiveCocoa.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ReactiveSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Result.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SpreadsheetView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>0299B683108981A9FF43E5A4FD6E604B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2E417308E41A3F3CB704DCE8C4DBD830</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8BA32AA72B9F5111A7FB52CDC58D8188</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8CDEBC22EAF60A130C059E178275D7BE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FF4144D53113B4268ED711D60F037BF5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

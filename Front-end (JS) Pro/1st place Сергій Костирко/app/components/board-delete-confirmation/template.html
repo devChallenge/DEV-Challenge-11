@@ -1,0 +1,17 @@
+<div class="c-overlay" data-bind="click: cancel"></div>
+<div class="o-modal">
+  <div class="c-card">
+    <header class="c-card__header">
+      <button type="button" class="c-button c-button--close" data-bind="click: cancel">×</button>
+      <span class="c-heading" data-bind="">У дошки є прив'язані картки</span>
+    </header>
+    <div class="c-card__body">
+      <footer class="c-card__footer">
+        <button type="button" class="c-button c-button--brand" data-bind="click: remove">Видалити разом з картками</button>
+        <button type="button" class="c-button c-button--brand" data-bind="click: move">Перемістити до</button>
+        <select data-bind="value: otherBoard, options: boards, optionsText: 'name', optionsValue: 'id'"></select>
+        <button type="button" class="c-button c-button--brand" data-bind="click: cancel">Відміна</button>
+      </footer>
+    </div>
+  </div>
+</div>

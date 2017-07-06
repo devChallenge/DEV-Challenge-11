@@ -1,0 +1,56 @@
+header.wrapper.header#header
+    .container
+        .header__wrapper
+            .header__left
+                a(href="#").header__logo
+                    +icon('logo')
+                .header__lang-select
+                    a(href="#").header__lang-select-link.active Укр
+                    a(href="#").header__lang-select-link Рус
+                    a(href="#").header__lang-select-link En
+            ul.header__menu
+                li.header__menu-item
+                    a(href="projects.html").header__menu-link Проекти
+                li.header__menu-item
+                    a(href="projects.html").header__menu-link Архів
+                li.header__menu-item
+                    a(href="projects.html").header__menu-link Контакти
+
+                li.header__menu-item
+                    a(href="projects.html").header__menu-link.active Термінова допомога
+            .header__right        
+                a(href="#").header__search
+                    +icon('search')    
+                .header__login
+                    a(href="#").header__login-link Вхід
+                    a(href="#").header__login-link Зареєструватися
+            .header__search-wrapper
+                .header__search-title Пошук
+                form
+                    input(type="text").header__search-input
+                a(href="#").header__search-close  
+                    +icon('close')
+            .header__search-results
+                .header__search-result-item
+                    .header__category-name Проекти        
+                    .header__category-wrapper
+                        .header__category-item
+                            .header__category-item-title Діти
+                            .header__category-item-text
+                                p.
+                                    Для операції на сердце маленькому хлопчику, необхідно зібрати гроші на ліки
+                                p.
+                                    Збираємо гроші на лікування п’ятирічного Василя, який став жертвою ДТП     
+                        .header__category-item    
+                            .header__category-item-title Війна
+                            .header__category-item-text
+                                p.
+                                    Необхідно зібрати ліки для поранених бійців із зони АТО 
+                .header__search-result-item
+                    .header__category-name Архів                         
+                    .header__category-wrapper
+                        .header__category-item
+                            .header__category-item-title Діти
+                            .header__category-item-text
+                                p.
+                                    Для операції на сердце маленькому хлопчику, необхідно зібрати гроші на ліки

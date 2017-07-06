@@ -1,0 +1,21 @@
+{
+    "extends": "airbnb",
+    "eslintConfig": {
+        "env": {
+            "browser": true,
+            "node": true
+        }
+    },
+    "globals": {
+        "window": true,
+        "document": true,
+        "alert": true,
+        "localStorage": true,
+        "VERSION": true,
+        "ENV": true
+    },
+    "rules": {
+        "import/newline-after-import": "off",
+        "no-alert": "off"
+    }
+}

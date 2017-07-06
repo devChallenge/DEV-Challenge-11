@@ -1,0 +1,27 @@
+version: '2'
+
+services:
+
+  mongo:
+    image: mongo:latest
+    restart: always
+    volumes:
+      - "/data/db"
+
+  redis:
+    image: redis:latest
+    restart: always
+    volumes:
+      - "/data"
+
+  entry-point:
+    build: ./services/entry-point
+    restart: always
+    depends_on:
+      - mongo
+      - redis
+    ports:
+      - "8080:8080"
+    environment:
+      - EXPRESS_SESSION_SECRET=tHcxcGCeBRiuij61
+    command: /usr/src/wait-for-it.sh redis:6379 --timeout=0 -- /usr/src/wait-for-it.sh mongo:27017 --timeout=0 -- npm start

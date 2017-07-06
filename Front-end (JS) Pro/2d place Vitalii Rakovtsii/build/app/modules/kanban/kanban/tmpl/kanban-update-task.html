@@ -1,0 +1,25 @@
+
+<form class="task-update__form" *ngIf="task">
+  <div class="form-group">
+    <label>Title</label>
+    <input class="form-control" name="title" [(ngModel)]="task.title"/>
+  </div>
+  <div class="form-group">
+    <label>Description</label>
+    <textarea class="form-control" name="description" [(ngModel)]="task.description"></textarea>
+    <p class="form-text text-muted"><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" target="_blank">markdown supported.</a></p>
+  </div>
+  <div class="form-group" *ngIf="columns">
+    <label>Status</label>
+    <select class="form-control" [(ngModel)]="task.columnID" name="columnID">
+      <option *ngFor="let column of columns" [value]="column.id">{{column.title}}</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label>Colour</label>
+    <select class="form-control" [(ngModel)]="task.colour" name="colour">
+      <option *ngFor="let colour of colours" [value]="colour[0]">{{colour[1]}}</option>
+    </select>
+  </div>
+  <div class="form-group"><a class="btn btn-block btn-primary" [routerLink]="[&quot;&quot;]">Done</a></div>
+</form>

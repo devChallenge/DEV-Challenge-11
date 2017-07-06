@@ -1,0 +1,218 @@
+.site {
+  @include flexbox();
+  @include flex-direction(column);
+  @include justify-content(space-between);
+  @include align-items();
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  min-width: 320px;
+  min-height: 100%;
+  font-size: 16px;
+  color: #555555;
+  @include main-font1();
+
+  &__header {
+    position: relative;
+    z-index: 4;
+    width: 100%;
+    height: 113px;
+    background: #404040;
+    @include main-font1();
+
+    //&-layout {
+    //  position: relative;
+    //  max-width: 1200px;
+    //  padding: 0 15px;
+    //  height: 113px;
+    //  margin: 0 auto;
+    //}
+  }
+  &__menu {
+    position: fixed;
+    z-index: 4;
+    top: 113px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 50px 0 0;
+    background: #404040;
+    font-size: 18px;
+    line-height: 1;
+    text-align: center;
+    transform: translate( -100%, 0);
+    transition: transform .2s linear;
+
+    &.opened {
+      transform: translate( 0, 0);
+    }
+
+    &-item {
+      display: block;
+      position: relative;
+      padding: 20px;
+      font-size: 16px;
+      color: #fff;
+      margin: 0 auto;
+      text-align: center;
+      transition: background-color .2s linear, border .2s linear;
+
+      &:hover {
+        background-color: #363636;
+      }
+      &.active {
+        background-color: #363636;
+        cursor: default;
+      }
+
+    }
+  }
+  &__menu-btn {
+    display: block;
+    @include absoluteCenterY();
+    z-index: 5;
+    right: 30px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    background: none;
+    border: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    cursor: pointer;
+
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 100%;
+      background-color: #363636;
+      content: '';
+    }
+
+    span {
+      display: block;
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      left: 14px;
+      right: 14px;
+      height: 2px;
+      margin-top: -2px;
+      background: #fff;
+      font-size: 0;
+      transition: background-color .3s linear;
+
+      &:before,
+      &:after {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        content: '';
+        -webkit-transition: -webkit-transform 0.3s, background .3s;
+        transition: transform 0.3s, background .3s;
+      }
+      &:before {
+        transform: translate(  0, -4px );
+      }
+      &:after {
+        transform: translate(  0, 4px );
+      }
+    }
+    &.opened {
+
+      span {
+        background-color: transparent;
+
+        &:before {
+          background: #fff;
+          -webkit-transform: translateY(0) rotate(45deg);
+          transform: translateY(0) rotate(45deg);
+        }
+
+        &:after {
+          background: #fff;
+          -webkit-transform: translateY(0) rotate(-45deg);
+          transform: translateY(0) rotate(-45deg);
+        }
+      }
+    }
+  }
+  &__footer {
+    @include flexbox();
+    @include flex-direction();
+    @include justify-content(center);
+    @include align-items(center);
+    text-align: center;
+    height: 70px;
+    font-size: 14px;
+  }
+
+}
+
+@media (min-width: $phone-landscape) {
+  .site {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .site {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .site {
+
+    &__menu-btn {
+      display: none;
+    }
+    &__menu {
+      @include absoluteCenterY();
+      z-index: 4;
+      right: 58px;
+      left: auto;
+      width: calc(100% - 450px);
+      height: auto;
+      padding: 0;
+      background: transparent;
+      transition: transform .2s linear;
+      text-align: right;
+
+      &-item {
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+        padding: 7px 5px;
+        border-bottom: 1px solid transparent;
+        margin: 0 34px 0 0;
+
+        &:hover {
+          background: transparent;
+          border-bottom: 1px solid #fff;
+        }
+        &.active {
+          border-bottom: 1px solid #fff;
+          background: transparent;
+          cursor: default;
+        }
+      }
+    }
+    &__footer {
+      height: 90px;
+      font-size: 16px;
+    }
+
+  }
+}
+@media (min-width: $desktop) {
+  .site {
+
+  }
+}
+

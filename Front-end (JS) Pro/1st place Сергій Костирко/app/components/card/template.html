@@ -1,0 +1,12 @@
+<div class="c-card" data-bind="css: {'u-highest': $root.isHighlighted(model)}">
+  <div class="c-card__item c-card__item--divider">
+    <span data-bind="text: model.name"></span>
+    <div class="icons">
+      <span class="icon-edit" data-bind="click: editCard"></span>
+      <span class="icon-delete" data-bind="click: deleteCard"></span>
+    </div>
+  </div>
+  <div class="c-card__item" data-bind="style: $root.cardStyle(model)">
+    <p class="c-paragraph" data-bind="markdown: model.description"></p>
+  </div>
+</div>

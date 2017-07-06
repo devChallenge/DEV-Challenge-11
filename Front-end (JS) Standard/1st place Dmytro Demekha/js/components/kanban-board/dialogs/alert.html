@@ -1,0 +1,8 @@
+<h2>Important!</h2>
+<div class="alert_content">
+    <p>Are you sure you want to {{$dialogCtrl.action}} this task?</p>
+</div>
+<div class="btns_group">
+    <button ng-click="$dialogCtrl.onAgreeClick()" class="orange_btn" ng-disabled="taskForm.$invalid">Yes</button>
+    <button ng-click="$dialogCtrl.cancel()" class="grey_btn">No</button>
+</div>

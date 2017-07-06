@@ -1,0 +1,76 @@
+include ../../../bower_components/bemto/bemto
+
+= '\n'
+// begin c-header
++b.HEADER.c-header
+  = '\n'
+  // begin o-container
+  .o-container
+    +e.inner
+      +e.side_left
+        +e.A(href="#" title="На головну").logo
+          +e.IMG(src="assets/img/logo.svg" alt="Добре серце").logo-pic
+        
+        +e.UL.language
+          +e.A(href="#").language-item_active Укр
+          +e.A(href="#").language-item Рус
+          +e.A(href="#").language-item En
+      +b.NAV.c-nav#js-nav
+        +b.UL.c-nav-list
+          +e.item
+            +e(href="#" title="Проекти").link Проекти
+          +e.item
+            +e(href="#" title="Архів").link Архів
+          +e.item
+            +e(href="#" title="Контакти").link Контакти
+          +e.item
+            +e(href="#" title="Термінова допомога").link_special Термінова допомога
+      +b.BUTTON(type="button" title="Меню").c-nav-btn#js-nav-btn
+        +e.SPAN.line
+        +e.SPAN.line
+      +e.side_right
+        +b.FORM.c-search
+          +e.BUTTON(type="button" title="Шукати").btn#js-search-btn
+            +b.I.c-icon
+              +e.SVG.inner
+                use(xlink:href="assets/img/sprite.svg#search")
+          +e.inner#js-search-inner
+            +e.field-wrapper
+              +e.overlay
+              +e.INPUT(type="text").field#js-search-field
+              +e.placeholder Пошук
+              +e.close#js-search-close
+                +b.I.c-icon
+                  +e.SVG.inner
+                    use(xlink:href="assets/img/sprite.svg#close")
+            +b.c-results.c-search__results#js-search-results
+              .c-search__overlay
+              +e.inner
+                +e.category
+                  +e.category-title Проекти
+                  +e.items
+                    +e.item
+                      +e.item-title Діти
+                      +e.A(href="#" title="Більше").item-text Для операції на сердце маленькому хлопчику, необхідно зібрати гроші на ліки
+                      +e.A(href="#" title="Більше").item-text Збираємо гроші на лікування п’ятирічного Василя, який став жертвою ДТП 
+                    
+                    +e.item
+                      +e.item-title Війна
+                      +e.A(href="#" title="Більше").item-text Необхідно зібрати ліки для поранених бійців із зони АТО 
+                
+                +e.category
+                  +e.category-title Архів
+                  +e.items
+                    +e.item
+                      +e.item-title Діти
+                      +e.A(href="#" title="Більше").item-text Необхідно купити ліки для дитячого будинку в місті Київ
+              
+        +e.actions
+          +e(href="#" title="Вхід").actions-item Вхід
+          | &nbsp;/&nbsp;
+          +e(href="#" title="Зареєструватися").actions-item Зареєструватися
+      
+  // end o-container
+  = '\n'
+// end c-header
+= '\n'

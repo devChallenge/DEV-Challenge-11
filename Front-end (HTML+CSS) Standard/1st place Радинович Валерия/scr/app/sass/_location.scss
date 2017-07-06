@@ -1,0 +1,28 @@
+.location {
+
+  &__map {
+    height: 376px;
+  }
+
+}
+
+@media (min-width: $tablet-portrait) {
+
+
+}
+
+@media (min-width: $tablet-landscape) {
+
+  .location {
+
+    &__map {
+      height: 674px;
+    }
+
+  }
+
+}
+
+@media (min-width: $desktop) {
+
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Title -->
+    <title><%= htmlWebpackPlugin.options.title %> | <%= htmlWebpackPlugin.options.subtitle %></title>
+    <!-- /Title -->
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- /Viewport -->
+    <!-- Meta -->
+    <meta name=description content="<%= htmlWebpackPlugin.options.description %>"/>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="<%= htmlWebpackPlugin.options.title %>"/>
+    <meta property="og:description" content="<%= htmlWebpackPlugin.options.description %>"/>
+    <meta property="og:site_name" content="<%= htmlWebpackPlugin.options.title %>"/>
+    <meta property="og:image" content="/assets/img/banner/banner.png"/>
+    <!-- /Meta -->
+    <!-- Favicons -->
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/fav.ico" />
+    <link rel="shortcut icon" href="/assets/img/fav32.png" />
+    <link rel="apple-touch-icon" href="/assets/img/fav180.png" />
+    <!-- /Favicons -->
+</head>
+<body>
+  <div id="app-container"></div>
+</body>
+</html>

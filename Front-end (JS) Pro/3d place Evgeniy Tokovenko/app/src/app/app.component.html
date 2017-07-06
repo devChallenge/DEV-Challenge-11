@@ -1,0 +1,39 @@
+<div id="page">
+  <md-toolbar color="primary">
+    <span fxFlex="90">Family Scrum</span>
+    <button md-raised-button 
+            color="warn"
+            (click)="onAddNewTask()">
+      Add new task
+    </button>
+  </md-toolbar>
+  <section fxLayout="row">
+    <div class="filter">
+      <md-input-container>
+        <input mdInput placeholder="Search by title" [(ngModel)]="searchText" (keyup)="onSerchText($event)">
+      </md-input-container>
+    </div>
+    <div class="filter">
+      <md-select placeholder="Filter by user" [(ngModel)]="filterUser" (change)="onSerchFamily($event)">
+        <md-option [value]="false">All family</md-option>
+        <md-option *ngFor="let user of users" [value]="user">
+          {{ user.name }}
+        </md-option>
+      </md-select>
+    </div>
+    <div class="filter">
+      <md-select placeholder="Filter by category" [(ngModel)]="filterCategory" (change)="onSerchCategory($event)">
+        <md-option [value]="false">All categories</md-option>
+        <md-option *ngFor="let category of categories" [value]="category">
+          {{ category.title }}
+        </md-option>
+      </md-select>
+    </div>
+  </section>
+  <section>
+    <app-tasks-columns-items 
+      [columns]="columns" 
+      [tasks]="tasks"
+    ></app-tasks-columns-items>
+  </section>
+</div>

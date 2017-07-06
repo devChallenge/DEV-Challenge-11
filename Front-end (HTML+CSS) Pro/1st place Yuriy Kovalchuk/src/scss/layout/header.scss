@@ -1,0 +1,295 @@
+// $geometria: "Geometria",sans-serif;
+// $geometriaBold: "Geometria Bold",sans-serif;
+// $geometriaExtraBold: "Geometria Extra Bold",sans-serif;
+// $geometriaLight: "Geometria Light",sans-serif;
+// $gilroy: 'Gilroy';
+
+body {
+    font-family: $geometria;
+}
+
+.page-wrapper {
+    background: url("../img/svg/background.svg") center center;
+    background-size: cover;
+    position: relative;
+
+    &:before {
+        content: '';
+        background: url("../img/svg/heart.svg") no-repeat;
+        width: 615px;
+        background-size: cover;
+        height: 419px;
+        @include position(absolute, null null 7vh 50%);
+        z-index: 1;
+    }
+    
+    &--projects{
+        background-image: linear-gradient(to right, #363b5d, #3c5a8c);
+        &:before{
+            display: none;
+        }
+    }
+
+    @media (max-width: $screen-sm-max) {
+        background-image: linear-gradient(to right, #363b5d, #3c5a8c);
+        &:before{
+            display: none;
+        }
+    }
+}
+
+
+
+
+.header {
+    color: #fff;
+
+
+
+    &__search-close {
+        @include position(absolute, 50% 26px null null);
+        transform: translateY(-50%);
+        display: block;
+
+        svg {
+            width: 44px;
+            height: 44px;
+        }
+    }
+
+    &__search-input {
+        width: 100%;
+        height: 100%;
+        border: none;
+        outline: none;
+        height: 60px;
+        background: transparent;
+        text-align: center;
+        font-family: $geometria;
+        font-size: 40px;
+        // font-weight: 500;
+        color: #ffffff;
+    }
+
+    &__search-title {
+        font-family: $geometria;
+        font-size: 18px;
+        // font-weight: bold;
+        // text-align: left;
+        color: #2e3f69;
+        @include position(absolute, 50% null null 26px );
+        transform: translateY(-50%);
+    }
+
+    &__search-wrapper {
+        @include position(absolute, 13px 0 null 0 );
+        width: calc(100% - 30px);
+        margin: auto;
+        height: 60px;
+        border-radius: 10px;
+        // -webkit-filter: blur(5px);
+        // -moz-filter: blur(5px);
+        // -o-filter: blur(5px);
+        // -ms-filter: blur(5px);
+        // filter: blur(5px);
+        background-color: rgba(197, 213, 230, 1);
+        overflow: hidden;
+
+        display: none;
+    }
+
+    &__wrapper {
+        display: flex;
+        padding-top: 18px;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    &__left,
+    &__right {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        margin-left: 14px;
+        margin-top: 0;
+        display: block;
+        margin-right: 100px;
+
+        svg {
+            width: 38px;
+            height: 32px;
+        }
+
+        @media (max-width: $screen-lg-max){
+            margin-right: 0;
+        }
+    }
+
+    &__search {
+        svg {
+            width: 18px;
+            height: 18px;
+        }
+    }
+
+    &__lang-select-link {
+        font-family: $geometria;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: -1px;
+        color: #c5d5e6;
+        text-transform: uppercase;
+        text-decoration: none;
+
+        &:not(.active) {
+            opacity: 0.5;
+        }
+
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        list-style-type: none;
+        @media (max-width:$screen-md-max){
+            display: none;
+        }
+    }
+
+    &__menu-link {
+        font-size: 14px;
+        color: #fff;
+        text-decoration: none;
+        font-family: $geometriaBold;
+        padding: 6px 23px;
+        border-radius: 5px;
+
+        &.active {
+            background-image: linear-gradient(to left, #6082d8, #e73453);
+        }
+    }
+
+    &__login {
+        display: flex;
+        margin-right: 15px;
+    }
+
+    &__search {
+        margin-right: 101px;
+        display: block;
+        transform: translateY(3px);
+
+        @media (max-width: $screen-lg-max){
+            margin-right: 22px;
+        }
+
+
+    }
+
+    &__login-link {
+        text-decoration: none;
+        opacity: 0.5;
+        font-family: $geometria;
+        font-size: 14px;
+        font-weight: 500;
+        color: #c5d5e6;
+
+        &:first-child {
+            margin-right: 16px;
+        }
+    }
+
+    &__search-result-item {
+        display: flex;
+
+        &:not(:first-child) {
+            .header__category-wrapper {
+                padding-top: 36px;
+                border-top: 1px solid #fff;
+            }
+        }
+    }
+
+    &__category-name {
+        font-family: $geometria;
+        font-size: 24px;
+        // font-weight: 500;
+        // text-align: left;
+        color: #ffffff;
+        display: flex;
+align-items: center;
+    }
+
+    &__category-wrapper {
+        display: flex;
+        width: 700px;
+            padding-bottom: 33px;
+    }
+
+    &__category-item {
+        width: 50%;
+        flex-shrink: 0;
+
+        &:first-child{
+                margin-right: 47px;
+        }
+    }
+
+    &__category-name{
+        width: 290px;
+        flex-shrink: 0;
+    }
+
+    &__category-item-title {
+        font-family: $geometria;
+        font-size: 18px;
+        // font-weight: 500;
+        // text-align: left;
+        color: #ffffff;
+        width: calc(100% - 30px);
+        margin-bottom: 12px;
+    }
+
+    &__category-item-text {
+        font-family: $gilroy;
+        font-size: 14px;
+        font-weight: 300;
+        // text-align: left;
+        color: #ffffff;
+
+        p {
+            padding: 7px 0;
+            max-width: 300px;
+            &:not(:first-child) {
+                border-top: 1px solid #fff;
+            }
+        }
+    }
+
+    &__search-results {
+        @include position(absolute, 96px 0 null 0 );
+        width: calc(100% - 30px);
+        margin: auto;
+        height: auto;
+            padding: 16px 15px 32px;
+        border-radius: 10px;
+        background-color: rgba(197, 213, 230, 1);
+        overflow: hidden;
+        padding-left: 50px;
+        z-index: 5;
+
+
+        display: none;
+    }
+}
+
+.header__lang-select{
+    @media(max-width: $screen-lg-max){
+        display: none;
+    }
+}

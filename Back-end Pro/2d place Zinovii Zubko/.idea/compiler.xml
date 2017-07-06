@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="server_client" />
+        <module name="server_config" />
+        <module name="server_gateway" />
+        <module name="server_main" />
+        <module name="server_register" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="dev-challenge-final" target="1.8" />
+      <module name="DevChallengeFinal" target="1.8" />
+      <module name="DevChallengeFinal (1)" target="1.8" />
+      <module name="server_client" target="1.8" />
+      <module name="server_config" target="1.8" />
+      <module name="server_core" target="1.5" />
+      <module name="server_gateway" target="1.8" />
+      <module name="server_main" target="1.8" />
+      <module name="server_register" target="1.8" />
+      <module name="server_register (1)" target="1.8" />
+      <module name="server_register (2)" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

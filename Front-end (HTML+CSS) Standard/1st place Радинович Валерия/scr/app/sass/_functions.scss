@@ -1,0 +1,8 @@
+
+// For scalable designs
+
+//returns vw from pixels
+@function get-vw($target) {
+  $vw-context: (1000*.01) * 1px;
+  @return ($target/$vw-context) * 1vw;
+}

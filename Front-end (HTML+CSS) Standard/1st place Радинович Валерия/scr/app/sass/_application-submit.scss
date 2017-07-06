@@ -1,0 +1,159 @@
+.application-submit {
+  position: relative;
+  max-width: 405px;
+  padding: 0 49px;
+  padding-top: 58px;
+  padding-bottom: 10px;
+  margin: 0 auto;
+
+  fieldset {
+    position: relative;
+    margin: 0 0 10px;
+
+    &.fill {
+      label {
+        top: 11px;
+        left: 1px;
+        font-size: 12px;
+        line-height: 12px;
+      }
+    }
+
+  }
+  input[type="text"],
+  input[type="password"],
+  textarea,
+  input[type="email"],
+  input[type="tel"],
+  input[type="phone"],
+  input[type="number"] {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    height: 54px;
+    padding: 31px 0 5px;
+    border: none;
+    border-bottom: 1px solid #b6b6b6;
+    background: transparent;
+    font-size: 16px;
+    line-height: 16px;
+    color: #000000;
+    @include main-font2();
+    border-radius: 0;
+    transition: border .2s linear, box-shadow .2s linear;
+
+    &:focus {
+      border-color: #252525;
+      box-shadow: 0 1px 0 0 #252525;
+    }
+
+  }
+  textarea {
+    height: 120px;
+  }
+  label {
+    position: absolute;
+    top: 32px;
+    left: 1px;
+    color: #9a9a9a;
+    font-size: 16px;
+    line-height: 16px;
+    transition: top .2s linear, left .2s linear;
+  }
+  .btn {
+    margin-top: 11px;
+  }
+  p {
+    margin: 0 0 10px;
+    color: #9a9a9a;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  &__title {
+    margin: 0 0 3px;
+    font-size: 28px;
+    line-height: 30px;
+    color: #252525;
+    @include main-font2();
+
+    span {
+      display: block;
+      margin: 11px 0 0;
+      font-size: 22px;
+      line-height: 22px;
+    }
+
+  }
+
+
+}
+
+@media (min-width: $tablet-landscape) {
+
+  .application-submit {
+    position: relative;
+    max-width: 405px;
+    padding: 0 20px;
+    padding-top: 77px;
+
+    fieldset {
+      margin: 0 0 25px;
+
+      &.fill {
+        label {
+          top: 11px;
+          left: 0;
+          font-size: 16px;
+          line-height: 16px;
+        }
+      }
+
+    }
+    input[type="text"],
+    input[type="password"],
+    textarea,
+    input[type="email"],
+    input[type="tel"],
+    input[type="phone"],
+    input[type="number"] {
+      height: 57px;
+      padding: 31px 0 5px;
+      font-size: 22px;
+      line-height: 22px;
+
+      &:focus {
+        border-color: #252525;
+        box-shadow: 0 1px 0 0 #252525;
+      }
+
+    }
+    label {
+      top: 28px;
+      left: 0;
+      font-size: 22px;
+      line-height: 22px;
+    }
+    .btn {
+      margin-top: 14px;
+    }
+    p {
+      margin: 0 0 10px;
+      font-size: 22px;
+      line-height: 24px;
+    }
+    &__title {
+      margin: 0 0 5px;
+      font-size: 42px;
+      line-height: 46px;
+
+      span {
+        margin: 25px 0 0;
+        font-size: 28px;
+        line-height: 30px;
+      }
+
+    }
+
+  }
+
+}

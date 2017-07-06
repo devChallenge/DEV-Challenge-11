@@ -1,0 +1,65 @@
+.tabs {
+
+}
+.tabs_animated1 {
+  transition: min-height 0.3s linear;
+}
+.tabs_animated2 {
+  transition: min-height 0.3s linear;
+}
+.tabs dl {
+  position: relative;
+}
+.tabs dt {
+  cursor: pointer;
+}
+.tabs dt.active + dd {
+  opacity: 1;
+  visibility: visible;
+}
+.tabs dd {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+}
+.tabs_animated1 dd {
+  transition: opacity 0.3s ease, visibility 0.3s ease, height 0.3s ease;
+}
+.tabs.tabs_animated1 .tabs__content {
+  transform-origin: 50% 0 0px;
+  transform: perspective(870px) rotateY(0deg) rotateX(-90deg);
+  transition: transform 0.3s ease;
+}
+.tabs.tabs_animated1 dt.active + dd .tabs__content {
+  transform: perspective(870px) rotateY(0deg) rotateX(0deg);
+}
+.tabs.tabs_animated2 .tabs__content {
+  opacity: 0;
+  transition: opacity 0.3s ease 0.1s;
+}
+.tabs.tabs_animated2 dt.active + dd .tabs__content {
+  opacity: 1;
+}
+
+@media (min-width: $tablet-landscape) {
+  .tabs dl dt{
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 28px 20px 0;
+  }
+  .tabs dl dd {
+    position: absolute;
+    top: 35px;
+    left: 0;
+  }
+  .tabs.tabs_animated1 .tabs__content {
+    transform: translateX(-120%);
+    transition: transform 0.3s ease 0.1s;
+  }
+  .tabs dt.active + dd .tabs__content {
+    transform: translateX(0);
+  }
+  .tabs.tabs_animated1 dt.active + dd .tabs__content {
+    transform: translateX(0);
+  }
+}

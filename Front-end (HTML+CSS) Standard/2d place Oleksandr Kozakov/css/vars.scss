@@ -1,0 +1,168 @@
+/*------------------ Fonts ------------------*/
+@font-face {
+	font-family: "Intro-Book";
+	src: url("fonts/Intro-Book.eot");
+	src: url("fonts/Intro-Book.eot?#iefix") format("embedded-opentype"),
+		 url("fonts/Intro-Book.woff2") format("woff2"),
+		 url("fonts/Intro-Book.woff") format("woff"),
+		 url("fonts/Intro-Book.ttf") format("truetype"),
+		 url("fonts/Intro-Book.svg#Intro-Book") format("svg");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Intro-Bold";
+	src: url("fonts/Intro-Bold.eot");
+	src: url("fonts/Intro-Bold.eot?#iefix") format("embedded-opentype"),
+		 url("fonts/Intro-Bold.woff2") format("woff2"),
+		 url("fonts/Intro-Bold.woff") format("woff"),
+		 url("fonts/Intro-Bold.ttf") format("truetype"),
+		 url("fonts/Intro-Bold.svg#Intro-Bold") format("svg");
+	font-weight: 400;
+	font-style: normal;
+}
+
+
+
+$container: 1170px;
+
+$font: "Intro-Book", sans-serif;
+$font_bold: "Intro-Bold", sans-serif;
+$main_color: #26a75e;
+$hover_color: #bf303e;
+$text_color: #555555;
+$title_color: #252525;
+$grey: #404040;
+$light_grey: #707070;
+$light_green: #527e65;
+$brown: #8c7a66;
+$blue: #556fa6;
+$red: #e53f28;
+$orange: #ecae5e;
+
+
+
+
+@mixin d-flex{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: flex;
+}
+
+@mixin flex($flex){
+	-webkit-flex: $flex;
+	    -ms-flex: $flex;
+	        flex: $flex;
+}
+
+@mixin flex-wrap($wrap){
+	-webkit-flex-wrap: $wrap;
+	    -ms-flex-wrap: $wrap;
+	        flex-wrap: $wrap;
+}
+
+@mixin justify-content($align){
+	-webkit-justify-content: $align;
+	        justify-content: $align;
+}
+
+@mixin align-items($align){
+	-webkit-align-items: $align;
+	        align-items: $align;
+}
+
+@mixin align-content($align){
+	-webkit-align-content: $align;
+	        align-content: $align;
+}
+
+@mixin flex-direction($direction){
+	-webkit-flex-direction: $direction;
+	    -ms-flex-direction: $direction;
+	        flex-direction: $direction;
+}
+
+@mixin order($order){
+	-webkit-order: $order;
+	    -ms-order: $order;
+		    order: $order;
+}
+
+@mixin filter($filter){
+	-webkit-filter: $filter;
+            filter: $filter;
+}
+
+@mixin appearance($appearance){
+	-webkit-appearance: $appearance;
+       -moz-appearance: $appearance;
+            appearance: $appearance;
+}
+
+@mixin border-radius($radius){
+	-webkit-border-radius: $radius;
+       -moz-border-radius: $radius;
+            border-radius: $radius;
+}
+
+@mixin box-shadow($shadow...){
+	-webkit-box-shadow: $shadow;
+       -moz-box-shadow: $shadow;
+            box-shadow: $shadow;
+}
+
+@mixin transition($transition...){
+	-webkit-transition: $transition;
+	   -moz-transition: $transition;
+			transition: $transition;
+}
+
+@mixin animation($animation...){
+	-webkit-animation: $animation;
+	   -moz-animation: $animation;
+			animation: $animation;
+}
+
+@mixin transform-origin($origin){
+	-webkit-transform-origin: $origin;
+	   -moz-transform-origin: $origin;
+	    -ms-transform-origin: $origin;
+	     -o-transform-origin: $origin;
+	        transform-origin: $origin;
+}
+
+@mixin transform($transform){
+	-webkit-transform: $transform;
+	   -moz-transform: $transform;
+	    -ms-transform: $transform;
+	     -o-transform: $transform;
+	        transform: $transform;
+}
+
+@mixin background-size($size){
+	-webkit-background-size: $size;
+	   -moz-background-size: $size;
+	        background-size: $size;
+}
+
+@mixin box-sizing($size){
+	-webkit-box-sizing: $size;
+	   -moz-box-sizing: $size;
+	        box-sizing: $size;
+}
+
+@mixin placeholder($elements...){
+	$placeholders-set: "::-webkit-input-placeholder", "::-moz-placeholder", ":-moz-placeholder", ":-ms-input-placeholder", "::placeholder";
+
+	@each $placeholder in $placeholders-set {
+		$selector: ();
+
+		@each $element in $elements {
+			$selector: append($selector, #{$element}#{$placeholder}, comma);
+		}
+
+		#{$selector} {
+			@content;
+		}
+	}
+}

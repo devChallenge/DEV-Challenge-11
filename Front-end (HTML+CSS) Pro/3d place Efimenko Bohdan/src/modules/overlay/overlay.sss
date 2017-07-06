@@ -1,0 +1,27 @@
+.c-overlay
+  font-size: 1rem
+  @media (max-width: 991px)
+    font-size: .7rem
+  @media (max-width: 767px)
+    font-size: .4rem
+  &__pic
+    position: absolute
+    width: 100%
+    height: 100%
+    left: 0
+    top: 0
+    object-fit: cover
+    @media (max-width: 767px)
+      display: none
+  &__icon-wrapper
+    position: absolute
+    right: 8.055555%
+    bottom: 13.375%
+    width: em(546)
+    height: em(370)
+    @media (max-width: 991px)
+      bottom: 7%
+    @media (max-width: 767px)
+      bottom: 3.375%
+    @media (max-width: 480px)
+      display: none

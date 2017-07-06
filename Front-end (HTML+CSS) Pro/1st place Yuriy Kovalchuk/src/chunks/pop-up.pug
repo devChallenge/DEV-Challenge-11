@@ -1,0 +1,182 @@
+.pop-up__wrapper
+    .pop-up.pop-up--type-of-help(style="display:none")#help
+        a(href="#").pop-up__close
+            +icon('close')
+        .pop-up__title Види допомоги
+        .pop-up__help-list
+            .pop-up__help-item
+                .pop-up__help-icon-wrapper
+                    .pop-up__help-icon.pop-up__help-icon--hand
+                        +icon('hand')
+                    .pop-up__help-title Зробити    
+                .pop-up__help-inner
+
+                    .pop-up__help-text
+                        p.
+                            Натискайте цю кнопку,
+                            якщо Ви хочете зробити,
+                            наприклад: ремонт у 
+                            дитячому будинку,
+                            складну операцію,
+                            побудувати дитячий
+                            майданчик або побудувати житло
+                            для переселенців і тд.
+                        p.    
+                            Ця кнопка, для організацій, які можуть взяти на себе відповідальність за увесь проект. 
+            .pop-up__help-item
+                .pop-up__help-icon-wrapper
+                    .pop-up__help-icon.pop-up__help-icon--money
+                        +icon('money')
+                    .pop-up__help-title Фінансова допомога    
+                .pop-up__help-inner
+                    .pop-up__help-text
+                        p.
+                            Перераховуйте гроші тим, хто дійсно потребує цього. 
+            .pop-up__help-item
+                .pop-up__help-icon-wrapper
+                    .pop-up__help-icon.pop-up__help-icon--clothes
+                        +icon('clothes')
+                    .pop-up__help-title Матеріальна допомога    
+                .pop-up__help-inner
+                    .pop-up__help-text
+                        p.
+                            Зберіть ліки, речі, їжу,
+                            іграшки та інше, для тих, кому це необхідно.
+            .pop-up__help-item
+                .pop-up__help-icon-wrapper
+                    .pop-up__help-icon.pop-up__help-icon--donation
+                        +icon('donation')
+                    .pop-up__help-title Волонтерство    
+                .pop-up__help-inner
+                    .pop-up__help-text
+                        p.
+                            Допоможіть ділом або професійними навичками. 
+                            Підтримайте проекти своєю роботою.  
+    .pop-up.pop-up--form(style="display:none")#form
+        a(href="#").pop-up__close
+            +icon('close')
+        .pop-up__title Заповніть форму
+        .pop-up__form-head
+            .pop-up__form-head-wrapper
+                a(href="#").pop-up__form-head-link.active Фіз. особа
+                a(href="#").pop-up__form-head-link Юр. особа
+        .pop-up__form-body
+            .pop-up__form-item
+                .pop-up__form-wrapper
+                    .pop-up__form-top-item
+                        .pop-up__form-group.pop-up__form-group--half
+                            .pop-up__form-group-name Ім’я
+                            input(type="text").pop-up__form-input
+                        .pop-up__form-group.pop-up__form-group--half
+                            .pop-up__form-group-name Фамілія
+                            input(type="text").pop-up__form-input
+                        .pop-up__form-group
+                            .pop-up__form-group-name Назва компаніі, організації
+                            input(type="text").pop-up__form-input
+
+                        .pop-up__form-group
+                            .pop-up__form-group-name Email-адрес
+                            input(type="text").pop-up__form-input
+                        .pop-up__form-group
+                            .pop-up__form-group-name Номер телефону
+                            input(type="text").pop-up__form-input
+                    .pop-up__form-top-item
+                        .pop-up__form-group
+                            .pop-up__form-group-name Країна
+                            input(type="text").pop-up__form-input
+                        .pop-up__form-group.pop-up__form-group--half
+                            .pop-up__form-group-name Місто
+                            input(type="text").pop-up__form-input
+                        .pop-up__form-group.pop-up__form-group--half
+                            .pop-up__form-group-name Штат, район
+                            input(type="text").pop-up__form-input
+                        .pop-up__form-group
+                            .pop-up__form-group-name Адреса
+                            input(type="text").pop-up__form-input
+
+                        .pop-up__form-group.pop-up__form-group--half
+                            .pop-up__form-group-name Поштовий індекс
+                            input(type="text").pop-up__form-input
+
+            .pop-up__form-item
+            .pop-up__payment
+                .pop-up__title Види допомоги
+                .pop-up__sub-title Ви можете змінити вид допомоги
+                .pop-up__payment-list
+                    label.pop-up__payment-item
+                        input(type="radio" name="pay").pop-up__payment-item-input
+                        span.pop-up__payment-wrapper
+                            .pop-up__help-icon.pop-up__help-icon--hand
+                                +icon('hand')
+                            .pop-up__help-title Зробити
+                        span.pop-up__payment-triangle
+                    label.pop-up__payment-item
+                        input(type="radio" name="pay").pop-up__payment-item-input
+                        span.pop-up__payment-wrapper
+                            .pop-up__help-icon.pop-up__help-icon--money
+                                +icon('money')
+                            .pop-up__help-title Фінансова допомога
+                        span.pop-up__payment-triangle
+                    label.pop-up__payment-item
+                        input(type="radio" name="pay").pop-up__payment-item-input
+                        span.pop-up__payment-wrapper
+                            .pop-up__help-icon.pop-up__help-icon--clothes
+                                +icon('clothes')
+                            .pop-up__help-title Матеріальна допомога
+                        span.pop-up__payment-triangle
+                    label.pop-up__payment-item
+                        input(type="radio" name="pay").pop-up__payment-item-input
+                        span.pop-up__payment-wrapper
+                            .pop-up__help-icon.pop-up__help-icon--donation
+                                +icon('donation')
+                            .pop-up__help-title Волонтерство
+                        span.pop-up__payment-triangle
+                .pop-up__payment-form
+                    .pop-up__payment-form-item
+                        .pop-up__payment-form-title.
+                            Спосіб оплати
+                        .pop-up__payment-form-type
+                            label.pop-up__payment-form-type-item
+                                input(type="radio" name="type").pop-up__payment-form-type-input
+                                .pop-up__payment-form-type-wrapper
+                                    img(src="img/visa.png" alt="")
+                            label.pop-up__payment-form-type-item
+                                input(type="radio" name="type").pop-up__payment-form-type-input
+                                .pop-up__payment-form-type-wrapper
+                                    img(src="img/privat.png" alt="")
+                            label.pop-up__payment-form-type-item
+                                input(type="radio" name="type").pop-up__payment-form-type-input
+                                .pop-up__payment-form-type-wrapper
+                                    img(src="img/term.png" alt="")
+                            label.pop-up__payment-form-type-item
+                                input(type="radio" name="type").pop-up__payment-form-type-input
+                                .pop-up__payment-form-type-wrapper
+                                    img(src="img/webm.png" alt="")
+                            label.pop-up__payment-form-type-item
+                                input(type="radio" name="type").pop-up__payment-form-type-input
+                                .pop-up__payment-form-type-wrapper
+                                    img(src="img/paypal.png" alt="")
+
+                    .pop-up__payment-form-item.pop-up__payment-form-item--card
+                        .pop-up__payment-form-title.
+                            Введіть наступні данні
+
+                        .pop-up__card
+                            .pop-up__card-form-group
+                                .pop-up__card-form-group-name.
+                                    Номер карти
+                                .pop-up__card-form-group-digits
+                                    input(type="text").pop-up__card-input
+                                    input(type="text").pop-up__card-input
+                                    input(type="text").pop-up__card-input
+                                    input(type="text").pop-up__card-input
+                            .pop-up__card-bottom
+                                .pop-up__card-form-group.pop-up__card-form-group--half
+                                    .pop-up__card-form-group-name.
+                                        Термін дії
+                                    input(type="text").pop-up__card-input-bottom
+                                .pop-up__card-form-group.pop-up__card-form-group--half
+                                    .pop-up__card-form-group-name.
+                                        CVC/CVV
+                                    input(type="text").pop-up__card-input-bottom
+                button(type="submit").pop-up__payment-form-submit Допомогти

@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    config:
+      server:
+        # "native" is used when the native profile is active, for local tests with a classpath repo:
+        native:
+          searchLocations: classpath:configs/
+server:
+  port: 8000
