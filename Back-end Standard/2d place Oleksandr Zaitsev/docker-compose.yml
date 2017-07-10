@@ -1,0 +1,51 @@
+version: "3"
+services:
+  webserver:
+    build: .
+    ports:
+      - "8000:80"
+    volumes:
+      - .:/var/www/html
+      - ./apache.conf:/etc/apache2/sites-available/000-default.conf
+    links:
+      - db
+      - redis
+  db:
+    image: mysql:5.7
+    volumes:
+      - ./.data/db:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: app_ddb
+      MYSQL_USER: app_user
+      MYSQL_PASSWORD: app_password
+    ports:
+      - "3306:3306"
+  composer:
+    restart: "no"
+    image: composer/composer:php7
+    volumes:
+      - .:/var/www/html
+    working_dir: /var/www/html
+    command: ["install"]
+    command: ["copy-env"]
+    depends_on:
+      - webserver
+  artisan:
+    image: netsells/artisan
+    restart: "no"
+    volumes:
+      - .:/var/www/html
+    working_dir: /var/www/html
+    command: ["migrate"]
+    command: ["queue:work"]
+    depends_on:
+      - db
+      - composer
+      - redis
+      - webserver
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
