@@ -1,0 +1,40 @@
+group 'dev-final'
+version '1.0'
+
+apply plugin: 'java'
+apply plugin: 'application'
+mainClassName = 'app.App'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+dependencies {
+    compile 'com.sparkjava:spark-core:2.6.0.RC0'
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+    compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.2'
+    compile 'org.codehaus.groovy:groovy-all:2.4.7'
+    compile 'com.google.code.gson:gson:2.3.1'
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
+jar {
+    manifest {
+        attributes(
+                "Manifest-Version": "1.0",
+                "Main-Class": mainClassName,
+                "Class-Path": configurations.compile.collect { it.getName() }.join(' ')
+        )
+    }
+}
+//create a single Jar with all dependencies
+task fatJar(type: Jar) {
+    manifest {
+        attributes ('Implementation-Version': version,
+                'Main-Class': mainClassName
+        )
+    }
+    baseName = project.name + '-all'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}

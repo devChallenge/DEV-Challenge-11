@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <script src="js/lib/jquery.js"></script>
+    <script src="js/lib/bootstrap.js"></script>
+</head>
+<body>
+    <div class="panel panel-default" id="header">
+        <div class="panel-heading" id="header-top">Flights Planner</div>
+        <div class="panel-body"></div>
+    </div>
+    <div id="auth">
+        <div id="email-div" class="input-group">
+            <span class="input-group-addon" id="addon1">@</span>
+            <input type="text" id="email" class="form-control" placeholder="email" aria-describedby="addon1">
+        </div>
+        <div id="login-form">
+            <div class="btn-group" role="group">
+                <button id="login-btn" type="button" class="btn btn-default">Login</button>
+            </div>
+        </div>
+    </div>
+    <div id="logined" class="not-display">
+        <h3><span class="label label-default" id="login-label"></span></h3>
+        <div id="logout-form">
+            <div class="btn-group" role="group">
+                <button id="logout-btn" type="button" class="btn btn-default">Logout</button>
+            </div>
+        </div>
+        <div id="client-content" class="margin-10 not-display">
+            <h4><span class="label label-default">Trip Planner</span></h4>
+            <div id="send-money-div">
+                <div class="input-group">
+                    <span class="input-group-addon" id="addon2">@</span>
+                    <input type="text" id="origin" class="form-control" placeholder="Origin city" aria-describedby="addon2">
+                    <span class="input-group-addon" id="addon3">@</span>
+                    <input type="text" id="destination" class="form-control" placeholder="Destination city" aria-describedby="addon3">
+                    <span class="input-group-addon" id="addon4">@</span>
+                    <input type="text" id="efficiency" class="form-control" placeholder="time/price/connections" aria-describedby="addon4">
+                    <span class="input-group-addon" id="addon5">@</span>
+                    <input type="text" id="results" class="form-control" placeholder="count of options" aria-describedby="addon5">
+                </div>
+                <div class="btn-group margin-10" role="group">
+                    <button id="plan-btn" type="button" class="btn btn-default">Plan Trip</button>
+                </div>
+            </div>
+            <div id="options">
+                <table class="table" id="options-tbl">
+                    <thead>
+                    <tr>
+                        <th>Flights Ids</th><th>Time</th><th>Price</th><th>Connections count</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+<script src="js/app/login.js"></script>
+<script src="js/app/main.js"></script>
+<script src="js/app/requests.js"></script>
+</body>

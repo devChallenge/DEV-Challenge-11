@@ -1,0 +1,29 @@
+version: '2.1'
+services:
+  db:
+    build:
+        context: .
+        dockerfile: Sql.dockerfile
+    environment:
+      sa_password: "123asdQ!"
+      ACCEPT_EULA: "y"
+    networks:
+      default:
+        ipv4_address: 172.20.27.248
+        aliases:
+          - db
+
+  web:
+    build: 
+        context: .
+        dockerfile: Web.dockerfile
+    depends_on:
+      - db
+    networks:
+      default:
+        ipv4_address: 172.20.23.5
+
+networks:
+  default:
+    external:
+      name: nat

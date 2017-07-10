@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Class-Path: spark-core-2.6.0.RC0.jar slf4j-api-1.7.25.jar logback-clas
+ sic-1.2.2.jar groovy-all-2.4.7.jar gson-2.3.1.jar jetty-server-9.4.4.
+ v20170414.jar jetty-webapp-9.4.4.v20170414.jar websocket-server-9.4.4
+ .v20170414.jar websocket-servlet-9.4.4.v20170414.jar logback-core-1.2
+ .2.jar javax.servlet-api-3.1.0.jar jetty-http-9.4.4.v20170414.jar jet
+ ty-io-9.4.4.v20170414.jar jetty-xml-9.4.4.v20170414.jar jetty-servlet
+ -9.4.4.v20170414.jar websocket-common-9.4.4.v20170414.jar websocket-c
+ lient-9.4.4.v20170414.jar websocket-api-9.4.4.v20170414.jar jetty-uti
+ l-9.4.4.v20170414.jar jetty-security-9.4.4.v20170414.jar jetty-client
+ -9.4.4.v20170414.jar
+Main-Class: app.App
+

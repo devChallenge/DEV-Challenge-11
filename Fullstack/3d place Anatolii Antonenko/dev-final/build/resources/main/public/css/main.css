@@ -1,0 +1,35 @@
+#header {
+    margin : 10px;
+}
+#login-form {
+    margin-left: 10px;
+}
+.margin-10 {
+    margin: 10px;
+}
+#email-div {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 25%;
+}
+.not-display {
+    display: none;
+}
+#logined {
+    margin: 10px;
+}
+#cards {
+    width: 30%;
+}
+#send-money-div {
+    width: 70%;
+}
+#my-transactions {
+    width: 90%;
+}
+#all-transactions {
+    width: 90%;
+}
+#requests {
+    width: 70%;
+}
